@@ -1,0 +1,81 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+@import 'reset';
+@import "skeleton-layer";
+@import "organ-layer";
+@import "muscle-layer";
+
+@import "skeleton-active";
+@import "organ-active";
+@import "muscle-active";
+
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #ccc;
+}
+
+.speech-bubble {
+}
+
+.speech-bubble-top {
+	background-image: url(../../dist/img/speechbubble.svg);
+	background-repeat: no-repeat;
+	width: 50%;
+	height: 0;
+	padding-bottom: 20.020833333%;
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 150;
+}
+
+.speech-bubble-tip {
+	background-image: url(../../dist/img/speechbubble_handle.svg);
+	background-repeat: no-repeat;
+	width: 50%;
+	height: 0;
+	padding-bottom: 10.020833333%;
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+	z-index: 149;
+}
+
+.overlay {
+    width: 100vw;
+    height: 300vh;
+    background: black;
+    opacity: .5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: none;
+    z-index: 150;
+}
+
+
+
+

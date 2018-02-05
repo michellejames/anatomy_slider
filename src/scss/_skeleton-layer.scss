@@ -1,0 +1,390 @@
+.skeleton-layer {
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+	position: relative;
+	// position: absolute;
+	// top: 0;
+	// left: 0;
+	// z-index: 20;
+
+	.skeleton-background {
+		position: absolute;
+		background-image: url(../../dist/img/Skeleton/Skeleton_bg.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 0;
+		padding-bottom: 100%;
+	}
+
+	.skull-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/Skull.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 23.7037037%;
+	    height: 0;
+	    padding-bottom: 14.94791667%;
+	    top: 21.61458333%;
+	    left: 38.42592593%;
+	}
+
+	.spine-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/Spine.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 5.277777778%;
+	    height: 0;
+	    padding-bottom: 28.48958333%;
+	    top: 36.82291667%;
+	    left: 47.68518519%;
+	    z-index: 2;
+	}
+
+	.left-collarbone-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/L_Collarbone.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 12.5%;
+	    height: 0;
+	    padding-bottom: 1.40625%;
+	    top: 42.08333333%;
+	    //left: 34.62962963%;
+	    left: 38.62963%;
+	}
+
+	.right-collarbone-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/R_Collarbone.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 12.5%;
+	    height: 0;
+	    padding-bottom: 1.40625%;
+	    top: 42.08333333%;
+	    //left: 54.16666667%;
+	    left: 49.466667%;
+	}
+
+	.left-humerus-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/L_Humerus.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 8.425925926%;
+	    height: 0;
+	    padding-bottom: 11.04166667%;
+	    top: 43.69791667%;
+	    //left: 28.24074074%;
+	    left: 36.240741%;
+	    z-index: 2;
+	}
+
+	.right-humerus-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/R_Humerus.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 8.425925926%;
+	    height: 0;
+	    padding-bottom: 11.04166667%;
+	    top: 43.69791667%;
+	    // left: 64.53703704%;
+	    left: 56.037037%;
+	    z-index: 2;
+	}
+
+	.left-forearm-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/L_Forearm.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 6.111111111%;
+	    height: 0;
+	    padding-bottom: 7.708333333%;
+	    top: 54.53125%;
+	    // left: 24.90740741%;
+	    left: 34.907407%;
+	}
+
+	.right-forearm-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/R_Forearm.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 6.111111111%;
+	    height: 0;
+	    padding-bottom: 7.708333333%;
+	    top: 54.53125%;
+	    // left: 70.18518519%;
+	    left: 59.685185%;
+	}
+
+	.left-wrist-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/L_Wristbone.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 6.018518519%;
+	    height: 0;
+	    padding-bottom: 1.666666667%;
+	    top: 62.44791667%;
+	    // left: 21.48148148%;
+	    left: 33.081481%;
+	}
+
+	.right-wrist-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/R_Wristbone.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 6.018518519%;
+	    height: 0;
+	    padding-bottom: 1.666666667%;
+	    top: 62.44791667%;
+	    // left: 72.68518519%;
+	    left: 61.685185%;
+	}
+
+	.left-fingers-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/L_Fingerbones.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 11.11111111%;
+	    height: 0;
+	    padding-bottom: 6.458333333%;
+	    top: 63.69791667%;
+	    // left: 18.05555556%;
+	    left: 30.055556%;
+	}
+
+	.right-fingers-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/R_Fingerbones.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 11.11111111%;
+	    height: 0;
+	    padding-bottom: 6.458333333%;
+	    top: 63.69791667%;
+	    // left: 71.48148148%;;
+	    left: 59.781481%;
+	}
+
+	.ribcage-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/Ribcage.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 26.85185185%;
+	    height: 0;
+	    padding-bottom: 12.13541667%;
+	    top: 43.90625%;
+	    //left: 36.57407407%;
+	    left: 36.874074%;
+	}
+
+	.hipbone-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/Hipbone.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 25.64814815%;
+	    height: 0;
+	    padding-bottom: 8.125%;
+	    top: 60.05208333%;
+	    left: 37.492593%;
+	}
+
+	.left-femur-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/L_Femur.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 7.777777778%;
+	    height: 0;
+	    padding-bottom: 15.3125%;
+	    top: 65.41666667%;
+	    //left: 37.12962963%;
+	    left: 41.12963%;
+	    z-index: 2;
+	}
+
+	.right-femur-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/R_Femur.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 7.777777778%;
+	    height: 0;
+	    padding-bottom: 15.3125%;
+	    top: 65.41666667%;
+	    //left: 56.2962963%;
+	    left: 51.696296%;
+	    z-index: 2;
+	}
+
+	.left-knee-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/L_Kneecap.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 3.425925926%;
+	    height: 0;
+	    padding-bottom: 2.135416667%;
+	    top: 79.94791667%;
+	    //left: 37.96296296%;
+	    left: 42.362963%;
+	}
+
+	.left-knee-div {
+	    position: absolute; 
+		width: 3.425925926%;
+	    height: 0;
+	    padding-bottom: 2.135416667%;
+	    top: 79.94791667%;
+	    //left: 37.96296296%;
+	    left: 42.362963%;
+	    z-index: 2;
+	}
+
+	.right-knee-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/R_Kneecap.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 3.425925926%;
+	    height: 0;
+	    padding-bottom: 2.135416667%;
+	    top: 79.94791667%;
+	    //left: 59.81481481%;
+	    left: 54.814815%;
+	}
+
+	.right-knee-div {
+		position: absolute; 
+		width: 3.425925926%;
+	    height: 0;
+	    padding-bottom: 2.135416667%;
+	    top: 79.94791667%;
+	    //left: 59.81481481%;
+	    left: 54.814815%;
+	    z-index: 2;
+	}
+
+	.left-tibia-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/L_Tibia.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 5.925925926%;
+	    height: 0;
+	    padding-bottom: 13.90625%;
+	    top: 80.72916667%;
+	    //left: 35.92592593%;
+	    left: 40.725926%;
+	}
+
+	.right-tibia-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/R_Tibia.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 5.925925926%;
+	    height: 0;
+	    padding-bottom: 13.90625%;
+	    top: 80.72916667%;
+	    //left: 59.81481481%;
+	    left: 54.114815%;
+	}
+
+	.left-ankle-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/L_Anklebone.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 6.759259259%;
+	    height: 0;
+	    padding-bottom: 3.697916667%;
+	    top: 94.58333333%;
+	    // left: 35.46296296%;
+	    left: 40.262963%;
+	}
+
+	.right-ankle-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/R_Anklebone.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 6.759259259%;
+	    height: 0;
+	    padding-bottom: 3.697916667%;
+	    top: 94.58333333%;
+	    // left: 60.09259259%;
+	    left: 54.092593%;
+	}
+
+	.left-foot-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/L_Footbone.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 11.85185185%;
+	    height: 0;
+	    padding-bottom: 3.020833333%;
+	    top: 95.83333333%;
+	    //left: 23.33333333%;
+	    left: 32.333333%;
+	}
+
+	.right-foot-original {
+	    position: absolute; 
+		background-image: url(../../dist/img/Skeleton/Original/R_Footbone.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 11.85185185%;
+	    height: 0;
+	    padding-bottom: 3.020833333%;
+	    top: 95.83333333%;
+	    //left: 66.2962963%;
+	    left: 56.996296%;
+	}
+}
+
+
+
+
+
+
+
+
+
+

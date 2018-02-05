@@ -1,0 +1,206 @@
+.muscle-layer {
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+	position: relative;
+	// position: absolute;
+	// top: 0;
+	// left: 0;
+	// z-index: 40;
+
+	.muscle-background {
+		position: absolute;
+		background-image: url(../../dist/img/Muscles/Muscle_bg.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 0;
+		padding-bottom: 100%;
+	}
+
+	.muscle-body {
+		position: absolute; 
+		background-image: url(../../dist/img/Body_Shape/Body.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 66.66666667%;
+	    height: 0;
+	    padding-bottom: 78.69791667%;
+	    top: 20.78125%;
+	    left: 16.94444444%;
+	}
+
+	.left-chest-original {
+		position: absolute;
+		background-image: url(../../dist/img/Muscles/Original/L_Chestmuscle.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 10.92592593%;
+	    height: 0;
+	    padding-bottom: 6.197916667%;
+	    top: 41.51041667%;
+	    // left: 38.14814815%;	
+	    left: 41.148148%;
+	}
+
+	.right-chest-original {
+		position: absolute;
+		background-image: url(../../dist/img/Muscles/Original/R_Chestmuscle.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 10.92592593%;
+	    height: 0;
+	    padding-bottom: 6.197916667%;
+	    top: 41.51041667%;
+	    // left: 51.2962963%;	
+	    left: 48.896296%;
+	}
+
+	.left-deltoid-original {
+		// position: absolute;
+		// background-image: url(../../dist/img/Muscles/Original/R_Chestmuscle.png);
+		// background-repeat: no-repeat;
+		// background-size: contain;
+		// background-position: center;
+		// width: 10.92592593%;
+	 //    height: 0;
+	 //    padding-bottom: 6.197916667%;
+	 //    top: 41.51041667%;
+	 //    left: 51.2962963%;
+	 // z-index: 2;	
+	}
+
+	.right-deltoid-original {
+		position: absolute;
+		background-image: url(../../dist/img/Muscles/Original/R_Deltoid.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 5.37037037%;
+		height: 0;
+		padding-bottom: 4.114583333%;
+	    top: 42.8125%;
+	    // left: 63.33333333%;	
+	    left: 56.933333%;
+	    z-index: 2;
+	}
+
+	.left-biceps-original {
+		position: absolute;
+		background-image: url(../../dist/img/Muscles/Original/L_Biceps.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 4.537037037%;
+		height: 0;
+		padding-bottom: 5.833333333%;
+	    top: 48.28125%;
+	    // left: 30.46296296%;	
+	    left: 37.462963%;
+	}
+
+	.right-biceps-original {
+		position: absolute;
+		background-image: url(../../dist/img/Muscles/Original/R_Biceps.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 4.537037037%;
+		height: 0;
+		padding-bottom: 5.833333333%;
+	    top: 48.28125%;
+	    // left: 66.57407407%;	
+	    left: 58.574074%;
+	}
+
+	.abdomin-original {
+		position: absolute;
+		background-image: url(../../dist/img/Muscles/Original/Abdomin.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 18.05555556%;
+		height: 0;
+		padding-bottom: 15.41666667%;
+	    top: 49.0625%;
+	    left: 41.2037037%;
+	}
+
+	.left-quadriceps-original {
+		position: absolute;
+		background-image: url(../../dist/img/Muscles/Original/L_Quadriceps.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 8.888888889%;
+		height: 0;
+		padding-bottom: 15.41666667%;
+	    top: 66.14583333%;
+	    // left: 36.2962963%;
+	    left: 40.496296%;
+	}
+
+	.right-quadriceps-original {
+		position: absolute;
+		background-image: url(../../dist/img/Muscles/Original/R_Quadriceps.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 8.888888889%;
+		height: 0;
+		padding-bottom: 15.41666667%;
+	    top: 66.14583333%;
+	    // left: 56.2037037%;
+	    left: 51.503704%;
+	}
+
+	.left-calf-original {
+		position: absolute;
+		background-image: url(../../dist/img/Muscles/Original/L_Calfmuscle.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 5.648148148%;
+		height: 0;
+		padding-bottom: 9.375%;
+	    top: 84.11458333%;
+	    // left: 37.40740741%;
+	    left: 41.407407%;
+	}
+
+	.right-calf-original {
+		position: absolute;
+		background-image: url(../../dist/img/Muscles/Original/R_Calfmuscle.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 5.648148148%;
+		height: 0;
+		padding-bottom: 9.375%;
+	    top: 84.11458333%;
+	    // left: 58.05555556%;
+	    left: 54.055556%;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
