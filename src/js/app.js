@@ -555,35 +555,35 @@ rightChest.addEventListener("click", function (){
 	speechBubbleTop.appendChild(activeRightChestText);
 });
 
-// let leftDeltoid = document.querySelector(".left-deltoid-original");
-// leftDeltoid.addEventListener("click", function (){
-// 	leftDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Deltoid.png)";
-// 	createInfoWindow();
+let leftDeltoid = document.querySelector(".left-deltoid-original");
+leftDeltoid.addEventListener("click", function (){
+	leftDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Deltoid.png)";
+	createInfoWindow();
 
-// 	let activeLeftDeltoid = document.createElement("div");
-// 	activeLeftDeltoid.classList.add("left-deltoid-active");
-// 	speechBubbleTop.appendChild(activeLeftDeltoid);
+	let activeLeftDeltoid = document.createElement("div");
+	activeLeftDeltoid.classList.add("left-deltoid-active");
+	speechBubbleTop.appendChild(activeLeftDeltoid);
 
-// 	let activeLeftDeltoidText = document.createElement("p");
-// 	activeLeftDeltoidText.innerHTML = "Mic Check, One Two, One Two";
-// 	activeLeftDeltoidText.classList.add("left-deltoid-active-text");
-// 	speechBubbleTop.appendChild(activeLeftDeltoidText);
-// });
+	let activeLeftDeltoidText = document.createElement("p");
+	activeLeftDeltoidText.innerHTML = "Mic Check, One Two, One Two";
+	activeLeftDeltoidText.classList.add("left-deltoid-active-text");
+	speechBubbleTop.appendChild(activeLeftDeltoidText);
+});
 
-// let rightDeltoid = document.querySelector(".right-deltoid-original");
-// rightDeltoid.addEventListener("click", function (){
-// 	rightDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Deltoid.png)";
-// 	createInfoWindow();
+let rightDeltoid = document.querySelector(".right-deltoid-original");
+rightDeltoid.addEventListener("click", function (){
+	rightDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Deltoid.png)";
+	createInfoWindow();
 
-// 	let activeRightDeltoid = document.createElement("div");
-// 	activeRightDeltoid.classList.add("right-deltoid-active");
-// 	speechBubbleTop.appendChild(activeRightDeltoid);
+	let activeRightDeltoid = document.createElement("div");
+	activeRightDeltoid.classList.add("right-deltoid-active");
+	speechBubbleTop.appendChild(activeRightDeltoid);
 
-// 	let activeRightDeltoidText = document.createElement("p");
-// 	activeRightDeltoidText.innerHTML = "Mic Check, One Two, One Two";
-// 	activeRightDeltoidText.classList.add("right-deltoid-active-text");
-// 	speechBubbleTop.appendChild(activeRightDeltoidText);
-// });
+	let activeRightDeltoidText = document.createElement("p");
+	activeRightDeltoidText.innerHTML = "Mic Check, One Two, One Two";
+	activeRightDeltoidText.classList.add("right-deltoid-active-text");
+	speechBubbleTop.appendChild(activeRightDeltoidText);
+});
 
 let leftBiceps = document.querySelector(".left-biceps-original");
 leftBiceps.addEventListener("click", function (){
@@ -750,8 +750,8 @@ function closeInfoWindow () {
 	smallIntestine.style.backgroundImage = "url(../../dist/img/Organs/Original/SmallIntestine.png)";
 	leftChest.style.backgroundImage = "url(../../dist/img/Muscles/Original/L_Chestmuscle.png)";
 	rightChest.style.backgroundImage = "url(../../dist/img/Muscles/Original/R_Chestmuscle.png)";
-	// leftDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Original/L_Deltoid.png)";
-	// rightDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Original/R_Deltoid.png)";
+	leftDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Original/L_Deltoid.png)";
+	rightDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Original/R_Deltoid.png)";
 	leftBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Original/L_Biceps.png)";
 	rightBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Original/R_Biceps.png)";
 	abdomin.style.backgroundImage = "url(../../dist/img/Muscles/Original/Abdomin.png)";

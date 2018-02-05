@@ -27,32 +27,32 @@
 }
 
 .left-deltoid-active {
-	// position: absolute;
-	// background-image: url(../../dist/img/Muscles/Active/ActiveR_Chestmuscle.png);
-	// background-repeat: no-repeat;
-	// background-size: contain;
-	// background-position: center;
-	// width: 10.92592593%;
- //    height: 0;
- //    padding-bottom: 6.197916667%;
- //    top: 50%;
-    // left: 5%;
-    // z-index: 151;	
+	position: absolute;
+	background-image: url(../../dist/img/Muscles/Active/ActiveL_Deltoid.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: 10.92592593%;
+    height: 0;
+    padding-bottom: 6.197916667%;
+    top: 50%;
+    left: 5%;
+    z-index: 151;	
 }
 
-// .right-deltoid-active {
-// 	position: absolute;
-// 	background-image: url(../../dist/img/Muscles/Active/ActiveR_Deltoid.png);
-// 	background-repeat: no-repeat;
-// 	background-size: contain;
-// 	background-position: center;
-// 	width: 5.37037037%;
-// 	height: 0;
-// 	padding-bottom: 4.114583333%;
-//     top: 50%;
-//     left: 5%;
-//     z-index: 151;
-// }
+.right-deltoid-active {
+	position: absolute;
+	background-image: url(../../dist/img/Muscles/Active/ActiveR_Deltoid.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: 5.37037037%;
+	height: 0;
+	padding-bottom: 4.114583333%;
+    top: 50%;
+    left: 5%;
+    z-index: 151;
+}
 
 .left-biceps-active {
 	position: absolute;

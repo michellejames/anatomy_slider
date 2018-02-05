@@ -19,6 +19,20 @@
 		padding-bottom: 100%;
 	}
 
+	.organ-title {
+		position: absolute; 
+		background-image: url(../../dist/img/Titles/OrganTitle/OrganTitle.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 66.66666667%;
+		height: 0;
+		padding-bottom: 18.697917%;
+		top: 2.78125%;
+		left: 18.944444%;
+		z-index: 5;
+	}
+
 	.organ-body {
 		position: absolute; 
 		background-image: url(../../dist/img/Body_Shape/Body.png);

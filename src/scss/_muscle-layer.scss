@@ -18,6 +18,20 @@
 		padding-bottom: 100%;
 	}
 
+	.muscle-title {
+		position: absolute; 
+		background-image: url(../../dist/img/Titles/Muscle/MuscleTitle.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 66.66666667%;
+		height: 0;
+		padding-bottom: 18.697917%;
+		top: 2.78125%;
+		left: 18.944444%;
+		z-index: 5;
+	}
+
 	.muscle-body {
 		position: absolute; 
 		background-image: url(../../dist/img/Body_Shape/Body.png);
@@ -60,17 +74,18 @@
 	}
 
 	.left-deltoid-original {
-		// position: absolute;
-		// background-image: url(../../dist/img/Muscles/Original/R_Chestmuscle.png);
-		// background-repeat: no-repeat;
-		// background-size: contain;
-		// background-position: center;
-		// width: 10.92592593%;
-	 //    height: 0;
-	 //    padding-bottom: 6.197916667%;
-	 //    top: 41.51041667%;
-	 //    left: 51.2962963%;
-	 // z-index: 2;	
+		position: absolute;
+		background-image: url(../../dist/img/Muscles/Original/L_Deltoid.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 5.37037037%;
+		height: 0;
+		padding-bottom: 4.114583333%;
+	    top: 42.8125%;
+	    // left: 30.74074074%;
+	    left: 39.040741%;
+	    z-index: 2;
 	}
 
 	.right-deltoid-original {
