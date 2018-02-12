@@ -215,7 +215,7 @@ TweenMax.to(".start-title", 1, {scale: 1.2, yoyo: true, repeat: 1, delay: 2});
 
 startButton.addEventListener("click", function (){
 	console.log("click");
-	startButton.style.backgroundImage = "url(../img/Go_selected_button.svg)";
+	startButton.style.backgroundImage = "url(../../dist/img/Go_selected_button.svg)";
 
 
 	var timeline = new TimelineMax();
@@ -235,7 +235,7 @@ startButton.addEventListener("click", function (){
 let skull = document.querySelector(".body-layers .skull-original");
 skull.addEventListener("click", function (){
 	console.log("click");
-	skull.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedSkull.png)";
+	skull.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedSkull.png)";
 	createInfoWindow();
 
 	let activeSkull = document.createElement("div");
@@ -254,7 +254,7 @@ skull.addEventListener("click", function (){
 
 let spine = document.querySelector(".body-layers .spine-original");
 spine.addEventListener("click", function (){
-	spine.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedSpine.png)";
+	spine.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedSpine.png)";
 	createInfoWindow();
 
 	let activeSpine = document.createElement("div");
@@ -273,8 +273,8 @@ spine.addEventListener("click", function (){
 
 let leftCollarbone = document.querySelector(".body-layers .left-collarbone-original");
 leftCollarbone.addEventListener("click", function (){
-	leftCollarbone.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Collarbone.png)";
-	rightCollarbone.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Collarbone.png)";
+	leftCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Collarbone.png)";
+	rightCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Collarbone.png)";
 	createInfoWindow();
 
 	let activeLeftCollarbone = document.createElement("div");
@@ -293,8 +293,8 @@ leftCollarbone.addEventListener("click", function (){
 
 let rightCollarbone = document.querySelector(".body-layers .right-collarbone-original");
 rightCollarbone.addEventListener("click", function (){
-	rightCollarbone.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Collarbone.png)";
-	leftCollarbone.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Collarbone.png)";
+	rightCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Collarbone.png)";
+	leftCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Collarbone.png)";
 	createInfoWindow();
 
 	let activeRightCollarbone = document.createElement("div");
@@ -313,8 +313,8 @@ rightCollarbone.addEventListener("click", function (){
 
 let leftHumerus = document.querySelector(".body-layers .left-humerus-original");
 leftHumerus.addEventListener("click", function (){
-	leftHumerus.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Humerus.png)";
-	rightHumerus.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Humerus.png)";
+	leftHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Humerus.png)";
+	rightHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Humerus.png)";
 	createInfoWindow();
 
 	let activeLeftHumerus = document.createElement("div");
@@ -333,8 +333,8 @@ leftHumerus.addEventListener("click", function (){
 
 let rightHumerus = document.querySelector(".body-layers .right-humerus-original");
 rightHumerus.addEventListener("click", function (){
-	rightHumerus.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Humerus.png)";
-	leftHumerus.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Humerus.png)";
+	rightHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Humerus.png)";
+	leftHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Humerus.png)";
 	createInfoWindow();
 
 	let activeRightHumerus = document.createElement("div");
@@ -353,8 +353,8 @@ rightHumerus.addEventListener("click", function (){
 
 let leftForearm = document.querySelector(".body-layers .left-forearm-original");
 leftForearm.addEventListener("click", function (){
-	leftForearm.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Forearm.png)";
-	rightForearm.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Forearm.png)";
+	leftForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Forearm.png)";
+	rightForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Forearm.png)";
 	createInfoWindow();
 
 	let activeLeftForearem = document.createElement("div");
@@ -373,8 +373,8 @@ leftForearm.addEventListener("click", function (){
 
 let rightForearm = document.querySelector(".body-layers .right-forearm-original");
 rightForearm.addEventListener("click", function (){
-	rightForearm.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Forearm.png)";
-	leftForearm.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Forearm.png)";
+	rightForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Forearm.png)";
+	leftForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Forearm.png)";
 	createInfoWindow();
 
 	let activeRightForearm = document.createElement("div");
@@ -393,8 +393,8 @@ rightForearm.addEventListener("click", function (){
 
 let leftWrist = document.querySelector(".body-layers .left-wrist-original");
 leftWrist.addEventListener("click", function (){
-	leftWrist.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Wristbone.png)";
-	rightWrist.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Wristbone.png)";
+	leftWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Wristbone.png)";
+	rightWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Wristbone.png)";
 	createInfoWindow();
 
 	let activeLeftWrist = document.createElement("div");
@@ -413,8 +413,8 @@ leftWrist.addEventListener("click", function (){
 
 let rightWrist = document.querySelector(".body-layers .right-wrist-original");
 rightWrist.addEventListener("click", function (){
-	rightWrist.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Wristbone.png)";
-	leftWrist.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Wristbone.png)";
+	rightWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Wristbone.png)";
+	leftWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Wristbone.png)";
 	createInfoWindow();
 
 	let activeRightWrist = document.createElement("div");
@@ -433,8 +433,8 @@ rightWrist.addEventListener("click", function (){
 
 let leftFingers = document.querySelector(".body-layers .left-fingers-original");
 leftFingers.addEventListener("click", function (){
-	leftFingers.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Fingerbones.png)";
-	rightFingers.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Fingerbones.png)";
+	leftFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Fingerbones.png)";
+	rightFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Fingerbones.png)";
 	createInfoWindow();
 
 	let activeLeftFingers = document.createElement("div");
@@ -453,8 +453,8 @@ leftFingers.addEventListener("click", function (){
 
 let rightFingers = document.querySelector(".body-layers .right-fingers-original");
 rightFingers.addEventListener("click", function (){
-	rightFingers.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Fingerbones.png)";
-	leftFingers.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Fingerbones.png)";
+	rightFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Fingerbones.png)";
+	leftFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Fingerbones.png)";
 	createInfoWindow();
 
 	let activeRightFingers = document.createElement("div");
@@ -473,7 +473,7 @@ rightFingers.addEventListener("click", function (){
 
 let ribcage = document.querySelector(".body-layers .ribcage-original");
 ribcage.addEventListener("click", function (){
-	ribcage.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedRibcage.png)";
+	ribcage.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedRibcage.png)";
 	createInfoWindow();
 
 	let activeRibcage = document.createElement("div");
@@ -492,7 +492,7 @@ ribcage.addEventListener("click", function (){
 
 let hipbone = document.querySelector(".body-layers .hipbone-original");
 	hipbone.addEventListener("click", function (){
-	hipbone.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedHipbone.png)";
+	hipbone.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedHipbone.png)";
 	createInfoWindow();
 
 	let activeHipbone = document.createElement("div");
@@ -511,8 +511,8 @@ let hipbone = document.querySelector(".body-layers .hipbone-original");
 
 let leftFemur = document.querySelector(".body-layers .left-femur-original");
 leftFemur.addEventListener("click", function (){
-	leftFemur.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Femur.png)";
-	rightFemur.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Femur.png)";
+	leftFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Femur.png)";
+	rightFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Femur.png)";
 	createInfoWindow();
 
 	let activeLeftFemur = document.createElement("div");
@@ -531,8 +531,8 @@ leftFemur.addEventListener("click", function (){
 
 let rightFemur = document.querySelector(".body-layers .right-femur-original");
 rightFemur.addEventListener("click", function (){
-	rightFemur.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Femur.png)";
-	leftFemur.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Femur.png)";
+	rightFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Femur.png)";
+	leftFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Femur.png)";
 	createInfoWindow();
 
 	let activeRightFemur = document.createElement("div");
@@ -552,8 +552,8 @@ rightFemur.addEventListener("click", function (){
 let leftKnee = document.querySelector(".body-layers .left-knee-original");
 let leftKneeDiv = document.querySelector(".left-knee-div");
 leftKneeDiv.addEventListener("click", function (){
-	leftKnee.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Kneecap.png)";
-	rightKnee.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Kneecap.png)";
+	leftKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Kneecap.png)";
+	rightKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Kneecap.png)";
 	createInfoWindow();
 
 	let activeLeftKnee = document.createElement("div");
@@ -573,8 +573,8 @@ leftKneeDiv.addEventListener("click", function (){
 let rightKnee = document.querySelector(".body-layers .right-knee-original");
 let rightKneeDiv = document.querySelector(".right-knee-div");
 rightKneeDiv.addEventListener("click", function (){
-	rightKnee.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Kneecap.png)";
-	leftKnee.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Kneecap.png)";
+	rightKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Kneecap.png)";
+	leftKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Kneecap.png)";
 	createInfoWindow();
 
 	let activeRightKnee = document.createElement("div");
@@ -593,8 +593,8 @@ rightKneeDiv.addEventListener("click", function (){
 
 let leftTibia = document.querySelector(".body-layers .left-tibia-original");
 	leftTibia.addEventListener("click", function (){
-	leftTibia.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Tibia.png)";
-	rightTibia.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Tibia.png)";
+	leftTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Tibia.png)";
+	rightTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Tibia.png)";
 	createInfoWindow();
 
 	let activeLeftTibia = document.createElement("div");
@@ -613,8 +613,8 @@ let leftTibia = document.querySelector(".body-layers .left-tibia-original");
 
 let rightTibia = document.querySelector(".body-layers .right-tibia-original");
 rightTibia.addEventListener("click", function (){
-	rightTibia.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Tibia.png)";
-	leftTibia.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Tibia.png)";
+	rightTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Tibia.png)";
+	leftTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Tibia.png)";
 	createInfoWindow();
 
 	let activeRightTibia = document.createElement("div");
@@ -633,8 +633,8 @@ rightTibia.addEventListener("click", function (){
 
 let leftAnkle = document.querySelector(".body-layers .left-ankle-original");
 leftAnkle.addEventListener("click", function (){
-	leftAnkle.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Anklebone.png)";
-	rightAnkle.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Anklebone.png)";
+	leftAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Anklebone.png)";
+	rightAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Anklebone.png)";
 	createInfoWindow();
 
 	let activeLeftAnkle = document.createElement("div");
@@ -653,8 +653,8 @@ leftAnkle.addEventListener("click", function (){
 
 let rightAnkle = document.querySelector(".body-layers .right-ankle-original");
 rightAnkle.addEventListener("click", function (){
-	rightAnkle.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Anklebone.png)";
-	leftAnkle.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Anklebone.png)";
+	rightAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Anklebone.png)";
+	leftAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Anklebone.png)";
 	createInfoWindow();
 
 	let activeRightAnkle = document.createElement("div");
@@ -673,8 +673,8 @@ rightAnkle.addEventListener("click", function (){
 
 let leftFoot = document.querySelector(".body-layers .left-foot-original");
 leftFoot.addEventListener("click", function (){
-	leftFoot.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Footbone.png)";
-	rightFoot.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Footbone.png)";
+	leftFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Footbone.png)";
+	rightFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Footbone.png)";
 	createInfoWindow();
 
 	let activeLeftFoot = document.createElement("div");
@@ -693,8 +693,8 @@ leftFoot.addEventListener("click", function (){
 
 let rightFoot = document.querySelector(".body-layers .right-foot-original");
 rightFoot.addEventListener("click", function (){
-	rightFoot.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedR_Footbone.png)";
-	leftFoot.style.backgroundImage = "url(../img/Skeleton/Ghosted/GhostedL_Footbone.png)";
+	rightFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Footbone.png)";
+	leftFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Footbone.png)";
 	createInfoWindow();
 
 	let activeRightFoot = document.createElement("div");
@@ -714,10 +714,11 @@ rightFoot.addEventListener("click", function (){
 let brain = document.querySelector(".body-layers .brain-original");
 brain.addEventListener("click", function (){
 	console.log("brain-original clicked")
-	brain.style.backgroundImage = "url(../img/Organs/Active/ActiveBrain.png)";
+	brain.style.backgroundImage = "url(../../dist/img/Organs/Active/ActiveBrain.png)";
 
-	TweenMax.to(brain, 2, {backgroundImage:'url(../img/Organs/Ghosted/Ghosted_Brain.png)'});
+	TweenMax.to(brain, 2, {backgroundImage:'url(../../dist/img/Organs/Ghosted/Ghosted_Brain.png)'});
 	createInfoWindow();
+
 
 	let activeBrain = document.createElement("div");
 	activeBrain.classList.add("brain-active");
@@ -738,8 +739,8 @@ brain.addEventListener("click", function (){
 
 let leftLung = document.querySelector(".body-layers .left-lung-original");
 leftLung.addEventListener("click", function (){
-	leftLung.style.backgroundImage = "url(../img/Organs/Ghosted/GhostedL_Lung.png)";
-	rightLung.style.backgroundImage = "url(../img/Organs/Ghosted/GhostedR_Lung.png)";
+	leftLung.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/GhostedL_Lung.png)";
+	rightLung.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/GhostedR_Lung.png)";
 
 	createInfoWindow();
 
@@ -759,8 +760,8 @@ leftLung.addEventListener("click", function (){
 
 let rightLung = document.querySelector(".body-layers .right-lung-original");
 rightLung.addEventListener("click", function (){
-	rightLung.style.backgroundImage = "url(../img/Organs/Ghosted/GhostedR_Lung.png)";
-	leftLung.style.backgroundImage = "url(../img/Organs/Ghosted/GhostedL_Lung.png)";
+	rightLung.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/GhostedR_Lung.png)";
+	leftLung.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/GhostedL_Lung.png)";
 	createInfoWindow();
 
 	let activeRightLung = document.createElement("div");
@@ -779,7 +780,7 @@ rightLung.addEventListener("click", function (){
 
 let heart = document.querySelector(".body-layers .heart-original");
 heart.addEventListener("click", function (){
-	heart.style.backgroundImage = "url(../img/Organs/Ghosted/Ghosted_Heart.png)";
+	heart.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Heart.png)";
 	createInfoWindow();
 
 	let activeHeart = document.createElement("div");
@@ -799,7 +800,7 @@ heart.addEventListener("click", function (){
 let liver = document.querySelector(".body-layers .liver-original");
 let liverDiv = document.querySelector(".liver-div");
 liverDiv.addEventListener("click", function (){
-	liver.style.backgroundImage = "url(../img/Organs/Ghosted/Ghosted_Liver.png)";
+	liver.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Liver.png)";
 	createInfoWindow();
 
 	let activeLiver = document.createElement("div");
@@ -819,7 +820,7 @@ liverDiv.addEventListener("click", function (){
 let kidney = document.querySelector(".body-layers .kidney-original");
 let kidneyDiv = document.querySelector(".kidney-div");
 kidneyDiv.addEventListener("click", function (){
-	kidney.style.backgroundImage = "url(../img/Organs/Ghosted/Ghosted_Kidney.png)";
+	kidney.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Kidney.png)";
 	createInfoWindow();
 
 	let activeKidney = document.createElement("div");
@@ -838,7 +839,7 @@ kidneyDiv.addEventListener("click", function (){
 
 let stomach = document.querySelector(".body-layers .stomach-original");
 stomach.addEventListener("click", function (){
-	stomach.style.backgroundImage = "url(../img/Organs/Ghosted/Ghosted_Stomach.png)";
+	stomach.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Stomach.png)";
 	createInfoWindow();
 
 	let activeStomach = document.createElement("div");
@@ -858,7 +859,7 @@ stomach.addEventListener("click", function (){
 let pancreas = document.querySelector(".body-layers .pancreas-original");
 let pancreasDiv = document.querySelector(".pancreas-div");
 pancreasDiv.addEventListener("click", function (){
-	pancreas.style.backgroundImage = "url(../img/Organs/Ghosted/Ghosted_Pancreas.png)";
+	pancreas.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Pancreas.png)";
 	createInfoWindow();
 
 	let activePancreas = document.createElement("div");
@@ -877,7 +878,7 @@ pancreasDiv.addEventListener("click", function (){
 
 let largeIntestine = document.querySelector(".body-layers .large-intestine-original");
 largeIntestine.addEventListener("click", function (){
-	largeIntestine.style.backgroundImage = "url(../img/Organs/Ghosted/Ghosted_LargeIntestine.png)";
+	largeIntestine.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_LargeIntestine.png)";
 	createInfoWindow();
 
 	let activeLargeIntestine = document.createElement("div");
@@ -898,7 +899,7 @@ largeIntestine.addEventListener("click", function (){
 let smallIntestine = document.querySelector(".body-layers .small-intestine-original");
 let smallIntestineDiv = document.querySelector(".small-intestine-div");
 smallIntestineDiv.addEventListener("click", function (){
-	smallIntestine.style.backgroundImage = "url(../img/Organs/Ghosted/Ghosted_SmallIntestine.png)";
+	smallIntestine.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_SmallIntestine.png)";
 	createInfoWindow();
 
 	let activeSmallIntestine = document.createElement("div");
@@ -917,8 +918,8 @@ smallIntestineDiv.addEventListener("click", function (){
 
 let leftChest = document.querySelector(".body-layers .left-chest-original");
 leftChest.addEventListener("click", function (){
-	leftChest.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedL_Chestmuscle.png)";
-	rightChest.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedR_Chestmuscle.png)";
+	leftChest.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Chestmuscle.png)";
+	rightChest.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Chestmuscle.png)";
 	createInfoWindow();
 
 	let activeLeftChest = document.createElement("div");
@@ -937,8 +938,8 @@ leftChest.addEventListener("click", function (){
 
 let rightChest = document.querySelector(".body-layers .right-chest-original");
 rightChest.addEventListener("click", function (){
-	rightChest.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedR_Chestmuscle.png)";
-	leftChest.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedL_Chestmuscle.png)";
+	rightChest.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Chestmuscle.png)";
+	leftChest.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Chestmuscle.png)";
 	createInfoWindow();
 
 	let activeRightChest = document.createElement("div");
@@ -957,8 +958,8 @@ rightChest.addEventListener("click", function (){
 
 let leftDeltoid = document.querySelector(".body-layers .left-deltoid-original");
 leftDeltoid.addEventListener("click", function (){
-	leftDeltoid.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedL_Deltoid.png)";
-	rightDeltoid.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedR_Deltoid.png)";
+	leftDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Deltoid.png)";
+	rightDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Deltoid.png)";
 	createInfoWindow();
 
 	let activeLeftDeltoid = document.createElement("div");
@@ -977,8 +978,8 @@ leftDeltoid.addEventListener("click", function (){
 
 let rightDeltoid = document.querySelector(".body-layers .right-deltoid-original");
 rightDeltoid.addEventListener("click", function (){
-	rightDeltoid.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedR_Deltoid.png)";
-	leftDeltoid.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedL_Deltoid.png)";
+	rightDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Deltoid.png)";
+	leftDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Deltoid.png)";
 	createInfoWindow();
 
 	let activeRightDeltoid = document.createElement("div");
@@ -997,8 +998,8 @@ rightDeltoid.addEventListener("click", function (){
 
 let leftBiceps = document.querySelector(".body-layers .left-biceps-original");
 leftBiceps.addEventListener("click", function (){
-	leftBiceps.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedL_Biceps.png)";
-	rightBiceps.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedR_Biceps.png)";
+	leftBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Biceps.png)";
+	rightBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Biceps.png)";
 	createInfoWindow();
 
 	let activeLeftBiceps = document.createElement("div");
@@ -1017,8 +1018,8 @@ leftBiceps.addEventListener("click", function (){
 
 let rightBiceps = document.querySelector(".body-layers .right-biceps-original");
 rightBiceps.addEventListener("click", function (){
-	rightBiceps.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedR_Biceps.png)";
-			leftBiceps.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedL_Biceps.png)";
+	rightBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Biceps.png)";
+			leftBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Biceps.png)";
 	createInfoWindow();
 
 	let activeRightBiceps = document.createElement("div");
@@ -1037,7 +1038,7 @@ rightBiceps.addEventListener("click", function (){
 
 let abdomin = document.querySelector(".body-layers .abdomin-original");
 abdomin.addEventListener("click", function (){
-	abdomin.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedAbdomin.png)";
+	abdomin.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedAbdomin.png)";
 	createInfoWindow();
 
 	let activeAbdomin = document.createElement("div");
@@ -1056,8 +1057,8 @@ abdomin.addEventListener("click", function (){
 
 let leftQuadriceps = document.querySelector(".body-layers .left-quadriceps-original");
 leftQuadriceps.addEventListener("click", function (){
-	leftQuadriceps.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedL_Quadriceps.png)";
-	rightQuadriceps.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedR_Quadriceps.png)";
+	leftQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Quadriceps.png)";
+	rightQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Quadriceps.png)";
 	createInfoWindow();
 
 	let activeLeftQuadriceps = document.createElement("div");
@@ -1076,8 +1077,8 @@ leftQuadriceps.addEventListener("click", function (){
 
 let rightQuadriceps = document.querySelector(".body-layers .right-quadriceps-original");
 rightQuadriceps.addEventListener("click", function (){
-	rightQuadriceps.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedR_Quadriceps.png)";
-	leftQuadriceps.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedL_Quadriceps.png)";
+	rightQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Quadriceps.png)";
+	leftQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Quadriceps.png)";
 	createInfoWindow();
 
 	let activeRightQuadriceps = document.createElement("div");
@@ -1096,8 +1097,8 @@ rightQuadriceps.addEventListener("click", function (){
 
 let leftCalf = document.querySelector(".body-layers .left-calf-original");
 leftCalf.addEventListener("click", function (){
-	leftCalf.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedL_Calfmuscle.png)";
-	rightCalf.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedR_Calfmuscle.png)";
+	leftCalf.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Calfmuscle.png)";
+	rightCalf.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Calfmuscle.png)";
 	createInfoWindow();
 
 	let activeLeftCalf = document.createElement("div");
@@ -1116,8 +1117,8 @@ leftCalf.addEventListener("click", function (){
 
 let rightCalf = document.querySelector(".body-layers .right-calf-original");
 rightCalf.addEventListener("click", function (){
-	rightCalf.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedR_Calfmuscle.png)";
-	leftCalf.style.backgroundImage = "url(../img/Muscles/Ghosted/GhostedL_Calfmuscle.png)";
+	rightCalf.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Calfmuscle.png)";
+	leftCalf.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Calfmuscle.png)";
 	createInfoWindow();
 
 	let activeRightCalf = document.createElement("div");
@@ -1158,49 +1159,49 @@ function closeInfoWindow () {
 	speechBubbleTop.innerHTML = '';
 	speechBubbleTop.style.display = "none";
 	speechBubbleTip.style.display = "none";
-	skull.style.backgroundImage = "url(../img/Skeleton/Original/Skull.png)";
-	spine.style.backgroundImage = "url(../img/Skeleton/Original/Spine.png)";
-	leftCollarbone.style.backgroundImage = "url(../img/Skeleton/Original/L_Collarbone.png)";
-	rightCollarbone.style.backgroundImage = "url(../img/Skeleton/Original/R_Collarbone.png)";
-	leftHumerus.style.backgroundImage = "url(../img/Skeleton/Original/L_Humerus.png)";
-	rightHumerus.style.backgroundImage = "url(../img/Skeleton/Original/R_Humerus.png)";
-	leftForearm.style.backgroundImage = "url(../img/Skeleton/Original/L_Forearm.png)";
-	rightForearm.style.backgroundImage = "url(../img/Skeleton/Original/R_Forearm.png)";
-	leftWrist.style.backgroundImage = "url(../img/Skeleton/Original/L_Wristbone.png)";
-	rightWrist.style.backgroundImage = "url(../img/Skeleton/Original/R_Wristbone.png)";
-	leftFingers.style.backgroundImage = "url(../img/Skeleton/Original/L_Fingerbones.png)";
-	rightFingers.style.backgroundImage = "url(../img/Skeleton/Original/R_Fingerbones.png)";
-	ribcage.style.backgroundImage = "url(../img/Skeleton/Original/Ribcage.png)";
-	hipbone.style.backgroundImage = "url(../img/Skeleton/Original/Hipbone.png)";
-	leftFemur.style.backgroundImage = "url(../img/Skeleton/Original/L_Femur.png)";
-	rightFemur.style.backgroundImage = "url(../img/Skeleton/Original/R_Femur.png)";
-	leftKnee.style.backgroundImage = "url(../img/Skeleton/Original/L_Kneecap.png)";
-	rightKnee.style.backgroundImage = "url(../img/Skeleton/Original/R_Kneecap.png)";
-	leftTibia.style.backgroundImage = "url(../img/Skeleton/Original/L_Tibia.png)";
-	rightTibia.style.backgroundImage = "url(../img/Skeleton/Original/R_Tibia.png)";
-	leftAnkle.style.backgroundImage = "url(../img/Skeleton/Original/L_Anklebone.png)";
-	rightAnkle.style.backgroundImage = "url(../img/Skeleton/Original/R_Anklebone.png)";
-	leftFoot.style.backgroundImage = "url(../img/Skeleton/Original/L_Footbone.png)";
-	rightFoot.style.backgroundImage = "url(../img/Skeleton/Original/R_Footbone.png)";
-	brain.style.backgroundImage = "url(../img/Organs/Original/Brain.png)";
-	leftLung.style.backgroundImage = "url(../img/Organs/Original/Lung_L.png)";
-	rightLung.style.backgroundImage = "url(../img/Organs/Original/Lung_R.png)";
-	heart.style.backgroundImage = "url(../img/Organs/Original/Heart.png)";
-	liver.style.backgroundImage = "url(../img/Organs/Original/Liver.png)";
-	kidney.style.backgroundImage = "url(../img/Organs/Original/Kidney.png)";
-	stomach.style.backgroundImage = "url(../img/Organs/Original/Stomach.png)";
-	pancreas.style.backgroundImage = "url(../img/Organs/Original/Pancreas.png)";
-	largeIntestine.style.backgroundImage = "url(../img/Organs/Original/LargeIntestine.png)";
-	smallIntestine.style.backgroundImage = "url(../img/Organs/Original/SmallIntestine.png)";
-	leftChest.style.backgroundImage = "url(../img/Muscles/Original/L_Chestmuscle.png)";
-	rightChest.style.backgroundImage = "url(../img/Muscles/Original/R_Chestmuscle.png)";
-	leftDeltoid.style.backgroundImage = "url(../img/Muscles/Original/L_Deltoid.png)";
-	rightDeltoid.style.backgroundImage = "url(../img/Muscles/Original/R_Deltoid.png)";
-	leftBiceps.style.backgroundImage = "url(../img/Muscles/Original/L_Biceps.png)";
-	rightBiceps.style.backgroundImage = "url(../img/Muscles/Original/R_Biceps.png)";
-	abdomin.style.backgroundImage = "url(../img/Muscles/Original/Abdomin.png)";
-	leftQuadriceps.style.backgroundImage = "url(../img/Muscles/Original/L_Quadriceps.png)";
-	rightQuadriceps.style.backgroundImage = "url(../img/Muscles/Original/R_Quadriceps.png)";
-	leftCalf.style.backgroundImage = "url(../img/Muscles/Original/L_Calfmuscle.png)";
-	rightCalf.style.backgroundImage = "url(../img/Muscles/Original/R_Calfmuscle.png)";
+	skull.style.backgroundImage = "url(../../dist/img/Skeleton/Original/Skull.png)";
+	spine.style.backgroundImage = "url(../../dist/img/Skeleton/Original/Spine.png)";
+	leftCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Collarbone.png)";
+	rightCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Collarbone.png)";
+	leftHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Humerus.png)";
+	rightHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Humerus.png)";
+	leftForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Forearm.png)";
+	rightForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Forearm.png)";
+	leftWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Wristbone.png)";
+	rightWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Wristbone.png)";
+	leftFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Fingerbones.png)";
+	rightFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Fingerbones.png)";
+	ribcage.style.backgroundImage = "url(../../dist/img/Skeleton/Original/Ribcage.png)";
+	hipbone.style.backgroundImage = "url(../../dist/img/Skeleton/Original/Hipbone.png)";
+	leftFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Femur.png)";
+	rightFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Femur.png)";
+	leftKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Kneecap.png)";
+	rightKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Kneecap.png)";
+	leftTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Tibia.png)";
+	rightTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Tibia.png)";
+	leftAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Anklebone.png)";
+	rightAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Anklebone.png)";
+	leftFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Footbone.png)";
+	rightFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Footbone.png)";
+	brain.style.backgroundImage = "url(../../dist/img/Organs/Original/Brain.png)";
+	leftLung.style.backgroundImage = "url(../../dist/img/Organs/Original/Lung_L.png)";
+	rightLung.style.backgroundImage = "url(../../dist/img/Organs/Original/Lung_R.png)";
+	heart.style.backgroundImage = "url(../../dist/img/Organs/Original/Heart.png)";
+	liver.style.backgroundImage = "url(../../dist/img/Organs/Original/Liver.png)";
+	kidney.style.backgroundImage = "url(../../dist/img/Organs/Original/Kidney.png)";
+	stomach.style.backgroundImage = "url(../../dist/img/Organs/Original/Stomach.png)";
+	pancreas.style.backgroundImage = "url(../../dist/img/Organs/Original/Pancreas.png)";
+	largeIntestine.style.backgroundImage = "url(../../dist/img/Organs/Original/LargeIntestine.png)";
+	smallIntestine.style.backgroundImage = "url(../../dist/img/Organs/Original/SmallIntestine.png)";
+	leftChest.style.backgroundImage = "url(../../dist/img/Muscles/Original/L_Chestmuscle.png)";
+	rightChest.style.backgroundImage = "url(../../dist/img/Muscles/Original/R_Chestmuscle.png)";
+	leftDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Original/L_Deltoid.png)";
+	rightDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Original/R_Deltoid.png)";
+	leftBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Original/L_Biceps.png)";
+	rightBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Original/R_Biceps.png)";
+	abdomin.style.backgroundImage = "url(../../dist/img/Muscles/Original/Abdomin.png)";
+	leftQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Original/L_Quadriceps.png)";
+	rightQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Original/R_Quadriceps.png)";
+	leftCalf.style.backgroundImage = "url(../../dist/img/Muscles/Original/L_Calfmuscle.png)";
+	rightCalf.style.backgroundImage = "url(../../dist/img/Muscles/Original/R_Calfmuscle.png)";
 }
