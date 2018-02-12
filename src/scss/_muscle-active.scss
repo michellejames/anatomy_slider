@@ -1,14 +1,66 @@
+.left-chest-active-text,
+.left-deltoid-active-text,
+.left-biceps-active-text,
+.abdomin-active-text,
+.left-quadriceps-active-text,
+.left-calf-active-text {
+	font-size: 1.5rem;
+    position: absolute;
+    width: 43%;
+    height: 0;
+    padding-bottom: 25%;
+    top: 30%;
+    left: 50%;
+    z-index: 151;
+    font-family: 'Lato', sans-serif;
+}
+
+.left-chest-active-text {
+	top: 21%;
+}
+
+.right-chest-active-text,
+.right-deltoid-active-text,
+.right-biceps-active-text,
+.right-quadriceps-active-text,
+.right-calf-active-text {
+	font-size: 1.5rem;
+	position: absolute;
+	width: 43%;
+	height: 0;
+	padding-bottom: 25%;
+	top: 37%;
+	left: 42%;
+	z-index: 151;
+	transform: rotateY(-180deg);
+    font-family: 'Lato', sans-serif;
+}
+
+.right-chest-active-text {
+	top: 21%;
+	left: 38%;
+}
+
+.right-quadriceps-active-text {
+	top: 29%;
+}
+
+.right-deltoid-active-text {
+	top: 32%;
+    left: 38%;
+}
+
 .left-chest-active {
 	position: absolute;
 	background-image: url(../../dist/img/Muscles/Active/ActiveL_Chestmuscle.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	width: 10.92592593%;
+	width: 40%;
     height: 0;
-    padding-bottom: 6.197916667%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
 }
 
@@ -18,12 +70,14 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	width: 10.92592593%;
+	width: 40%;
     height: 0;
-    padding-bottom: 6.197916667%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
+    transform: rotateY(-180deg);
+
 }
 
 .left-deltoid-active {
@@ -32,11 +86,11 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	width: 10.92592593%;
+	width: 40%;
     height: 0;
-    padding-bottom: 6.197916667%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;	
 }
 
@@ -46,12 +100,14 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	width: 5.37037037%;
-	height: 0;
-	padding-bottom: 4.114583333%;
-    top: 50%;
-    left: 5%;
+	width: 40%;
+    height: 0;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
+    transform: rotateY(-180deg);
+
 }
 
 .left-biceps-active {
@@ -60,11 +116,11 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	width: 4.537037037%;
-	height: 0;
-	padding-bottom: 5.833333333%;
-    top: 50%;
-    left: 5%;
+	width: 40%;
+    height: 0;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
 }
 
@@ -74,12 +130,13 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	width: 4.537037037%;
-	height: 0;
-	padding-bottom: 5.833333333%;
-    top: 50%;
-    left: 5%;
+	width: 40%;
+    height: 0;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .abdomin-active {
@@ -88,11 +145,11 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	width: 18.05555556%;
-	height: 0;
-	padding-bottom: 15.41666667%;
-    top: 50%;
-    left: 5%;
+	width: 40%;
+    height: 0;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
 }
 
@@ -102,11 +159,11 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	width: 8.888888889%;
-	height: 0;
-	padding-bottom: 15.41666667%;
-    top: 50%;
-    left: 5%;
+	width: 40%;
+    height: 0;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
 }
 
@@ -116,12 +173,13 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	width: 8.888888889%;
-	height: 0;
-	padding-bottom: 15.41666667%;
-    top: 50%;
-    left: 5%;
+	width: 40%;
+    height: 0;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .left-calf-active {
@@ -130,11 +188,11 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	width: 5.648148148%;
-	height: 0;
-	padding-bottom: 9.375%;
-    top: 50%;
-    left: 5%;
+	width: 40%;
+    height: 0;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
 }
 
@@ -144,10 +202,11 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	width: 5.648148148%;
-	height: 0;
-	padding-bottom: 9.375%;
-    top: 50%;
-    left: 5%;
+	width: 40%;
+    height: 0;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
+    transform: rotateY(-180deg);
 }

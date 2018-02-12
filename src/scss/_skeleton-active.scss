@@ -1,14 +1,67 @@
+.skull-active-text,
+.left-collarbone-active-text,
+.left-humerus-active-text,
+.right-forearm-active-text,
+.right-wrist-active-text,
+.right-fingers-active-text,
+.ribcage-active-text,
+.left-femur-active-text,
+.left-knee-active-text,
+.left-tibia-active-text,
+.left-ankle-active-text,
+.right-foot-active-text {
+    font-size: 1.5rem;
+    position: absolute;
+    width: 43%;
+    height: 0;
+    padding-bottom: 25%;
+    top: 30%;
+    left: 50%;
+    z-index: 151;
+    font-family: 'Lato', sans-serif;
+}
+
+.spine-active-text,
+.right-collarbone-active-text,
+.right-humerus-active-text,
+.left-forearm-active-text,
+.left-wrist-active-text,
+.left-fingers-active-text,
+.hipbone-active-text,
+.right-femur-active-text,
+.right-knee-active-text,
+.right-tibia-active-text,
+.right-ankle-active-text,
+.left-foot-active-text {
+    font-size: 1.5rem;
+    position: absolute;
+    width: 43%;
+    height: 0;
+    padding-bottom: 25%;
+    top: 30%;
+    left: 42%;
+    z-index: 151;
+    transform: rotateY(-180deg);
+    font-family: 'Lato', sans-serif;
+}
+
+.left-collarbone-active-text,
+.right-collarbone-active-text {
+    top: 21%;
+}
+
+
 .skull-active {
     position: absolute; 
 	background-image: url(../../dist/img/Skeleton/Active/ActiveSkull.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	width: 23.7037037%;
+	width: 40%;
     height: 0;
-    padding-bottom: 14.94791667%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
 }
 
@@ -18,12 +71,13 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	width: 23.7037037%;
+	width: 40%;
     height: 0;
-    padding-bottom: 14.94791667%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .left-collarbone-active {
@@ -32,11 +86,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 12.5%;
+    width: 40%;
     height: 0;
-    padding-bottom: 1.40625%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
 }
 
 .right-collarbone-active {
@@ -45,11 +100,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 12.5%;
+    width: 40%;
     height: 0;
-    padding-bottom: 1.40625%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .left-humerus-active {
@@ -58,11 +115,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 8.425925926%;
+    width: 40%;
     height: 0;
-    padding-bottom: 11.04166667%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
 }
 
 .right-humerus-active {
@@ -71,11 +129,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 8.425925926%;
+    width: 40%;
     height: 0;
-    padding-bottom: 11.04166667%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .left-forearm-active {
@@ -84,11 +144,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 6.111111111%;
+    width: 40%;
     height: 0;
-    padding-bottom: 7.708333333%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .right-forearm-active {
@@ -97,11 +159,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 6.111111111%;
+    width: 40%;
     height: 0;
-    padding-bottom: 7.708333333%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
 }
 
 .left-wrist-active {
@@ -110,11 +173,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 6.018518519%;
+    width: 40%;
     height: 0;
-    padding-bottom: 1.666666667%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .right-wrist-active {
@@ -123,11 +188,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 6.018518519%;
+    width: 40%;
     height: 0;
-    padding-bottom: 1.666666667%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
 }
 
 .left-fingers-active {
@@ -136,11 +202,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 11.11111111%;
+    width: 40%;
     height: 0;
-    padding-bottom: 6.458333333%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .right-fingers-active {
@@ -149,11 +217,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 11.11111111%;
+    width: 40%;
     height: 0;
-    padding-bottom: 6.458333333%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
 }
 
 .ribcage-active {
@@ -162,11 +231,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 26.85185185%;
+    width: 40%;
     height: 0;
-    padding-bottom: 12.13541667%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
 }
 
 .hipbone-active {
@@ -175,11 +245,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 25.64814815%;
+    width: 40%;
     height: 0;
-    padding-bottom: 8.125%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .left-femur-active {
@@ -188,11 +260,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 7.777777778%;
+    width: 40%;
     height: 0;
-    padding-bottom: 15.3125%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
 }
 
 .right-femur-active {
@@ -201,11 +274,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 7.777777778%;
+    width: 40%;
     height: 0;
-    padding-bottom: 15.3125%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .left-knee-active {
@@ -214,11 +289,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 3.425925926%;
+    width: 40%;
     height: 0;
-    padding-bottom: 2.135416667%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
 }
 
 .right-knee-active {
@@ -227,11 +303,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 3.425925926%;
+    width: 40%;
     height: 0;
-    padding-bottom: 2.135416667%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .left-tibia-active {
@@ -240,11 +318,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 5.925925926%;
+    width: 40%;
     height: 0;
-    padding-bottom: 13.90625%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
 }
 
 .right-tibia-active {
@@ -253,11 +332,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 5.925925926%;
+    width: 40%;
     height: 0;
-    padding-bottom: 13.90625%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .left-ankle-active {
@@ -266,11 +347,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 6.759259259%;
+    width: 40%;
     height: 0;
-    padding-bottom: 3.697916667%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
 }
 
 .right-ankle-active {
@@ -279,11 +361,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 6.759259259%;
+    width: 40%;
     height: 0;
-    padding-bottom: 3.697916667%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .left-foot-active {
@@ -292,11 +376,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 11.85185185%;
+    width: 40%;
     height: 0;
-    padding-bottom: 3.020833333%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .right-foot-active {
@@ -305,9 +391,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 11.85185185%;
+    width: 40%;
     height: 0;
-    padding-bottom: 3.020833333%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
+    z-index: 151;
 }

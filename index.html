@@ -9,79 +9,174 @@
 
 		<!-- <link rel="stylesheet" href="dist/css/reset.css">
 		<link rel="stylesheet" href="dist/css/main.css"> -->
-
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 		<link rel="stylesheet" href="dist/css/app.css">
 	</head>
 	<body>
 
-		<div class="body-layers">
-			<div class="skeleton-layer">
-				<div class="skeleton-background"></div>
-				<div class="skeleton-title"></div>
-				<div class="skeleton-body"></div>
-				<div class="skull-original"></div>
-				<div class="spine-original"></div>
-				<div class="left-collarbone-original"></div>
-				<div class="right-collarbone-original"></div>
-				<div class="left-humerus-original"></div>
-				<div class="right-humerus-original"></div>
-				<div class="left-forearm-original"></div>
-				<div class="right-forearm-original"></div>
-				<div class="left-wrist-original"></div>
-				<div class="right-wrist-original"></div>
-				<div class="left-fingers-original"></div>
-				<div class="right-fingers-original"></div>
-				<div class="ribcage-original"></div>
-				<div class="hipbone-original"></div>
-				<div class="left-femur-original"></div>
-				<div class="right-femur-original"></div>
-				<div class="left-knee-original"></div>
-				<div class="left-knee-div"></div>
-				<div class="right-knee-original"></div>
-				<div class="right-knee-div"></div>
-				<div class="left-tibia-original"></div>
-				<div class="right-tibia-original"></div>
-				<div class="left-ankle-original"></div>
-				<div class="right-ankle-original"></div>
-				<div class="left-foot-original"></div>
-				<div class="right-foot-original"></div>
+		<div class="start-screen horizontal" draggable="false">
+			<div class="start-background"></div>
+			<div class="start-title"></div>
+			<div class="start-body-sizer">
+				<svg class="scroller__thumb thumb-horizontal" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+					<polygon points="0 50 37 68 37 32 0 50" style="fill:#D1F4E0"/>
+					<polygon points="100 50 64 32 64 68 100 50" style="fill:#D1F4E0"/>
+				</svg>
+			</div>
+			<div class="start-body">
+				<div class="start-button"></div>
+				<div class="start-layers">				
+					<div class="skeleton-body">
+						<div class="skull-original"></div>
+						<div class="spine-original"></div>
+						<div class="left-collarbone-original"></div>
+						<div class="right-collarbone-original"></div>
+						<div class="left-humerus-original"></div>
+						<div class="right-humerus-original"></div>
+						<div class="left-forearm-original"></div>
+						<div class="right-forearm-original"></div>
+						<div class="left-wrist-original"></div>
+						<div class="right-wrist-original"></div>
+						<div class="left-fingers-original"></div>
+						<div class="right-fingers-original"></div>
+						<div class="ribcage-original"></div>
+						<div class="hipbone-original"></div>
+						<div class="left-femur-original"></div>
+						<div class="right-femur-original"></div>
+						<div class="left-knee-original"></div>
+						<div class="left-knee-div"></div>
+						<div class="right-knee-original"></div>
+						<div class="right-knee-div"></div>
+						<div class="left-tibia-original"></div>
+						<div class="right-tibia-original"></div>
+						<div class="left-ankle-original"></div>
+						<div class="right-ankle-original"></div>
+						<div class="left-foot-original"></div>
+						<div class="right-foot-original"></div>
+					</div>
+					<div class="organ-body">
+						<div class="brain-original"></div>
+						<div class="left-lung-original"></div>
+						<div class="right-lung-original"></div>
+						<div class="heart-original"></div>
+						<div class="liver-original"></div>
+						<div class="liver-div"></div>
+						<div class="kidney-original"></div>
+						<div class="kidney-div"></div>
+						<div class="stomach-original"></div>
+						<div class="pancreas-original"></div>
+						<div class="pancreas-div"></div>
+						<div class="large-intestine-original"></div>
+						<div class="small-intestine-original"></div>
+						<div class="small-intestine-div"></div>
+					</div>
+					<div class="muscle-body">
+						<div class="left-chest-original"></div>
+						<div class="right-chest-original"></div>
+						<div class="left-deltoid-original"></div>
+						<div class="right-deltoid-original"></div>
+						<div class="left-biceps-original"></div>
+						<div class="right-biceps-original"></div>
+						<div class="abdomin-original"></div>
+						<div class="left-quadriceps-original"></div>
+						<div class="right-quadriceps-original"></div>
+						<div class="left-calf-original"></div>
+						<div class="right-calf-original"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="body-layers wrapper">
+
+			<div class="skeleton-layer top">
+				<div class="inner-body-layer">
+					<div class="skeleton-background"></div>
+					<div class="skeleton-title"></div>
+					<div class="skeleton-body">
+						<div class="skull-original"></div>
+						<div class="spine-original"></div>
+						<div class="left-collarbone-original"></div>
+						<div class="right-collarbone-original"></div>
+						<div class="left-humerus-original"></div>
+						<div class="right-humerus-original"></div>
+						<div class="left-forearm-original"></div>
+						<div class="right-forearm-original"></div>
+						<div class="left-wrist-original"></div>
+						<div class="right-wrist-original"></div>
+						<div class="left-fingers-original"></div>
+						<div class="right-fingers-original"></div>
+						<div class="ribcage-original"></div>
+						<div class="hipbone-original"></div>
+						<div class="left-femur-original"></div>
+						<div class="right-femur-original"></div>
+						<div class="left-knee-original"></div>
+						<div class="left-knee-div"></div>
+						<div class="right-knee-original"></div>
+						<div class="right-knee-div"></div>
+						<div class="left-tibia-original"></div>
+						<div class="right-tibia-original"></div>
+						<div class="left-ankle-original"></div>
+						<div class="right-ankle-original"></div>
+						<div class="left-foot-original"></div>
+						<div class="right-foot-original"></div>
+					</div>
+				</div>
 			</div>
 
-			<div class="organ-layer">
-				<div class="organ-background"></div>
-				<div class="organ-title"></div>
-				<div class="organ-body"></div>
-				<div class="brain-original"></div>
-				<div class="left-lung-original"></div>
-				<div class="right-lung-original"></div>
-				<div class="heart-original"></div>
-				<div class="liver-original"></div>
-				<div class="liver-div"></div>
-				<div class="kidney-original"></div>
-				<div class="kidney-div"></div>
-				<div class="stomach-original"></div>
-				<div class="pancreas-original"></div>
-				<div class="pancreas-div"></div>
-				<div class="large-intestine-original"></div>
-				<div class="small-intestine-original"></div>
-				<div class="small-intestine-div"></div>
+			<div class="organ-layer middle">
+				<div class="inner-body-layer">
+					<div class="organ-background"></div>
+					<div class="organ-title"></div>
+					<div class="organ-body">
+						<div class="brain-original"></div>
+						<div class="left-lung-original"></div>
+						<div class="right-lung-original"></div>
+						<div class="heart-original"></div>
+						<div class="liver-original"></div>
+						<div class="liver-div"></div>
+						<div class="kidney-original"></div>
+						<div class="kidney-div"></div>
+						<div class="stomach-original"></div>
+						<div class="pancreas-original"></div>
+						<div class="pancreas-div"></div>
+						<div class="large-intestine-original"></div>
+						<div class="small-intestine-original"></div>
+						<div class="small-intestine-div"></div>
+					</div>
+				</div>
 			</div>
 
-			<div class="muscle-layer">
+			<div class="scroller scroller-middle">
+			    <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+			    	<polygon points="0 50 37 68 37 32 0 50" style="fill:#D1F4E0"/>
+			    	<polygon points="100 50 64 32 64 68 100 50" style="fill:#D1F4E0"/>
+			    </svg>
+			</div>
+
+			<div class="muscle-layer bottom">
 				<div class="muscle-background"></div>
 				<div class="muscle-title"></div>
-				<div class="muscle-body"></div>
-				<div class="left-chest-original"></div>
-				<div class="right-chest-original"></div>
-				<div class="left-deltoid-original"></div>
-				<div class="right-deltoid-original"></div>
-				<div class="left-biceps-original"></div>
-				<div class="right-biceps-original"></div>
-				<div class="abdomin-original"></div>
-				<div class="left-quadriceps-original"></div>
-				<div class="right-quadriceps-original"></div>
-				<div class="left-calf-original"></div>
-				<div class="right-calf-original"></div>
+				<div class="muscle-body">
+					<div class="left-chest-original"></div>
+					<div class="right-chest-original"></div>
+					<div class="left-deltoid-original"></div>
+					<div class="right-deltoid-original"></div>
+					<div class="left-biceps-original"></div>
+					<div class="right-biceps-original"></div>
+					<div class="abdomin-original"></div>
+					<div class="left-quadriceps-original"></div>
+					<div class="right-quadriceps-original"></div>
+					<div class="left-calf-original"></div>
+					<div class="right-calf-original"></div>
+				</div>
+			</div>
+
+			<div class="scroller scroller-top">
+			    <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+			    	<polygon points="0 50 37 68 37 32 0 50" style="fill:#D1F4E0"/>
+			    	<polygon points="100 50 64 32 64 68 100 50" style="fill:#D1F4E0"/>
+			    </svg>
 			</div>
 		</div>
 
@@ -91,6 +186,14 @@
 			<div class="speech-bubble-top"></div>
 			<div class="speech-bubble-tip"></div>
 		</div>
+
+		
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="vendor/gsap/minified/TweenMax.min.js"></script>
+		<script src="vendor/gsap/minified/plugins/DrawSVGPlugin.min.js"></script>
+		<script src="vendor/gsap/minified/utils/Draggable.min.js"></script>
 
 		<!-- <script src="dist/js/main.js"></script> -->
 		<script src="src/js/app.js"></script>

@@ -1,231 +1,230 @@
 .organ-layer {
 	width: 100%;
-	height: 0;
-	padding-bottom: 100%;
-	position: relative;
-	// position: absolute;
-	// top: 0;
-	// left: 0;
-	// z-index: 30;
-
+	height: 100%;
+	// position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 30;
 
 	.organ-background {
 		position: absolute;
-		background-image: url(../../dist/img/Organs/Organ_bg.png);
+		background-image: url(../img/Organs/Organ_bg.png);
 		background-repeat: no-repeat;
 		background-size: cover;
 		width: 100%;
-		height: 0;
-		padding-bottom: 100%;
+		height: 100%;
 	}
 
 	.organ-title {
 		position: absolute; 
-		background-image: url(../../dist/img/Titles/OrganTitle/OrganTitle.svg);
+		background-image: url(../img/Titles/OrganTitle/OrganTitle.svg);
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: center;
 		width: 66.66666667%;
 		height: 0;
 		padding-bottom: 18.697917%;
-		top: 2.78125%;
+		top: 5.78125%;
 		left: 18.944444%;
 		z-index: 5;
 	}
 
 	.organ-body {
 		position: absolute; 
-		background-image: url(../../dist/img/Body_Shape/Body.png);
+		background-image: url(../img/Body_Shape/Body.png);
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: center;
-		width: 66.66666667%;
+		$width: 66.66666667%;
+		width: $width;
 	    height: 0;
-	    padding-bottom: 78.69791667%;
+	    padding-bottom: $width * (6310/3013);  //width and height of body background
 	    top: 20.78125%;
-	    left: 16.94444444%;
-	}
-
-	.brain-original {
-	    position: absolute; 
-		background-image: url(../../dist/img/Organs/Original/Brain.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
-		width: 15.55555556%;
-	    height: 0;
-	    padding-bottom: 5.520833333%;
-	    top: 22.08333333%;
-	    left: 42.68518519%;
-	}
-
-	.left-lung-original {
-	    position: absolute; 
-		background-image: url(../../dist/img/Organs/Original/Lung_L.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
-		width: 9.814814815%;
-	    height: 0;
-	    padding-bottom: 10.36458333%;
-	    top: 40.98958333%;
-	    // left: 39.07407407%; original
-	    //left: 41.574074%;	even to other lung
-	    left: 42.574074%; //closest to the heart
-	}
-
-	.right-lung-original {
-	    position: absolute; 
-		background-image: url(../../dist/img/Organs/Original/Lung_R.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
-		width: 9.814814815%;
-	    height: 0;
-	    padding-bottom: 10.36458333%;
-	    top: 40.98958333%;
-	    // left: 52.31481481%;
-	    left: 49.314815%;
-	}
-
-	.heart-original {
-	    position: absolute; 
-		background-image: url(../../dist/img/Organs/Original/Heart.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
-		width: 8.981481481%;
-	    height: 0;
-	    padding-bottom: 4.6875%;
-	    top: 45.46875%;
-	    left: 46.66666667%;
-	}
-
-	.liver-original {
-		position: absolute; 
-		background-image: url(../../dist/img/Organs/Original/Liver.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
-		width: 18.7037037%;
-	    height: 0;
-	    padding-bottom: 6.458333333%;
-	    top: 51.30208333%;
-	    left: 39.44444444%;
-	}
-
-	.liver-div {
-		position: absolute;
-		// width: 18.7037037%;
-		width: 13.703704%;
-	    height: 0;
-	    padding-bottom: 6.458333333%;
-	    top: 51.30208333%;
-	    left: 39.44444444%;
-	    z-index: 3;
-	}
-
-	.kidney-original {
-		position: absolute; 
-		background-image: url(../../dist/img/Organs/Original/Kidney.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
-		width: 3.611111111%;
-	    height: 0;
-	    padding-bottom: 3.333333333%;
-	    top: 54.01041667%;
-	    // left: 41.94444444%;
-	    left: 43.944444%;
-	}
-
-	.kidney-div {
-		position: absolute;
-		width: 3.611111111%;
-	    height: 0;
-	    padding-bottom: 3.333333333%;
-	    top: 54.01041667%;
-	    // left: 41.94444444%;
-	    left: 43.944444%;
-	    z-index: 3;
-	}
-
-	.stomach-original {
-		position: absolute; 
-		background-image: url(../../dist/img/Organs/Original/Stomach.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
-		width: 17.12962963%;
-	    height: 0;
-	    padding-bottom: 9.53125%;
-	    top: 51.45833333%;
-	    left: 44.90740741%;
-	    z-index: 2;
-	}
-
-	.pancreas-original {
-		position: absolute; 
-		background-image: url(../../dist/img/Organs/Original/Pancreas.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
-		width: 13.14814815%;
-	    height: 0;
-	    padding-bottom: 2.916666667%;
-	    top: 58.07291667%;
-	    left: 45.92592593%;
-	}
-
-	.pancreas-div {
-		position: absolute;
-		width: 13.14814815%;
-	    height: 0;
-	    padding-bottom: 2.916666667%;
-	    top: 58.07291667%;
-	    left: 45.92592593%;
-	    z-index: 4;
-	}
-
-	.large-intestine-original {
-		position: absolute; 
-		background-image: url(../../dist/img/Organs/Original/LargeIntestine.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
-		width: 25.18518519%;
-	    height: 0;
-	    padding-bottom: 8.90625%;
-	    top: 58.80208333%;
-	    left: 37.96296296%;
-	    z-index: 3;
-	}
-
-	.small-intestine-original {
-		position: absolute; 
-		background-image: url(../../dist/img/Organs/Original/SmallIntestine.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
-		width: 16.94444444%;
-	    height: 0;
-	    padding-bottom: 5%;
-	    top: 61.61458333%;
-	    left: 42.12962963%;
-	}
-
-	.small-intestine-div {
-		position: absolute;
-		// width: 16.94444444%;
-		width: 12.944444%;
-	    height: 0;
-	    padding-bottom: 5%;
-	    top: 61.61458333%;
-	    left: 42.12962963%;
-	    z-index: 4;
+	    left: 16.94444444%;	
 	}
 }
 
+.brain-original {
+    position: absolute; 
+	background-image: url(../img/Organs/Original/Brain.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: percentage(168/720);
+    height: 0;
+    padding-bottom: percentage(106/720);
+    top: 1.083333%;
+    left: 38.485185%;
+    z-index: 11;
+}
+
+.left-lung-original {
+    position: absolute; 
+	background-image: url(../img/Organs/Original/Lung_L.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: percentage(106/720);
+    height: 0;
+    padding-bottom: percentage(199/720);
+    top: 25.989583%;
+    left: 33.574074%;
+    z-index: 11;
+}
+
+.right-lung-original {
+    position: absolute; 
+	background-image: url(../img/Organs/Original/Lung_R.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: percentage(106/720);
+    height: 0;
+    padding-bottom: percentage(199/720);
+    top: 25.989583%;
+    left: 51.314815%;
+    z-index: 11;
+}
+
+.heart-original {
+    position: absolute; 
+	background-image: url(../img/Organs/Original/Heart.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: percentage(97/720);
+    height: 0;
+    padding-bottom: percentage(90/720);
+    top: 31.46875%;
+    left: 43.666667%;
+    z-index: 11;
+}
+
+.liver-original {
+	position: absolute; 
+	background-image: url(../img/Organs/Original/Liver.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: percentage(202/720);
+    height: 0;
+    padding-bottom: percentage(124/720);
+    top: 39.302083%;
+    left: 32.444444%;
+    z-index: 11;
+}
+
+.liver-div {
+	position: absolute;
+	width: percentage(202/720);
+    height: 0;
+    padding-bottom: percentage(124/720);
+    top: 39.302083%;
+    left: 32.444444%;
+    z-index: 13;
+}
+
+
+.kidney-original {
+	position: absolute; 
+	background-image: url(../img/Organs/Original/Kidney.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: percentage(39/720);
+    height: 0;
+    padding-bottom: percentage(64/720);
+    top: 43.510417%;
+    left: 36.944444%;
+    z-index: 12;
+}
+
+.kidney-div {
+	position: absolute;
+	width: percentage(39/720);
+    height: 0;
+    padding-bottom: percentage(64/720);
+    top: 43.510417%;
+    left: 36.944444%;
+    z-index: 13;
+}
+
+.stomach-original {
+	position: absolute; 
+	background-image: url(../img/Organs/Original/Stomach.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: percentage(185/720);
+    height: 0;
+    padding-bottom: percentage(183/720);
+    top: 39.958333%;
+    left: 41.907407%;
+    z-index: 12;
+}
+
+.pancreas-original {
+	position: absolute; 
+	background-image: url(../img/Organs/Original/Pancreas.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: percentage(142/720);
+    height: 0;
+    padding-bottom: percentage(56/720);
+    top: 48.972917%;
+    left: 43.725926%;
+    z-index: 11;
+}
+
+.pancreas-div {
+	position: absolute;
+	width: percentage(142/720);
+    height: 0;
+    padding-bottom: percentage(56/720);
+    top: 48.972917%;
+    left: 43.725926%;
+    z-index: 13;
+}
+
+.large-intestine-original {
+	position: absolute; 
+	background-image: url(../img/Organs/Original/LargeIntestine.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: percentage(272/720);
+    height: 0;
+    padding-bottom: percentage(171/720);
+    top: 49.602083%;
+	left: 31.962963%;
+    z-index: 12;
+}
+
+.small-intestine-original {
+	position: absolute; 
+	background-image: url(../img/Organs/Original/SmallIntestine.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: percentage(183/720);
+    height: 0;
+    padding-bottom: percentage(96/720);
+    top: 53.614583%;
+    left: 38.12963%;
+    z-index: 11;
+}
+
+.small-intestine-div {
+	position: absolute;
+	width: percentage(183/720);
+    height: 0;
+    padding-bottom: percentage(96/720);
+    top: 53.614583%;
+    left: 38.12963%;
+    z-index: 13;
+}
 
 
 

@@ -1,3 +1,39 @@
+.brain-active-text,
+.left-lung-active-text,
+.liver-active-text,
+.kidney-active-text,
+.pancreas-active-text,
+.large-intestine-active-text {
+    font-size: 1.5rem;
+    position: absolute;
+    width: 43%;
+    height: 0;
+    padding-bottom: 25%;
+    top: 30%;
+    left: 50%;
+    z-index: 151;
+    font-family: 'Lato', sans-serif;
+}
+
+.right-lung-active-text,
+.heart-active-text,
+.stomach-active-text,
+.small-intestine-active-text {
+    font-size: 1.5rem;
+    position: absolute;
+    width: 43%;
+    height: 0;
+    padding-bottom: 25%;
+    top: 30%;
+    left: 42%;
+    z-index: 151;
+    transform: rotateY(-180deg);
+    font-family: 'Lato', sans-serif;
+}
+
+.large-intestine-active-text {
+    width: 45%;
+}
 
 .brain-active {
     position: absolute; 
@@ -5,13 +41,14 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 15.55555556%;
+    width: 40%;
     height: 0;
-    padding-bottom: 5.520833333%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
 }
+
 
 .left-lung-active {
     position: absolute; 
@@ -19,11 +56,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 9.814814815%;
+    width: 40%;
     height: 0;
-    padding-bottom: 10.36458333%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
 }
 
@@ -33,13 +70,15 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 9.814814815%;
+    width: 40%;
     height: 0;
-    padding-bottom: 10.36458333%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
+    transform: rotateY(-180deg);
 }
+
 
 .heart-active {
     position: absolute; 
@@ -47,12 +86,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 8.981481481%;
+    width: 40%;
     height: 0;
-    padding-bottom: 4.6875%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .liver-active {
@@ -61,11 +101,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 18.7037037%;
+    width: 40%;
     height: 0;
-    padding-bottom: 6.458333333%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
 }
 
@@ -75,11 +115,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 3.611111111%;
+    width: 40%;
     height: 0;
-    padding-bottom: 3.333333333%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
 }
 
@@ -89,12 +129,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 17.12962963%;
+    width: 40%;
     height: 0;
-    padding-bottom: 9.53125%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
+    transform: rotateY(-180deg);
 }
 
 .pancreas-active {
@@ -103,11 +144,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 13.14814815%;
+    width: 40%;
     height: 0;
-    padding-bottom: 2.916666667%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
 }
 
@@ -117,11 +158,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 25.18518519%;
+    width: 40%;
     height: 0;
-    padding-bottom: 8.90625%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
 }
 
@@ -131,10 +172,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 16.94444444%;
+    width: 40%;
     height: 0;
-    padding-bottom: 5%;
-    top: 50%;
-    left: 5%;
+    padding-bottom: 25%;
+    top: 36%;
+    left: 6%;
     z-index: 151;
+    transform: rotateY(-180deg);
 }

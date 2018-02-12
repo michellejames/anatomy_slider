@@ -13,6 +13,7 @@ TABLE OF CONTENTS:
 */
 
 @import 'reset';
+@import "slider";
 @import "skeleton-layer";
 @import "organ-layer";
 @import "muscle-layer";
@@ -32,40 +33,58 @@ body {
 	background: #ccc;
 }
 
+.bold-active-text {
+	font-weight: 700;
+}
+
+.inner-body-layer {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+}
+
 .speech-bubble {
+
+	position: absolute;
+	width: 30%;
+	height: 20%;
+	z-index: 155;
+
+	.speech-bubble-top {
+		display: flex;
+		align-items: center;
+		background-image: url(../../dist/img/speechbubble.svg);
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 0;
+		padding-bottom: 100%;
+		display: none;
+		position: absolute;
+	    // top: 9%;
+	    // left: 17%;
+		//transform: translate(-50%, -50%);
+		z-index: 151;
+	}
+
+	.speech-bubble-tip {
+		background-image: url(../../dist/img/speechbubble_handle.svg);
+		background-repeat: no-repeat;
+		width: 60%;
+		height: 0;
+		padding-bottom: 60%;
+		display: none;
+		position: absolute;
+	    top: 50%;
+	    left: 50%;
+		z-index: 150;
+	}
+
 }
 
-.speech-bubble-top {
-	background-image: url(../../dist/img/speechbubble.svg);
-	background-repeat: no-repeat;
-	width: 50%;
-	height: 0;
-	padding-bottom: 20.020833333%;
-	display: none;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 150;
-}
-
-.speech-bubble-tip {
-	background-image: url(../../dist/img/speechbubble_handle.svg);
-	background-repeat: no-repeat;
-	width: 50%;
-	height: 0;
-	padding-bottom: 10.020833333%;
-	display: none;
-	position: absolute;
-	top: 50%;
-	left: 70%;
-	transform: translate(-50%, -50%);
-	z-index: 149;
-}
 
 .overlay {
     width: 100vw;
-    height: 300vh;
+    height: 100vh;
     background: black;
     opacity: .5;
     top: 50%;
@@ -76,6 +95,88 @@ body {
     z-index: 150;
 }
 
+.start-screen {
+	width: 100%;
+	height: 100%;
+	// position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
 
+	.start-background {
+		position: absolute;
+		background: #0C3548;
+		width: 100%;
+		height: 100%;
+	}
+
+	.start-title {
+		position: absolute; 
+		background-image: url(../../dist/img/Titles/MainTitle/MainTitle.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 66.66666667%;
+		height: 0;
+		padding-bottom: 18.697917%;
+		top: 2.78125%;
+		left: 18.944444%;
+		z-index: 5;
+		opacity: 0;
+	}
+
+	.start-body-sizer {
+		position: absolute;
+		width: 105%;
+		height: 20px;
+		background: #2B7892;
+		// left: 50%;
+		top: 20%;
+		// transform: translateX(-50%);
+		z-index: 300;
+		display: flex;
+		justify-content: center;
+	}
+
+	.start-body {
+		position: absolute; 
+		background-image: url(../../dist/img/Body_Shape/Bodysize.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		$width: 66.66666667%;
+		width: $width;
+	    height: 0;
+	    padding-bottom: $width * (6310/3013);  //width and height of body background
+	    // top: 20.78125%;
+	    bottom: 1%;
+	    left: 16.94444444%;
+	    transform-origin: 50% 100%;
+	
+		.start-button {
+			position: absolute; 
+			background-image: url(../../dist/img/Go_unselected_button.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: percentage(133/720);
+		    height: 0;
+		    padding-bottom: percentage(133/720);
+		    top: 26.510417%;
+		    left: 41.148148%;
+		}
+
+		.start-layers {
+
+			.skeleton-body,
+			.organ-body,
+			.muscle-body {
+				display: none;
+			}
+		}
+	}
+
+}
 
 
