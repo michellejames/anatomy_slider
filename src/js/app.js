@@ -1,12 +1,5 @@
-// //add timeline to sliders
-// TweenMax.to(document.querySelector('.middle'), 4, {delay: 5, width: 1000});
-// TweenMax.to(scrollerMiddle, 4, {delay: 5, left: 1000-25});
-
-// TweenMax.to(document.querySelector('.top'), 4, {delay: 5, width: 500});
-// TweenMax.to(scrollerTop, 4, {delay: 5, left: 500-25});
 
 //snap sliders to left and right
-
 let skeletonLayer = document.querySelector(".body-layers .skeleton-body");
 skeletonLayer.addEventListener("click", function () {
 	TweenMax.to(document.querySelector('.middle'), 1, {delay: 0.4, width: 1080});
@@ -203,8 +196,6 @@ Draggable.create(".start-body-sizer", {
 		startBody.style.transform = `scale(${bodyHeight})`;
 			
 	}
-	// edgeResistance:0.65, 
-	// throwProps:true
 });
 
 
@@ -221,13 +212,13 @@ startButton.addEventListener("click", function (){
 	var timeline = new TimelineMax();
 	timeline.to(".start-button", 0.3, {opacity: 0})
 	timeline.to(".start-layers .skeleton-body", 0, {display: "block"})
-	timeline.staggerFrom(".start-layers .skeleton-body div", .8, {y: "-50", opacity: 0, yoyo: true, repeat: 1}, 0.1);
+	timeline.staggerFrom(".start-layers .skeleton-body div", .8, {y: "-50", opacity: 0, yoyo: true, repeat: 1}, 0.05);
 	timeline.to(".start-layers .skeleton-body div", 0.1, {opacity: 0});
 	timeline.to(".start-layers .organ-body", 0, {display: "block"})
-	timeline.staggerFrom(".start-layers .organ-body div", .8, {y: "-50", opacity: 0, yoyo: true, repeat: 1}, 0.1);
+	timeline.staggerFrom(".start-layers .organ-body div", .8, {y: "-50", opacity: 0, yoyo: true, repeat: 1}, 0.05);
 	timeline.to(".start-layers .organ-body div", 0.1, {opacity: 0});
 	timeline.to(".start-layers .muscle-body", 0, {display: "block"})
-	timeline.staggerFrom(".start-layers .muscle-body div", .8, {y: "-50", opacity: 0, yoyo: true, repeat: 1}, 0.1);
+	timeline.staggerFrom(".start-layers .muscle-body div", .8, {y: "-50", opacity: 0, yoyo: true, repeat: 1}, 0.05);
 	timeline.to(".start-layers .muscle-body div", 0.1, {opacity: 0});
 	timeline.to(startScreen, 1, {opacity: 0, zIndex: 0});
 }); 
@@ -250,6 +241,9 @@ skull.addEventListener("click", function (){
 	speechBubble.style.top = 8+"%";
 	speechBubble.style.left = 12+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".skull-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let spine = document.querySelector(".body-layers .spine-original");
@@ -269,6 +263,9 @@ spine.addEventListener("click", function (){
 	speechBubble.style.top = 22+"%";
 	speechBubble.style.left = 51+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".spine-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let leftCollarbone = document.querySelector(".body-layers .left-collarbone-original");
@@ -289,6 +286,9 @@ leftCollarbone.addEventListener("click", function (){
 	speechBubble.style.top = 22+"%";
 	speechBubble.style.left = 7+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".left-collarbone-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let rightCollarbone = document.querySelector(".body-layers .right-collarbone-original");
@@ -309,6 +309,9 @@ rightCollarbone.addEventListener("click", function (){
 	speechBubble.style.top = 22+"%";
 	speechBubble.style.left = 65+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".right-collarbone-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let leftHumerus = document.querySelector(".body-layers .left-humerus-original");
@@ -329,6 +332,9 @@ leftHumerus.addEventListener("click", function (){
 	speechBubble.style.top = 29+"%";
 	speechBubble.style.left = 1+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".left-humerus-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let rightHumerus = document.querySelector(".body-layers .right-humerus-original");
@@ -349,6 +355,9 @@ rightHumerus.addEventListener("click", function (){
 	speechBubble.style.top = 26+"%";
 	speechBubble.style.left = 69+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".right-humerus-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let leftForearm = document.querySelector(".body-layers .left-forearm-original");
@@ -369,6 +378,9 @@ leftForearm.addEventListener("click", function (){
 	speechBubble.style.top = 40+"%";
 	speechBubble.style.left = 28+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".left-forearm-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let rightForearm = document.querySelector(".body-layers .right-forearm-original");
@@ -389,6 +401,9 @@ rightForearm.addEventListener("click", function (){
 	speechBubble.style.top = 40+"%";
 	speechBubble.style.left = 43+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".right-forearm-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let leftWrist = document.querySelector(".body-layers .left-wrist-original");
@@ -409,6 +424,9 @@ leftWrist.addEventListener("click", function (){
 	speechBubble.style.top = 43+"%";
 	speechBubble.style.left = 28+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".left-wrist-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let rightWrist = document.querySelector(".body-layers .right-wrist-original");
@@ -429,6 +447,9 @@ rightWrist.addEventListener("click", function (){
 	speechBubble.style.top = 43+"%";
 	speechBubble.style.left = 43+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".right-wrist-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let leftFingers = document.querySelector(".body-layers .left-fingers-original");
@@ -449,6 +470,9 @@ leftFingers.addEventListener("click", function (){
 	speechBubble.style.top = 47+"%";
 	speechBubble.style.left = 25+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".left-fingers-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let rightFingers = document.querySelector(".body-layers .right-fingers-original");
@@ -469,6 +493,9 @@ rightFingers.addEventListener("click", function (){
 	speechBubble.style.top = 47+"%";
 	speechBubble.style.left = 46+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".right-fingers-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let ribcage = document.querySelector(".body-layers .ribcage-original");
@@ -488,6 +515,9 @@ ribcage.addEventListener("click", function (){
 	speechBubble.style.top = 29+"%";
 	speechBubble.style.left = 10+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".ribcage-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let hipbone = document.querySelector(".body-layers .hipbone-original");
@@ -507,6 +537,9 @@ let hipbone = document.querySelector(".body-layers .hipbone-original");
 	speechBubble.style.top = 43+"%";
 	speechBubble.style.left = 60+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".hipbone-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let leftFemur = document.querySelector(".body-layers .left-femur-original");
@@ -527,6 +560,9 @@ leftFemur.addEventListener("click", function (){
 	speechBubble.style.top = 54+"%";
 	speechBubble.style.left = 10+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".left-femur-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let rightFemur = document.querySelector(".body-layers .right-femur-original");
@@ -547,10 +583,13 @@ rightFemur.addEventListener("click", function (){
 	speechBubble.style.top = 54+"%";
 	speechBubble.style.left = 62+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".right-femur-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let leftKnee = document.querySelector(".body-layers .left-knee-original");
-let leftKneeDiv = document.querySelector(".left-knee-div");
+let leftKneeDiv = document.querySelector(".body-layers .left-knee-div");
 leftKneeDiv.addEventListener("click", function (){
 	leftKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Kneecap.png)";
 	rightKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Kneecap.png)";
@@ -568,10 +607,13 @@ leftKneeDiv.addEventListener("click", function (){
 	speechBubble.style.top = 60+"%";
 	speechBubble.style.left = 9+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".left-knee-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let rightKnee = document.querySelector(".body-layers .right-knee-original");
-let rightKneeDiv = document.querySelector(".right-knee-div");
+let rightKneeDiv = document.querySelector(".body-layers .right-knee-div");
 rightKneeDiv.addEventListener("click", function (){
 	rightKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Kneecap.png)";
 	leftKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Kneecap.png)";
@@ -589,6 +631,9 @@ rightKneeDiv.addEventListener("click", function (){
 	speechBubble.style.top = 60+"%";
 	speechBubble.style.left = 63+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".right-knee-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let leftTibia = document.querySelector(".body-layers .left-tibia-original");
@@ -609,6 +654,9 @@ let leftTibia = document.querySelector(".body-layers .left-tibia-original");
 	speechBubble.style.top = 67+"%";
 	speechBubble.style.left = 10+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".left-tibia-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let rightTibia = document.querySelector(".body-layers .right-tibia-original");
@@ -629,6 +677,9 @@ rightTibia.addEventListener("click", function (){
 	speechBubble.style.top = 67+"%";
 	speechBubble.style.left = 62+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".right-tibia-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let leftAnkle = document.querySelector(".body-layers .left-ankle-original");
@@ -649,6 +700,9 @@ leftAnkle.addEventListener("click", function (){
 	speechBubble.style.top = 76+"%";
 	speechBubble.style.left = 7+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".left-ankle-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let rightAnkle = document.querySelector(".body-layers .right-ankle-original");
@@ -669,6 +723,9 @@ rightAnkle.addEventListener("click", function (){
 	speechBubble.style.top = 76+"%";
 	speechBubble.style.left = 62+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".right-ankle-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let leftFoot = document.querySelector(".body-layers .left-foot-original");
@@ -689,6 +746,9 @@ leftFoot.addEventListener("click", function (){
 	speechBubble.style.top = 77+"%";
 	speechBubble.style.left = 33+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".left-foot-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let rightFoot = document.querySelector(".body-layers .right-foot-original");
@@ -709,14 +769,17 @@ rightFoot.addEventListener("click", function (){
 	speechBubble.style.top = 77+"%";
 	speechBubble.style.left = 39+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".right-foot-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let brain = document.querySelector(".body-layers .brain-original");
 brain.addEventListener("click", function (){
 	console.log("brain-original clicked")
-	brain.style.backgroundImage = "url(../../dist/img/Organs/Active/ActiveBrain.png)";
+	brain.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Brain.png)";
 
-	TweenMax.to(brain, 2, {backgroundImage:'url(../../dist/img/Organs/Ghosted/Ghosted_Brain.png)'});
+	//TweenMax.to(brain, 2, {backgroundImage:'url(../../dist/img/Organs/Ghosted/Ghosted_Brain.png)'});
 	createInfoWindow();
 
 
@@ -756,6 +819,9 @@ leftLung.addEventListener("click", function (){
 	speechBubble.style.top = 24+"%";
 	speechBubble.style.left = 12+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".left-lung-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let rightLung = document.querySelector(".body-layers .right-lung-original");
@@ -776,6 +842,8 @@ rightLung.addEventListener("click", function (){
 	speechBubble.style.top = 24+"%";
 	speechBubble.style.left = 59+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".right-lung-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 });
 
 let heart = document.querySelector(".body-layers .heart-original");
@@ -795,10 +863,12 @@ heart.addEventListener("click", function (){
 	speechBubble.style.top = 28+"%";
 	speechBubble.style.left = 53+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+	
+	TweenMax.to(".heart-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 });
 
 let liver = document.querySelector(".body-layers .liver-original");
-let liverDiv = document.querySelector(".liver-div");
+let liverDiv = document.querySelector(".body-layers .liver-div");
 liverDiv.addEventListener("click", function (){
 	liver.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Liver.png)";
 	createInfoWindow();
@@ -815,10 +885,12 @@ liverDiv.addEventListener("click", function (){
 	speechBubble.style.top = 32+"%";
 	speechBubble.style.left = 12+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".liver-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 });
 
 let kidney = document.querySelector(".body-layers .kidney-original");
-let kidneyDiv = document.querySelector(".kidney-div");
+let kidneyDiv = document.querySelector(".body-layers .kidney-div");
 kidneyDiv.addEventListener("click", function (){
 	kidney.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Kidney.png)";
 	createInfoWindow();
@@ -835,6 +907,8 @@ kidneyDiv.addEventListener("click", function (){
 	speechBubble.style.top = 36+"%";
 	speechBubble.style.left = 12+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".kidney-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 });
 
 let stomach = document.querySelector(".body-layers .stomach-original");
@@ -854,10 +928,12 @@ stomach.addEventListener("click", function (){
 	speechBubble.style.top = 34+"%";
 	speechBubble.style.left = 59+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".stomach-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 });
 
 let pancreas = document.querySelector(".body-layers .pancreas-original");
-let pancreasDiv = document.querySelector(".pancreas-div");
+let pancreasDiv = document.querySelector(".body-layers .pancreas-div");
 pancreasDiv.addEventListener("click", function (){
 	pancreas.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Pancreas.png)";
 	createInfoWindow();
@@ -874,6 +950,8 @@ pancreasDiv.addEventListener("click", function (){
 	speechBubble.style.top = 41+"%";
 	speechBubble.style.left = 17+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".pancreas-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 });
 
 let largeIntestine = document.querySelector(".body-layers .large-intestine-original");
@@ -893,11 +971,12 @@ largeIntestine.addEventListener("click", function (){
 	speechBubble.style.top = 44+"%";
 	speechBubble.style.left = 10+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
-
+	
+	TweenMax.to(".large-intestine-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 });
 
 let smallIntestine = document.querySelector(".body-layers .small-intestine-original");
-let smallIntestineDiv = document.querySelector(".small-intestine-div");
+let smallIntestineDiv = document.querySelector(".body-layers .small-intestine-div");
 smallIntestineDiv.addEventListener("click", function (){
 	smallIntestine.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_SmallIntestine.png)";
 	createInfoWindow();
@@ -914,6 +993,8 @@ smallIntestineDiv.addEventListener("click", function (){
 	speechBubble.style.top = 46+"%";
 	speechBubble.style.left = 55+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".small-intestine-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 });
 
 let leftChest = document.querySelector(".body-layers .left-chest-original");
@@ -934,6 +1015,9 @@ leftChest.addEventListener("click", function (){
 	speechBubble.style.top = 26+"%";
 	speechBubble.style.left = 10+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".left-chest-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let rightChest = document.querySelector(".body-layers .right-chest-original");
@@ -954,6 +1038,8 @@ rightChest.addEventListener("click", function (){
 	speechBubble.style.top = 26+"%";
 	speechBubble.style.left = 60+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".right-chest-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 });
 
 let leftDeltoid = document.querySelector(".body-layers .left-deltoid-original");
@@ -974,6 +1060,8 @@ leftDeltoid.addEventListener("click", function (){
 	speechBubble.style.top = 26+"%";
 	speechBubble.style.left = 3+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".left-deltoid-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 });
 
 let rightDeltoid = document.querySelector(".body-layers .right-deltoid-original");
@@ -994,6 +1082,8 @@ rightDeltoid.addEventListener("click", function (){
 	speechBubble.style.top = 26+"%";
 	speechBubble.style.left = 69+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".right-deltoid-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 });
 
 let leftBiceps = document.querySelector(".body-layers .left-biceps-original");
@@ -1014,6 +1104,9 @@ leftBiceps.addEventListener("click", function (){
 	speechBubble.style.top = 32+"%";
 	speechBubble.style.left = 0+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".left-biceps-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let rightBiceps = document.querySelector(".body-layers .right-biceps-original");
@@ -1034,6 +1127,9 @@ rightBiceps.addEventListener("click", function (){
 	speechBubble.style.top = 33+"%";
 	speechBubble.style.left = 71+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".right-biceps-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let abdomin = document.querySelector(".body-layers .abdomin-original");
@@ -1053,6 +1149,9 @@ abdomin.addEventListener("click", function (){
 	speechBubble.style.top = 36+"%";
 	speechBubble.style.left = 18+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".abdomin-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let leftQuadriceps = document.querySelector(".body-layers .left-quadriceps-original");
@@ -1073,6 +1172,9 @@ leftQuadriceps.addEventListener("click", function (){
 	speechBubble.style.top = 53+"%";
 	speechBubble.style.left = 9+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".left-quadriceps-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let rightQuadriceps = document.querySelector(".body-layers .right-quadriceps-original");
@@ -1093,6 +1195,9 @@ rightQuadriceps.addEventListener("click", function (){
 	speechBubble.style.top = 53+"%";
 	speechBubble.style.left = 63+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".right-quadriceps-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let leftCalf = document.querySelector(".body-layers .left-calf-original");
@@ -1113,6 +1218,9 @@ leftCalf.addEventListener("click", function (){
 	speechBubble.style.top = 70+"%";
 	speechBubble.style.left = 9+"%";
 	speechBubble.style.transform = "rotateY(0deg)";
+
+	TweenMax.to(".left-calf-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let rightCalf = document.querySelector(".body-layers .right-calf-original");
@@ -1133,6 +1241,9 @@ rightCalf.addEventListener("click", function (){
 	speechBubble.style.top = 70+"%";
 	speechBubble.style.left = 63+"%";
 	speechBubble.style.transform = "rotateY(180deg)";
+
+	TweenMax.to(".right-calf-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+
 });
 
 let overlayBK = document.querySelector(".overlay");
@@ -1148,12 +1259,15 @@ function createInfoWindow () {
 	overlay.style.display = "block";
 	speechBubbleTop.style.display = "block";
 	speechBubbleTip.style.display = "block";
+	speechBubble.style.zIndex = 155;
+
 }
 
 function closeInfoWindow () {
 	let overlay = document.querySelector(".overlay");
 	let speechBubbleTop = document.querySelector(".speech-bubble-top");
 	let speechBubbleTip = document.querySelector(".speech-bubble-tip");
+	speechBubble.style.zIndex = 0;
 
 	overlay.style.display = "none";
 	speechBubbleTop.innerHTML = '';
