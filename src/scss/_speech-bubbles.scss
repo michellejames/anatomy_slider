@@ -1,0 +1,72 @@
+.speech-bubble-container {
+	position: absolute;
+    top: 0;
+	left: 0;
+	width: 0;
+    height: 0;
+    transform: translate(5vw, 4vw);
+    display: none;
+    z-index: 155;
+
+    .speech-bubble-tip {
+	    position: absolute; 
+		background-image: url(../img/speechbubble_handle.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+	    width: 20vw;
+	    height: 10vh;
+	    bottom: 0;
+	    right: 0;
+    }
+	
+	.speech-bubble {
+	    position: absolute; 
+		background-image: url(../img/speechbubble.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		z-index: 10;
+		width: 30vw;
+		height: 20vh;
+		bottom: 0;
+		right: 0;
+
+	    .active-image {
+	    	position: absolute; 
+	    	background-repeat: no-repeat;
+	    	background-size: contain;
+	    	background-position: center;
+	    	z-index: 151;
+	    }
+
+	    .active-text {
+	    	font-size: 1.5rem;
+	    	position: absolute;
+	    	width: 43%;
+	    	height: 0;
+	    	padding-bottom: 25%;
+	    	top: 30%;
+	    	left: 50%;
+	    	z-index: 151;
+	    	font-family: 'Lato', sans-serif;
+	    }
+	}
+
+    &.speech-bubble-container-right {
+    	left: auto;
+    	right: 0;
+    	transform: translate(-5vw, 4vw);
+
+    	.speech-bubble-tip {
+			right: auto;
+			left: 0;
+			transform: scaleX(-1);
+    	}
+    	.speech-bubble {
+			right: auto;
+			left: 0;
+    	}
+    }
+
+}

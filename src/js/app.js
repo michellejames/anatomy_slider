@@ -1,6 +1,6 @@
 
 //snap sliders to left and right
-let skeletonLayer = document.querySelector(".body-layers .skeleton-body");
+let skeletonLayer = document.querySelector(".body-layers .skeleton-layer");
 skeletonLayer.addEventListener("click", function () {
 	TweenMax.to(document.querySelector('.middle'), 1, {delay: 0.4, width: 1080});
 	TweenMax.to(scrollerMiddle, 1, {delay: 0.4, left: 1080-25});
@@ -14,7 +14,7 @@ skeletonLayer.addEventListener("click", function () {
 	TweenMax.to (".skeleton-title", 2, {display: "block"});
 });
 
-let organLayer = document.querySelector(".body-layers .organ-body");
+let organLayer = document.querySelector(".body-layers .organ-layer");
 organLayer.addEventListener("click", function () {
 	TweenMax.to(document.querySelector('.middle'), 1, {delay: 0.4, width: 1080});
 	TweenMax.to(scrollerMiddle, 1, {delay: 0.4, left: 1080-25});
@@ -29,7 +29,7 @@ organLayer.addEventListener("click", function () {
 	TweenMax.to (".organ-title", 2, {display: "block"});
 });
 
-let muscleLayer = document.querySelector(".body-layers .muscle-body");
+let muscleLayer = document.querySelector(".body-layers .muscle-layer");
 muscleLayer.addEventListener("click", function () {
 	TweenMax.to(document.querySelector('.middle'), 1, {delay: 0.4, width: 0});
 	TweenMax.to(scrollerMiddle, 1, {delay: 0.4, left: 0-25});
@@ -798,27 +798,25 @@ rightFoot.addEventListener("click", function (){
 
 let brain = document.querySelector(".body-layers .brain-original");
 brain.addEventListener("click", function (){
-	console.log("brain-original clicked")
 	brain.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Brain.png)";
 
-	//TweenMax.to(brain, 2, {backgroundImage:'url(../../dist/img/Organs/Ghosted/Ghosted_Brain.png)'});
 	createInfoWindow();
+	TweenMax.to(".brain-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".brain-original .brain-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 
+	// let activeBrain = document.createElement("div");
+	// activeBrain.classList.add("brain-active");
+	// speechBubbleTop.appendChild(activeBrain);
 
-	let activeBrain = document.createElement("div");
-	activeBrain.classList.add("brain-active");
-	speechBubbleTop.appendChild(activeBrain);
+	// let activeBrainText = document.createElement("p");
+	// activeBrainText.innerHTML = "Hi! I am your <span class='bold-active-text'>brain</span>.<br/>I help you think fast.";
+	// activeBrainText.classList.add("brain-active-text");
+	// speechBubbleTop.appendChild(activeBrainText);
 
-	let activeBrainText = document.createElement("p");
-	activeBrainText.innerHTML = "Hi! I am your <span class='bold-active-text'>brain</span>.<br/>I help you think fast.";
-	activeBrainText.classList.add("brain-active-text");
-	speechBubbleTop.appendChild(activeBrainText);
+	// speechBubble.style.top = 5+"%";
+	// speechBubble.style.left = 15+"%";
+	// speechBubble.style.transform = "rotateY(0deg)";
 
-	speechBubble.style.top = 5+"%";
-	speechBubble.style.left = 15+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".brain-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 	
 });
 
@@ -828,21 +826,22 @@ leftLung.addEventListener("click", function (){
 	rightLung.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/GhostedR_Lung.png)";
 
 	createInfoWindow();
+	TweenMax.to(".left-lung-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-lung-original .left-lung-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 
-	let activeLeftLung = document.createElement("div");
-	activeLeftLung.classList.add("left-lung-active");
-	speechBubbleTop.appendChild(activeLeftLung);
+	// let activeLeftLung = document.createElement("div");
+	// activeLeftLung.classList.add("left-lung-active");
+	// speechBubbleTop.appendChild(activeLeftLung);
 
-	let activeLeftLungText = document.createElement("p");
-	activeLeftLungText.innerHTML = "I'm your <span class='bold-active-text'>lung</span>. My twin and I help you breath easy.";
-	activeLeftLungText.classList.add("left-lung-active-text");
-	speechBubbleTop.appendChild(activeLeftLungText);
+	// let activeLeftLungText = document.createElement("p");
+	// activeLeftLungText.innerHTML = "I'm your <span class='bold-active-text'>lung</span>. My twin and I help you breath easy.";
+	// activeLeftLungText.classList.add("left-lung-active-text");
+	// speechBubbleTop.appendChild(activeLeftLungText);
 
-	speechBubble.style.top = 24+"%";
-	speechBubble.style.left = 12+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
+	// speechBubble.style.top = 24+"%";
+	// speechBubble.style.left = 12+"%";
+	// speechBubble.style.transform = "rotateY(0deg)";
 
-	TweenMax.to(".left-lung-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 
 });
 
@@ -850,43 +849,48 @@ let rightLung = document.querySelector(".body-layers .right-lung-original");
 rightLung.addEventListener("click", function (){
 	rightLung.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/GhostedR_Lung.png)";
 	leftLung.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/GhostedL_Lung.png)";
+
 	createInfoWindow();
+	TweenMax.to(".right-lung-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-lung-original .right-lung-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 
-	let activeRightLung = document.createElement("div");
-	activeRightLung.classList.add("right-lung-active");
-	speechBubbleTop.appendChild(activeRightLung);
 
-	let activeRightLungText = document.createElement("p");
-	activeRightLungText.innerHTML = "I'm your <span class='bold-active-text'>lung</span>. My twin and I help you breath easy.";
-	activeRightLungText.classList.add("right-lung-active-text");
-	speechBubbleTop.appendChild(activeRightLungText);
+	// let activeRightLung = document.createElement("div");
+	// activeRightLung.classList.add("right-lung-active");
+	// speechBubbleTop.appendChild(activeRightLung);
 
-	speechBubble.style.top = 24+"%";
-	speechBubble.style.left = 59+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
+	// let activeRightLungText = document.createElement("p");
+	// activeRightLungText.innerHTML = "I'm your <span class='bold-active-text'>lung</span>. My twin and I help you breath easy.";
+	// activeRightLungText.classList.add("right-lung-active-text");
+	// speechBubbleTop.appendChild(activeRightLungText);
 
-	TweenMax.to(".right-lung-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+	// speechBubble.style.top = 24+"%";
+	// speechBubble.style.left = 59+"%";
+	// speechBubble.style.transform = "rotateY(180deg)";
+
 });
 
 let heart = document.querySelector(".body-layers .heart-original");
 heart.addEventListener("click", function (){
 	heart.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Heart.png)";
+
 	createInfoWindow();
+	TweenMax.to(".heart-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".heart-original .heart-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 
-	let activeHeart = document.createElement("div");
-	activeHeart.classList.add("heart-active");
-	speechBubbleTop.appendChild(activeHeart);
+	// let activeHeart = document.createElement("div");
+	// activeHeart.classList.add("heart-active");
+	// speechBubbleTop.appendChild(activeHeart);
 
-	let activeHeartText = document.createElement("p");
-	activeHeartText.innerHTML = "Hello! I'm your <span class='bold-active-text'>heart</span>! I pump blood.";
-	activeHeartText.classList.add("heart-active-text");
-	speechBubbleTop.appendChild(activeHeartText);
+	// let activeHeartText = document.createElement("p");
+	// activeHeartText.innerHTML = "Hello! I'm your <span class='bold-active-text'>heart</span>! I pump blood.";
+	// activeHeartText.classList.add("heart-active-text");
+	// speechBubbleTop.appendChild(activeHeartText);
 
-	speechBubble.style.top = 28+"%";
-	speechBubble.style.left = 53+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
+	// speechBubble.style.top = 28+"%";
+	// speechBubble.style.left = 53+"%";
+	// speechBubble.style.transform = "rotateY(180deg)";
 	
-	TweenMax.to(".heart-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 });
 
 let liver = document.querySelector(".body-layers .liver-original");
@@ -1275,26 +1279,29 @@ overlayBK.addEventListener("click", function (){
 
 function createInfoWindow () {
 	let overlay = document.querySelector(".overlay");
-	let speechBubbleTop = document.querySelector(".speech-bubble-top");
-	let speechBubbleTip = document.querySelector(".speech-bubble-tip");
+	// let speechBubbleTop = document.querySelector(".speech-bubble-top");
+	// let speechBubbleTip = document.querySelector(".speech-bubble-tip");
 
 	overlay.style.display = "block";
-	speechBubbleTop.style.display = "block";
-	speechBubbleTip.style.display = "block";
-	speechBubble.style.zIndex = 155;
+	// speechBubbleTop.style.display = "block";
+	// speechBubbleTip.style.display = "block";
+	// speechBubble.style.zIndex = 155;
 
 }
 
 function closeInfoWindow () {
 	let overlay = document.querySelector(".overlay");
-	let speechBubbleTop = document.querySelector(".speech-bubble-top");
-	let speechBubbleTip = document.querySelector(".speech-bubble-tip");
-	speechBubble.style.zIndex = 0;
+	// let speechBubbleTop = document.querySelector(".speech-bubble-top");
+	// let speechBubbleTip = document.querySelector(".speech-bubble-tip");
+	// speechBubble.style.zIndex = 0;
+
+	TweenMax.to(".speech-bubble-container", .1, {display: "none"});
+
 
 	overlay.style.display = "none";
-	speechBubbleTop.innerHTML = '';
-	speechBubbleTop.style.display = "none";
-	speechBubbleTip.style.display = "none";
+	// speechBubbleTop.innerHTML = '';
+	// speechBubbleTop.style.display = "none";
+	// speechBubbleTip.style.display = "none";
 	skull.style.backgroundImage = "url(../../dist/img/Skeleton/Original/Skull.png)";
 	spine.style.backgroundImage = "url(../../dist/img/Skeleton/Original/Spine.png)";
 	leftCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Collarbone.png)";

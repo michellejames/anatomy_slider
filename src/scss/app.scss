@@ -18,6 +18,7 @@ TABLE OF CONTENTS:
 @import "organ-layer";
 @import "muscle-layer";
 
+@import "speech-bubbles";
 @import "skeleton-active";
 @import "organ-active";
 @import "muscle-active";
@@ -104,9 +105,7 @@ body {
 	    left: 50%;
 		// z-index: 150;
 	}
-
 }
-
 
 .overlay {
     width: 100vw;

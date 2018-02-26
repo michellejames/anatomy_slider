@@ -57,15 +57,24 @@
 	background-size: contain;
 	background-position: center;
 	width: percentage(168/720);
-	//height: 0;
+	height: 0;
     // height: percentage(106/1511);
     padding-bottom: percentage(106/720);
     top: 1.522170748%;
     left: 38.485185%;
-    // top: percentage(23/1511);
-    // left: percentage(278/720);
     z-index: 11;
-}	
+    
+    .active-image {
+    	background-image: url(../img/Organs/Active/ActiveBrain.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    }
+}
+
+    
 
 .left-lung-original {
     position: absolute; 
@@ -80,6 +89,16 @@
     top: percentage(387/1511);
     left: percentage(236/720);
     z-index: 11;
+
+    .active-image {
+    	background-image: url(../../dist/img/Organs/Active/ActiveL_Lung.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    }
 }
 
 .right-lung-original {
@@ -95,6 +114,17 @@
     top: 25.989583%;
     left: 53.33333333%;
     z-index: 11;
+
+    .active-image {
+    	background-image: url(../../dist/img/Organs/Active/ActiveR_Lung.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    	transform: rotateY(-180deg);
+    }
 }
 
 .heart-original {
@@ -109,6 +139,17 @@
     top: 31.46875%;
     left: 43.666667%;
     z-index: 11;
+
+    .active-image {
+    	background-image: url(../../dist/img/Organs/Active/ActiveHeart.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    	transform: rotateY(-180deg);
+    }
 }
 
 .liver-original {
@@ -123,6 +164,16 @@
     top: 39.302083%;
     left: 32.444444%;
     z-index: 11;
+
+    .active-image {
+    	background-image: url(../../dist/img/Organs/Active/ActiveLiver.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    }
 }
 
 .liver-div {
@@ -148,6 +199,16 @@
     top: 43.510417%;
     left: 36.944444%;
     z-index: 12;
+
+    .active-image {
+    	background-image: url(../../dist/img/Organs/Active/ActiveKidney.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    }
 }
 
 .kidney-div {
@@ -172,6 +233,17 @@
     top: 39.958333%;
     left: 41.907407%;
     z-index: 12;
+
+    .active-image {
+    	background-image: url(../../dist/img/Organs/Active/ActiveStomach.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    	transform: rotateY(-180deg);
+    }
 }
 
 .pancreas-original {
@@ -186,6 +258,16 @@
     top: 48.972917%;
     left: 43.725926%;
     z-index: 11;
+
+    .active-image {
+    	background-image: url(../../dist/img/Organs/Active/ActivePancreas.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    }
 }
 
 .pancreas-div {
@@ -210,6 +292,16 @@
     top: 49.602083%;
 	left: 31.962963%;
     z-index: 12;
+
+    .active-image {
+    	background-image: url(../../dist/img/Organs/Active/ActiveLargeIntestine.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    }
 }
 
 .small-intestine-original {
@@ -224,6 +316,17 @@
     top: 53.614583%;
     left: 38.12963%;
     z-index: 11;
+
+    .active-image {
+    	background-image: url(../../dist/img/Organs/Active/ActiveSmallIntestine.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    	transform: rotateY(-180deg);
+    }
 }
 
 .small-intestine-div {
