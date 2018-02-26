@@ -33,6 +33,32 @@ body {
 	background: #ccc;
 }
 
+.change-height {
+	width: 10px;
+	height: 100vh;
+	background: #2B7892;
+	position: relative;
+	z-index: 1234;
+	left: 10%;
+
+	.change-height-slider {
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 150px;
+		height: 150px;
+		border-radius: 100px;
+		background: #2B7892;
+		padding: 15px;
+
+		& svg {
+			transform: rotate(90deg);
+			transform-origin: center center;
+		}
+	}
+}
+
 .bold-active-text {
 	font-weight: 700;
 }

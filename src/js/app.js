@@ -7,6 +7,11 @@ skeletonLayer.addEventListener("click", function () {
 
 	TweenMax.to(document.querySelector('.top'), 1, {delay: 0.4, width: 1080});
 	TweenMax.to(scrollerTop, 1, {delay: 0.4, left: 1080-25});
+
+	TweenMax.to(".organ-title", .4, {display: "none"});
+	TweenMax.to(".muscle-title", .4, {display: "none"});
+
+	TweenMax.to (".skeleton-title", 2, {display: "block"});
 });
 
 let organLayer = document.querySelector(".body-layers .organ-body");
@@ -16,6 +21,12 @@ organLayer.addEventListener("click", function () {
 
 	TweenMax.to(document.querySelector('.top'), 1, {delay: 0.4, width: 0});
 	TweenMax.to(scrollerTop, 1, {delay: 0.4, left: 0-25});
+
+
+	TweenMax.to(".skeleton-title", .4, {display: "none"});
+	TweenMax.to(".muscle-title", .4, {display: "none"});
+
+	TweenMax.to (".organ-title", 2, {display: "block"});
 });
 
 let muscleLayer = document.querySelector(".body-layers .muscle-body");
@@ -25,12 +36,14 @@ muscleLayer.addEventListener("click", function () {
 
 	TweenMax.to(document.querySelector('.top'), 1, {delay: 0.4, width: 0});
 	TweenMax.to(scrollerTop, 1, {delay: 0.4, left: 0-25});
+
+	TweenMax.to(".skeleton-title", .4, {display: "none"});
+	TweenMax.to(".organ-title", .4, {display: "none"});
+
+	TweenMax.to (".muscle-title", 2, {display: "block"});
 });
 
 
-
-
-TweenMax.fromTo(".organ-title", 3, {width: 0, transformOrigin: "center"}, {transformOrigin: "center", width: "66.66666667%", delay: 5});
 
 
 // I hope this over-commenting helps. Let's do this!
@@ -183,7 +196,11 @@ let startScreen = document.querySelector(".start-screen");
 let startButton = document.querySelector(".start-button");
 let startBody = document.querySelector(".start-body");
 
-Draggable.create(".start-body-sizer", {
+let skeletonBody = document.querySelector(".body-layers .skeleton-body");
+let organBody = document.querySelector(".body-layers .organ-body");
+let muscleBody = document.querySelector(".body-layers .muscle-body");
+
+Draggable.create(".change-height-slider", {		//.start-body-sizer
 	type:"y", 
 	bounds:".start-screen", 
 	onDrag: function() {
@@ -194,6 +211,11 @@ Draggable.create(".start-body-sizer", {
 		// 	startBody.style.paddingBottom = bodyHeight[i]+ "%";
 		// }
 		startBody.style.transform = `scale(${bodyHeight})`;
+		skeletonBody.style.transform = `scale(${bodyHeight})`;
+		organBody.style.transform = `scale(${bodyHeight})`;
+		muscleBody.style.transform = `scale(${bodyHeight})`;
+
+
 			
 	}
 });

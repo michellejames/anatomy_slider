@@ -28,6 +28,7 @@
 		top: 5.78125%;
 		left: 18.944444%;
 		z-index: 5;
+		display: none;
 	}
 
 	.organ-body {
@@ -37,13 +38,17 @@
 		background-size: contain;
 		background-position: center;
 		$width: 66.66666667%;
-		width: $width;
+		width: 66.66666667%; //720
+	    // height: 78.69791667%; //1511
 	    height: 0;
 	    padding-bottom: $width * (6310/3013);  //width and height of body background
 	    top: 20.78125%;
-	    left: 16.94444444%;	
+	    left: 16.94444444%;
+	    transform-origin: bottom;
 	}
 }
+
+
 
 .brain-original {
     position: absolute; 
@@ -52,12 +57,15 @@
 	background-size: contain;
 	background-position: center;
 	width: percentage(168/720);
-    height: 0;
+	//height: 0;
+    // height: percentage(106/1511);
     padding-bottom: percentage(106/720);
-    top: 1.083333%;
+    top: 1.522170748%;
     left: 38.485185%;
+    // top: percentage(23/1511);
+    // left: percentage(278/720);
     z-index: 11;
-}
+}	
 
 .left-lung-original {
     position: absolute; 
@@ -66,10 +74,11 @@
 	background-size: contain;
 	background-position: center;
 	width: percentage(106/720);
-    height: 0;
+	height: 0;
+    // height: percentage(199/1511);
     padding-bottom: percentage(199/720);
-    top: 25.989583%;
-    left: 33.574074%;
+    top: percentage(387/1511);
+    left: percentage(236/720);
     z-index: 11;
 }
 
@@ -80,10 +89,11 @@
 	background-size: contain;
 	background-position: center;
 	width: percentage(106/720);
-    height: 0;
+	height: 0;
+    // height: percentage(199/1511);
     padding-bottom: percentage(199/720);
     top: 25.989583%;
-    left: 51.314815%;
+    left: 53.33333333%;
     z-index: 11;
 }
 
@@ -94,7 +104,7 @@
 	background-size: contain;
 	background-position: center;
 	width: percentage(97/720);
-    height: 0;
+    // height: percentage(90/1511);
     padding-bottom: percentage(90/720);
     top: 31.46875%;
     left: 43.666667%;
@@ -108,7 +118,7 @@
 	background-size: contain;
 	background-position: center;
 	width: percentage(202/720);
-    height: 0;
+    // height: percentage(124/1511);
     padding-bottom: percentage(124/720);
     top: 39.302083%;
     left: 32.444444%;
@@ -118,7 +128,7 @@
 .liver-div {
 	position: absolute;
 	width: percentage(202/720);
-    height: 0;
+    // height: percentage(124/1511);
     padding-bottom: percentage(124/720);
     top: 39.302083%;
     left: 32.444444%;
@@ -133,7 +143,7 @@
 	background-size: contain;
 	background-position: center;
 	width: percentage(39/720);
-    height: 0;
+    // height: percentage(64/1511);
     padding-bottom: percentage(64/720);
     top: 43.510417%;
     left: 36.944444%;
@@ -143,7 +153,7 @@
 .kidney-div {
 	position: absolute;
 	width: percentage(39/720);
-    height: 0;
+    // height: percentage(64/1511);
     padding-bottom: percentage(64/720);
     top: 43.510417%;
     left: 36.944444%;
@@ -157,7 +167,7 @@
 	background-size: contain;
 	background-position: center;
 	width: percentage(185/720);
-    height: 0;
+    // height: percentage(183/1511);
     padding-bottom: percentage(183/720);
     top: 39.958333%;
     left: 41.907407%;
@@ -171,7 +181,7 @@
 	background-size: contain;
 	background-position: center;
 	width: percentage(142/720);
-    height: 0;
+    // height: percentage(56/1511);
     padding-bottom: percentage(56/720);
     top: 48.972917%;
     left: 43.725926%;
@@ -181,7 +191,7 @@
 .pancreas-div {
 	position: absolute;
 	width: percentage(142/720);
-    height: 0;
+    // height: percentage(56/1511);
     padding-bottom: percentage(56/720);
     top: 48.972917%;
     left: 43.725926%;
@@ -195,7 +205,7 @@
 	background-size: contain;
 	background-position: center;
 	width: percentage(272/720);
-    height: 0;
+    // height: percentage(171/1511);
     padding-bottom: percentage(171/720);
     top: 49.602083%;
 	left: 31.962963%;
@@ -209,7 +219,7 @@
 	background-size: contain;
 	background-position: center;
 	width: percentage(183/720);
-    height: 0;
+    // height: percentage(96/1511);
     padding-bottom: percentage(96/720);
     top: 53.614583%;
     left: 38.12963%;
@@ -219,12 +229,14 @@
 .small-intestine-div {
 	position: absolute;
 	width: percentage(183/720);
-    height: 0;
+    // height: percentage(96/1511);
     padding-bottom: percentage(96/720);
     top: 53.614583%;
     left: 38.12963%;
     z-index: 13;
 }
+
+
 
 
 

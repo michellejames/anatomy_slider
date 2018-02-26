@@ -23,11 +23,13 @@
 		<div class="start-screen horizontal" draggable="false">
 			<div class="start-background"></div>
 			<div class="start-title"></div>
-			<div class="start-body-sizer">
-				<svg class="scroller__thumb thumb-horizontal" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
-					<polygon points="0 50 37 68 37 32 0 50" style="fill:#D1F4E0"/>
-					<polygon points="100 50 64 32 64 68 100 50" style="fill:#D1F4E0"/>
-				</svg>
+			<div class="change-height">
+				<div class="change-height-slider">
+					<svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+						<polygon points="0 50 37 68 37 32 0 50" style="fill:#D1F4E0"/>
+						<polygon points="100 50 64 32 64 68 100 50" style="fill:#D1F4E0"/>
+					</svg>
+				</div>
 			</div>
 			<div class="start-body">
 				<div class="start-button"></div>
@@ -164,7 +166,9 @@
 				<div class="muscle-background"></div>
 				<div class="muscle-title"></div>
 				<div class="muscle-body">
-					<div class="left-chest-original"></div>
+					<div class="left-chest-original">
+						
+					</div>
 					<div class="right-chest-original"></div>
 					<div class="left-deltoid-original"></div>
 					<div class="right-deltoid-original"></div>
@@ -193,6 +197,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="vendor/gsap/minified/TweenMax.min.js"></script>
 		<script src="vendor/gsap/minified/plugins/DrawSVGPlugin.min.js"></script>
+		<!-- <script src="vendor/gsap/minified/utils/SplitText.min.js"></script> -->
 		<script src="vendor/gsap/minified/utils/Draggable.min.js"></script>
 
 		<!-- <script src="dist/js/main.js"></script> -->

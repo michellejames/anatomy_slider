@@ -28,6 +28,7 @@
 		top: 5.78125%;
 		left: 18.944444%;
 		z-index: 5;
+		display: none;
 	}
 	.skeleton-body {
 		position: absolute; 
@@ -41,6 +42,7 @@
 	    padding-bottom: $width * (6310/3013);  //width and height of body background
 	    top: 20.78125%;
 	    left: 16.94444444%;
+	    transform-origin: bottom;
 	}
 
 }
