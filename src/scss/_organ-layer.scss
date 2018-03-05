@@ -28,6 +28,7 @@
 		top: 5.78125%;
 		left: 18.944444%;
 		z-index: 5;
+        opacity: 0;
 		display: none;
 	}
 
@@ -260,13 +261,13 @@
     z-index: 11;
 
     .active-image {
-    	background-image: url(../../dist/img/Organs/Active/ActivePancreas.png);
+    	background-image: url(../img/Organs/Original/Pancreas.png);
     	width: 40%;
     	height: 0;
     	padding-bottom: 25%;
     	top: 36%;
     	left: 6%;
-    	z-index: 151;
+    	//z-index: 151;
     }
 }
 
@@ -301,6 +302,10 @@
     	top: 36%;
     	left: 6%;
     	z-index: 151;
+    }
+
+    .active-text {
+    	width: 45%;
     }
 }
 

@@ -28,6 +28,7 @@
 		top: 5.78125%;
 		left: 18.944444%;
 		z-index: 5;
+		opacity: 0;
 		display: none;
 	}
 
@@ -59,6 +60,17 @@
     top: 26.510417%;
     left: 32.148148%;
     z-index: 31;
+
+    .active-image {
+		background-image: url(../img/Muscles/Original/L_Chestmuscle.png);
+		width: 40%;
+	    height: 0;
+	    padding-bottom: 25%;
+	    top: 36%;
+	    left: 6%;
+	    z-index: 156;
+	    top: 21%;
+    }
 }
 
 .right-chest-original {
@@ -73,6 +85,17 @@
     top: 26.510417%;
     left: 52.896296%;
     z-index: 31;
+
+    .active-image {
+		background-image: url(../../dist/img/Muscles/Active/ActiveR_Chestmuscle.png);
+		width: 40%;
+	    height: 0;
+	    padding-bottom: 25%;
+	    top: 36%;
+	    left: 6%;
+	    z-index: 151;
+	    transform: rotateY(-180deg);
+    }
 }
 
 .left-deltoid-original {
@@ -87,6 +110,16 @@
     top: 28.8125%;
     left: 24.040741%;
     z-index: 31;
+
+    .active-image {
+		background-image: url(../../dist/img/Muscles/Active/ActiveL_Deltoid.png);
+		width: 40%;
+	    height: 0;
+	    padding-bottom: 25%;
+	    top: 36%;
+	    left: 6%;
+	    z-index: 151;
+    }
 }
 
 .right-deltoid-original {
@@ -101,6 +134,17 @@
     top: 28.8125%;
     left: 69.933333%;
 	z-index: 31;
+
+	.active-image {
+		background-image: url(../../dist/img/Muscles/Active/ActiveR_Deltoid.png);
+		width: 40%;
+	    height: 0;
+	    padding-bottom: 25%;
+	    top: 36%;
+	    left: 6%;
+	    z-index: 151;
+	    transform: rotateY(-180deg);
+	}
 }
 
 .left-biceps-original {
@@ -116,6 +160,16 @@
     left: 18.462963%;
 	z-index: 31;
 
+	.active-image {
+		background-image: url(../../dist/img/Muscles/Active/ActiveL_Biceps.png);
+		width: 40%;
+	    height: 0;
+	    padding-bottom: 25%;
+	    top: 36%;
+	    left: 6%;
+	    z-index: 151;
+	}
+
 }
 
 .right-biceps-original {
@@ -130,6 +184,17 @@
     top: 35.0625%;
     left: 75.574074%;
     z-index: 31;
+
+    .active-image {
+		background-image: url(../../dist/img/Muscles/Active/ActiveR_Biceps.png);
+		width: 40%;
+	    height: 0;
+	    padding-bottom: 25%;
+	    top: 36%;
+	    left: 6%;
+	    z-index: 151;
+	    transform: rotateY(-180deg);
+    }
 }
 
 .abdomin-original {
@@ -144,6 +209,16 @@
 	top: 36.0625%;
 	left: 37.203704%;
     z-index: 31;
+
+    .active-image {
+		background-image: url(../../dist/img/Muscles/Active/ActiveAbdomin.png);
+		width: 40%;
+	    height: 0;
+	    padding-bottom: 25%;
+	    top: 36%;
+	    left: 6%;
+	    z-index: 151;
+    }
 }
 
 .left-quadriceps-original {
@@ -158,6 +233,16 @@
     top: 57.145833%;
     left: 29.496296%;
     z-index: 31;
+
+    .active-image {
+		background-image: url(../img/Muscles/Original/L_Quadriceps.png);
+		width: 40%;
+	    height: 0;
+	    padding-bottom: 25%;
+	    top: 36%;
+	    left: 6%;
+	    z-index: 151;
+    }
 }
 
 .right-quadriceps-original {
@@ -172,6 +257,18 @@
     top: 57.145833%;
     left: 58.503704%;
     z-index: 31;
+
+    .active-image {
+    	background-image: url(../../dist/img/Muscles/Active/ActiveR_Quadriceps.png);
+		width: 40%;
+		height: 0;
+		padding-bottom: 25%;
+		top: 36%;
+		left: 6%;
+		z-index: 151;
+		transform: rotateY(-180deg);
+		top: 29%;
+    }
 }
 
 .left-calf-original {
@@ -186,6 +283,16 @@
     top: 80.114583%;
     left: 29.407407%;
     z-index: 31;
+
+    .active-image {
+		background-image: url(../../dist/img/Muscles/Active/ActiveL_Calfmuscle.png);
+		width: 40%;
+	    height: 0;
+	    padding-bottom: 25%;
+	    top: 36%;
+	    left: 6%;
+	    z-index: 151;
+    }
 }
 
 .right-calf-original {
@@ -200,6 +307,17 @@
     top: 80.114583%;
     left: 63.055556%;
     z-index: 31;
+
+    .active-image {
+    	background-image: url(../../dist/img/Muscles/Active/ActiveR_Calfmuscle.png);
+		width: 40%;
+	    height: 0;
+	    padding-bottom: 25%;
+	    top: 36%;
+	    left: 6%;
+	    z-index: 151;
+	    transform: rotateY(-180deg);
+    }
 }
 
 

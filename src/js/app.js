@@ -1,3 +1,5 @@
+const FASTMODE = true;
+
 
 //snap sliders to left and right
 let skeletonLayer = document.querySelector(".body-layers .skeleton-layer");
@@ -8,10 +10,10 @@ skeletonLayer.addEventListener("click", function () {
 	TweenMax.to(document.querySelector('.top'), 1, {delay: 0.4, width: 1080});
 	TweenMax.to(scrollerTop, 1, {delay: 0.4, left: 1080-25});
 
-	TweenMax.to(".organ-title", .4, {display: "none"});
-	TweenMax.to(".muscle-title", .4, {display: "none"});
+	TweenMax.to(".organ-title", 0.4, {display: "none"});
+	TweenMax.to(".muscle-title", 0.4, {display: "none"});
 
-	TweenMax.to (".skeleton-title", 2, {display: "block"});
+	TweenMax.to (".skeleton-title", 2, {display: "block", delay: 1, opacity: 2});
 });
 
 let organLayer = document.querySelector(".body-layers .organ-layer");
@@ -23,10 +25,10 @@ organLayer.addEventListener("click", function () {
 	TweenMax.to(scrollerTop, 1, {delay: 0.4, left: 0-25});
 
 
-	TweenMax.to(".skeleton-title", .4, {display: "none"});
-	TweenMax.to(".muscle-title", .4, {display: "none"});
+	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
+	TweenMax.to(".muscle-title", 0.4, {display: "none"});
 
-	TweenMax.to (".organ-title", 2, {display: "block"});
+	TweenMax.to (".organ-title", 2, {display: "block", delay: 1, opacity: 2});
 });
 
 let muscleLayer = document.querySelector(".body-layers .muscle-layer");
@@ -37,10 +39,10 @@ muscleLayer.addEventListener("click", function () {
 	TweenMax.to(document.querySelector('.top'), 1, {delay: 0.4, width: 0});
 	TweenMax.to(scrollerTop, 1, {delay: 0.4, left: 0-25});
 
-	TweenMax.to(".skeleton-title", .4, {display: "none"});
-	TweenMax.to(".organ-title", .4, {display: "none"});
+	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
+	TweenMax.to(".organ-title", 0.4, {display: "none"});
 
-	TweenMax.to (".muscle-title", 2, {display: "block"});
+	TweenMax.to (".muscle-title", 2, {display: "block", delay: 1, opacity: 2});
 });
 
 
@@ -234,380 +236,176 @@ startButton.addEventListener("click", function (){
 	var timeline = new TimelineMax();
 	timeline.to(".start-button", 0.3, {opacity: 0})
 	timeline.to(".start-layers .skeleton-body", 0, {display: "block"})
-	timeline.staggerFrom(".start-layers .skeleton-body div", .8, {y: "-50", opacity: 0, yoyo: true, repeat: 1}, 0.05);
+	timeline.staggerFrom(".start-layers .skeleton-body div", 0.8, {y: "-50", opacity: 0, yoyo: true, repeat: 1}, 0.05);
 	timeline.to(".start-layers .skeleton-body div", 0.1, {opacity: 0});
 	timeline.to(".start-layers .organ-body", 0, {display: "block"})
-	timeline.staggerFrom(".start-layers .organ-body div", .8, {y: "-50", opacity: 0, yoyo: true, repeat: 1}, 0.05);
+	timeline.staggerFrom(".start-layers .organ-body div", 0.8, {y: "-50", opacity: 0, yoyo: true, repeat: 1}, 0.05);
 	timeline.to(".start-layers .organ-body div", 0.1, {opacity: 0});
 	timeline.to(".start-layers .muscle-body", 0, {display: "block"})
-	timeline.staggerFrom(".start-layers .muscle-body div", .8, {y: "-50", opacity: 0, yoyo: true, repeat: 1}, 0.05);
+	timeline.staggerFrom(".start-layers .muscle-body div", 0.8, {y: "-50", opacity: 0, yoyo: true, repeat: 1}, 0.05);
 	timeline.to(".start-layers .muscle-body div", 0.1, {opacity: 0});
 	timeline.to(startScreen, 1, {opacity: 0, zIndex: 0});
+
+	if (FASTMODE) {
+		timeline.timeScale(5);
+	}
 }); 
 
 let skull = document.querySelector(".body-layers .skull-original");
 skull.addEventListener("click", function (){
 	console.log("click");
 	skull.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedSkull.png)";
-	createInfoWindow();
-
-	let activeSkull = document.createElement("div");
-	activeSkull.classList.add("skull-active");
-	speechBubbleTop.appendChild(activeSkull);
-
-	let activeSkullText = document.createElement("p");
-	activeSkullText.innerHTML = "I'm your <span class='bold-active-text'>skull</span>.<br/>I protect your brain.";
-	activeSkullText.classList.add("skull-active-text");
-	speechBubbleTop.appendChild(activeSkullText);
-
-	speechBubble.style.top = 8+"%";
-	speechBubble.style.left = 12+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".skull-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	skull.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".skull-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".skull-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let spine = document.querySelector(".body-layers .spine-original");
 spine.addEventListener("click", function (){
 	spine.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedSpine.png)";
-	createInfoWindow();
-
-	let activeSpine = document.createElement("div");
-	activeSpine.classList.add("spine-active");
-	speechBubbleTop.appendChild(activeSpine);
-
-	let activeSpineText = document.createElement("p");
-	activeSpineText.innerHTML = "I'm your <span class='bold-active-text'>spine</span> and I help you stand up straight!";
-	activeSpineText.classList.add("spine-active-text");
-	speechBubbleTop.appendChild(activeSpineText);
-
-	speechBubble.style.top = 22+"%";
-	speechBubble.style.left = 51+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".spine-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	spine.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".spine-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".spine-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let leftCollarbone = document.querySelector(".body-layers .left-collarbone-original");
 leftCollarbone.addEventListener("click", function (){
 	leftCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Collarbone.png)";
 	rightCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Collarbone.png)";
-	createInfoWindow();
-
-	let activeLeftCollarbone = document.createElement("div");
-	activeLeftCollarbone.classList.add("left-collarbone-active");
-	speechBubbleTop.appendChild(activeLeftCollarbone);
-
-	let activeLeftCollarboneText = document.createElement("p");
-	activeLeftCollarboneText.innerHTML = "I'm your <span class='bold-active-text'>collarbone</span>. My sister and I contect your arms to your body.";
-	activeLeftCollarboneText.classList.add("left-collarbone-active-text");
-	speechBubbleTop.appendChild(activeLeftCollarboneText);
-
-	speechBubble.style.top = 22+"%";
-	speechBubble.style.left = 7+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".left-collarbone-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	leftCollarbone.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".left-collarbone-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-collarbone-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightCollarbone = document.querySelector(".body-layers .right-collarbone-original");
 rightCollarbone.addEventListener("click", function (){
 	rightCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Collarbone.png)";
 	leftCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Collarbone.png)";
-	createInfoWindow();
-
-	let activeRightCollarbone = document.createElement("div");
-	activeRightCollarbone.classList.add("right-collarbone-active");
-	speechBubbleTop.appendChild(activeRightCollarbone);
-
-	let activeRightCollarboneText = document.createElement("p");
-	activeRightCollarboneText.innerHTML = "I'm your <span class='bold-active-text'>collarbone</span>. My sister and I contect your arms to your body.";
-	activeRightCollarboneText.classList.add("right-collarbone-active-text");
-	speechBubbleTop.appendChild(activeRightCollarboneText);
-
-	speechBubble.style.top = 22+"%";
-	speechBubble.style.left = 65+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".right-collarbone-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	rightCollarbone.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".right-collarbone-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-collarbone-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let leftHumerus = document.querySelector(".body-layers .left-humerus-original");
 leftHumerus.addEventListener("click", function (){
 	leftHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Humerus.png)";
 	rightHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Humerus.png)";
-	createInfoWindow();
-
-	let activeLeftHumerus = document.createElement("div");
-	activeLeftHumerus.classList.add("left-humerus-active");
-	speechBubbleTop.appendChild(activeLeftHumerus);
-
-	let activeLeftHumerusText = document.createElement("p");
-	activeLeftHumerusText.innerHTML = "I'm your <span class='bold-active-text'>upper-arm bone</span>. I'm the largest part of your arm.";
-	activeLeftHumerusText.classList.add("left-humerus-active-text");
-	speechBubbleTop.appendChild(activeLeftHumerusText);
-
-	speechBubble.style.top = 29+"%";
-	speechBubble.style.left = 1+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".left-humerus-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	leftHumerus.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".left-humerus-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-humerus-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightHumerus = document.querySelector(".body-layers .right-humerus-original");
 rightHumerus.addEventListener("click", function (){
 	rightHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Humerus.png)";
 	leftHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Humerus.png)";
-	createInfoWindow();
-
-	let activeRightHumerus = document.createElement("div");
-	activeRightHumerus.classList.add("right-humerus-active");
-	speechBubbleTop.appendChild(activeRightHumerus);
-
-	let activeRightHumerusText = document.createElement("p");
-	activeRightHumerusText.innerHTML = "I'm your <span class='bold-active-text'>upper-arm bone</span>. I'm the largest part of your arm.";
-	activeRightHumerusText.classList.add("right-humerus-active-text");
-	speechBubbleTop.appendChild(activeRightHumerusText);
-
-	speechBubble.style.top = 26+"%";
-	speechBubble.style.left = 69+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".right-humerus-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	rightHumerus.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".right-humerus-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-humerus-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let leftForearm = document.querySelector(".body-layers .left-forearm-original");
 leftForearm.addEventListener("click", function (){
 	leftForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Forearm.png)";
 	rightForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Forearm.png)";
-	createInfoWindow();
-
-	let activeLeftForearem = document.createElement("div");
-	activeLeftForearem.classList.add("left-forearm-active");
-	speechBubbleTop.appendChild(activeLeftForearem);
-
-	let activeLeftForearemText = document.createElement("p");
-	activeLeftForearemText.innerHTML = "Hi, I'm your <span class='bold-active-text'>forearm</span>. I am the other part of your strong arm.";
-	activeLeftForearemText.classList.add("left-forearm-active-text");
-	speechBubbleTop.appendChild(activeLeftForearemText);
-
-	speechBubble.style.top = 40+"%";
-	speechBubble.style.left = 28+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".left-forearm-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	leftForearm.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".left-forearm-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-forearm-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightForearm = document.querySelector(".body-layers .right-forearm-original");
 rightForearm.addEventListener("click", function (){
 	rightForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Forearm.png)";
 	leftForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Forearm.png)";
-	createInfoWindow();
-
-	let activeRightForearm = document.createElement("div");
-	activeRightForearm.classList.add("right-forearm-active");
-	speechBubbleTop.appendChild(activeRightForearm);
-
-	let activeRightForearmText = document.createElement("p");
-	activeRightForearmText.innerHTML = "Hi, I'm your <span class='bold-active-text'>forearm</span>. I am the other part of your strong arm.";
-	activeRightForearmText.classList.add("right-forearm-active-text");
-	speechBubbleTop.appendChild(activeRightForearmText);
-
-	speechBubble.style.top = 40+"%";
-	speechBubble.style.left = 43+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".right-forearm-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	rightForearm.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".right-forearm-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-forearm-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let leftWrist = document.querySelector(".body-layers .left-wrist-original");
 leftWrist.addEventListener("click", function (){
 	leftWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Wristbone.png)";
 	rightWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Wristbone.png)";
-	createInfoWindow();
-
-	let activeLeftWrist = document.createElement("div");
-	activeLeftWrist.classList.add("left-wrist-active");
-	speechBubbleTop.appendChild(activeLeftWrist);
-
-	let activeLeftWristText = document.createElement("p");
-	activeLeftWristText.innerHTML = "Hi, I'm your <span class='bold-active-text'>wrist</span> and I help you twist and turn your hands - yay!";
-	activeLeftWristText.classList.add("left-wrist-active-text");
-	speechBubbleTop.appendChild(activeLeftWristText);
-
-	speechBubble.style.top = 43+"%";
-	speechBubble.style.left = 28+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".left-wrist-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	leftWrist.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".left-wrist-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-wrist-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightWrist = document.querySelector(".body-layers .right-wrist-original");
 rightWrist.addEventListener("click", function (){
 	rightWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Wristbone.png)";
 	leftWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Wristbone.png)";
-	createInfoWindow();
-
-	let activeRightWrist = document.createElement("div");
-	activeRightWrist.classList.add("right-wrist-active");
-	speechBubbleTop.appendChild(activeRightWrist);
-
-	let activeRightWristText = document.createElement("p");
-	activeRightWristText.innerHTML = "Hi, I'm your <span class='bold-active-text'>wrist</span> and I help you twist and turn your hands - yay!";
-	activeRightWristText.classList.add("right-wrist-active-text");
-	speechBubbleTop.appendChild(activeRightWristText);
-
-	speechBubble.style.top = 43+"%";
-	speechBubble.style.left = 43+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".right-wrist-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	rightWrist.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".right-wrist-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-wrist-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let leftFingers = document.querySelector(".body-layers .left-fingers-original");
 leftFingers.addEventListener("click", function (){
 	leftFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Fingerbones.png)";
 	rightFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Fingerbones.png)";
-	createInfoWindow();
-
-	let activeLeftFingers = document.createElement("div");
-	activeLeftFingers.classList.add("left-fingers-active");
-	speechBubbleTop.appendChild(activeLeftFingers);
-
-	let activeLeftFingersText = document.createElement("p");
-	activeLeftFingersText.innerHTML = "We are the <span class='bold-active-text'>fingerbone brothers</span>. We make your fingers move fast!";
-	activeLeftFingersText.classList.add("left-fingers-active-text");
-	speechBubbleTop.appendChild(activeLeftFingersText);
-
-	speechBubble.style.top = 47+"%";
-	speechBubble.style.left = 25+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".left-fingers-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	leftFingers.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".left-fingers-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-fingers-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightFingers = document.querySelector(".body-layers .right-fingers-original");
 rightFingers.addEventListener("click", function (){
 	rightFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Fingerbones.png)";
 	leftFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Fingerbones.png)";
-	createInfoWindow();
-
-	let activeRightFingers = document.createElement("div");
-	activeRightFingers.classList.add("right-fingers-active");
-	speechBubbleTop.appendChild(activeRightFingers);
-
-	let activeRightFingersText = document.createElement("p");
-	activeRightFingersText.innerHTML = "We are the <span class='bold-active-text'>fingerbone brothers</span>. We make your fingers move fast!";
-	activeRightFingersText.classList.add("right-fingers-active-text");
-	speechBubbleTop.appendChild(activeRightFingersText);
-
-	speechBubble.style.top = 47+"%";
-	speechBubble.style.left = 46+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".right-fingers-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	rightFingers.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".right-fingers-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-fingers-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let ribcage = document.querySelector(".body-layers .ribcage-original");
 ribcage.addEventListener("click", function (){
 	ribcage.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedRibcage.png)";
-	createInfoWindow();
-
-	let activeRibcage = document.createElement("div");
-	activeRibcage.classList.add("ribcage-active");
-	speechBubbleTop.appendChild(activeRibcage);
-
-	let activeRibcageText = document.createElement("p");
-	activeRibcageText.innerHTML = "I'm your <span class='bold-active-text'>ribcage</span>.<br/>I protect all your organs!";
-	activeRibcageText.classList.add("ribcage-active-text");
-	speechBubbleTop.appendChild(activeRibcageText);
-
-	speechBubble.style.top = 29+"%";
-	speechBubble.style.left = 10+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".ribcage-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	ribcage.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".ribcage-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".ribcage-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let hipbone = document.querySelector(".body-layers .hipbone-original");
 	hipbone.addEventListener("click", function (){
 	hipbone.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedHipbone.png)";
-	createInfoWindow();
-
-	let activeHipbone = document.createElement("div");
-	activeHipbone.classList.add("hipbone-active");
-	speechBubbleTop.appendChild(activeHipbone);
-
-	let activeHipboneText = document.createElement("p");
-	activeHipboneText.innerHTML = "I'm your<br/><span class='bold-active-text'>hip bone</span>.<br/>I connect your legs to your body!";
-	activeHipboneText.classList.add("hipbone-active-text");
-	speechBubbleTop.appendChild(activeHipboneText);
-
-	speechBubble.style.top = 43+"%";
-	speechBubble.style.left = 60+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".hipbone-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	hipbone.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".hipbone-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".hipbone-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let leftFemur = document.querySelector(".body-layers .left-femur-original");
 leftFemur.addEventListener("click", function (){
 	leftFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Femur.png)";
 	rightFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Femur.png)";
-	createInfoWindow();
-
-	let activeLeftFemur = document.createElement("div");
-	activeLeftFemur.classList.add("left-femur-active");
-	speechBubbleTop.appendChild(activeLeftFemur);
-
-	let activeLeftFemurText = document.createElement("p");
-	activeLeftFemurText.innerHTML = "Hi, I'm your <span class='bold-active-text'>thigh bone</span> and the strongest bone your whole body!";
-	activeLeftFemurText.classList.add("left-femur-active-text");
-	speechBubbleTop.appendChild(activeLeftFemurText);
-
-	speechBubble.style.top = 54+"%";
-	speechBubble.style.left = 10+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".left-femur-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	leftFemur.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".left-femur-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-femur-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightFemur = document.querySelector(".body-layers .right-femur-original");
 rightFemur.addEventListener("click", function (){
 	rightFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Femur.png)";
 	leftFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Femur.png)";
-	createInfoWindow();
-
-	let activeRightFemur = document.createElement("div");
-	activeRightFemur.classList.add("right-femur-active");
-	speechBubbleTop.appendChild(activeRightFemur);
-
-	let activeRightFemurText = document.createElement("p");
-	activeRightFemurText.innerHTML = "Hi, I'm your <span class='bold-active-text'>thigh bone</span> and the strongest bone your whole body!";
-	activeRightFemurText.classList.add("right-femur-active-text");
-	speechBubbleTop.appendChild(activeRightFemurText);
-
-	speechBubble.style.top = 54+"%";
-	speechBubble.style.left = 62+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".right-femur-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	rightFemur.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".right-femur-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-femur-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let leftKnee = document.querySelector(".body-layers .left-knee-original");
@@ -615,23 +413,10 @@ let leftKneeDiv = document.querySelector(".body-layers .left-knee-div");
 leftKneeDiv.addEventListener("click", function (){
 	leftKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Kneecap.png)";
 	rightKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Kneecap.png)";
-	createInfoWindow();
-
-	let activeLeftKnee = document.createElement("div");
-	activeLeftKnee.classList.add("left-knee-active");
-	speechBubbleTop.appendChild(activeLeftKnee);
-
-	let activeLeftKneeText = document.createElement("p");
-	activeLeftKneeText.innerHTML = "I'm your <span class='bold-active-text'>knee bone</span> and help you bend the knee";
-	activeLeftKneeText.classList.add("left-knee-active-text");
-	speechBubbleTop.appendChild(activeLeftKneeText);
-
-	speechBubble.style.top = 60+"%";
-	speechBubble.style.left = 9+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".left-knee-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	leftKnee.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".left-knee-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-knee-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightKnee = document.querySelector(".body-layers .right-knee-original");
@@ -639,669 +424,303 @@ let rightKneeDiv = document.querySelector(".body-layers .right-knee-div");
 rightKneeDiv.addEventListener("click", function (){
 	rightKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Kneecap.png)";
 	leftKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Kneecap.png)";
-	createInfoWindow();
-
-	let activeRightKnee = document.createElement("div");
-	activeRightKnee.classList.add("right-knee-active");
-	speechBubbleTop.appendChild(activeRightKnee);
-
-	let activeRightKneeText = document.createElement("p");
-	activeRightKneeText.innerHTML = "I'm your <span class='bold-active-text'>knee bone</span> and help you bend the knee";
-	activeRightKneeText.classList.add("right-knee-active-text");
-	speechBubbleTop.appendChild(activeRightKneeText);
-
-	speechBubble.style.top = 60+"%";
-	speechBubble.style.left = 63+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".right-knee-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	rightKnee.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".right-knee-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-knee-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let leftTibia = document.querySelector(".body-layers .left-tibia-original");
 	leftTibia.addEventListener("click", function (){
 	leftTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Tibia.png)";
 	rightTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Tibia.png)";
-	createInfoWindow();
-
-	let activeLeftTibia = document.createElement("div");
-	activeLeftTibia.classList.add("left-tibia-active");
-	speechBubbleTop.appendChild(activeLeftTibia);
-
-	let activeLeftTibiaText = document.createElement("p");
-	activeLeftTibiaText.innerHTML = "I'm your <span class='bold-active-text'>shinbone</span>.<br/>I support most of<br/>your weight.";
-	activeLeftTibiaText.classList.add("left-tibia-active-text");
-	speechBubbleTop.appendChild(activeLeftTibiaText);
-
-	speechBubble.style.top = 67+"%";
-	speechBubble.style.left = 10+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".left-tibia-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	leftTibia.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".left-tibia-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-tibia-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightTibia = document.querySelector(".body-layers .right-tibia-original");
 rightTibia.addEventListener("click", function (){
 	rightTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Tibia.png)";
 	leftTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Tibia.png)";
-	createInfoWindow();
-
-	let activeRightTibia = document.createElement("div");
-	activeRightTibia.classList.add("right-tibia-active");
-	speechBubbleTop.appendChild(activeRightTibia);
-
-	let activeRightTibiaText = document.createElement("p");
-	activeRightTibiaText.innerHTML = "I'm your <span class='bold-active-text'>shinbone</span>.<br/>I support most of<br/>your weight.";
-	activeRightTibiaText.classList.add("right-tibia-active-text");
-	speechBubbleTop.appendChild(activeRightTibiaText);
-
-	speechBubble.style.top = 67+"%";
-	speechBubble.style.left = 62+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".right-tibia-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	rightTibia.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".right-tibia-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-tibia-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let leftAnkle = document.querySelector(".body-layers .left-ankle-original");
 leftAnkle.addEventListener("click", function (){
 	leftAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Anklebone.png)";
 	rightAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Anklebone.png)";
-	createInfoWindow();
-
-	let activeLeftAnkle = document.createElement("div");
-	activeLeftAnkle.classList.add("left-ankle-active");
-	speechBubbleTop.appendChild(activeLeftAnkle);
-
-	let activeLeftAnkleText = document.createElement("p");
-	activeLeftAnkleText.innerHTML = "I'm your <span class='bold-active-text'>ankle</span>. I help you rotate your feet.";
-	activeLeftAnkleText.classList.add("left-ankle-active-text");
-	speechBubbleTop.appendChild(activeLeftAnkleText);
-
-	speechBubble.style.top = 76+"%";
-	speechBubble.style.left = 7+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".left-ankle-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	leftAnkle.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".left-ankle-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-ankle-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightAnkle = document.querySelector(".body-layers .right-ankle-original");
 rightAnkle.addEventListener("click", function (){
 	rightAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Anklebone.png)";
 	leftAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Anklebone.png)";
-	createInfoWindow();
-
-	let activeRightAnkle = document.createElement("div");
-	activeRightAnkle.classList.add("right-ankle-active");
-	speechBubbleTop.appendChild(activeRightAnkle);
-
-	let activeRightAnkleText = document.createElement("p");
-	activeRightAnkleText.innerHTML = "I'm your <span class='bold-active-text'>ankle</span>. I help you rotate your feet.";
-	activeRightAnkleText.classList.add("right-ankle-active-text");
-	speechBubbleTop.appendChild(activeRightAnkleText);
-
-	speechBubble.style.top = 76+"%";
-	speechBubble.style.left = 62+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".right-ankle-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	rightAnkle.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".right-ankle-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-ankle-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let leftFoot = document.querySelector(".body-layers .left-foot-original");
 leftFoot.addEventListener("click", function (){
 	leftFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Footbone.png)";
 	rightFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Footbone.png)";
-	createInfoWindow();
-
-	let activeLeftFoot = document.createElement("div");
-	activeLeftFoot.classList.add("left-foot-active");
-	speechBubbleTop.appendChild(activeLeftFoot);
-
-	let activeLeftFootText = document.createElement("p");
-	activeLeftFootText.innerHTML = "Hi, I'm your <span class='bold-active-text'>foot bone</span> and I help you walk!";
-	activeLeftFootText.classList.add("left-foot-active-text");
-	speechBubbleTop.appendChild(activeLeftFootText);
-
-	speechBubble.style.top = 77+"%";
-	speechBubble.style.left = 33+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".left-foot-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	leftFoot.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".left-foot-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-foot-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightFoot = document.querySelector(".body-layers .right-foot-original");
 rightFoot.addEventListener("click", function (){
 	rightFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Footbone.png)";
 	leftFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Footbone.png)";
-	createInfoWindow();
-
-	let activeRightFoot = document.createElement("div");
-	activeRightFoot.classList.add("right-foot-active");
-	speechBubbleTop.appendChild(activeRightFoot);
-
-	let activeRightFootText = document.createElement("p");
-	activeRightFootText.innerHTML = "Hi, I'm your <span class='bold-active-text'>foot bone</span> and I help you walk!";
-	activeRightFootText.classList.add("right-foot-active-text");
-	speechBubbleTop.appendChild(activeRightFootText);
-
-	speechBubble.style.top = 77+"%";
-	speechBubble.style.left = 39+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".right-foot-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	rightFoot.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".right-foot-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-foot-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let brain = document.querySelector(".body-layers .brain-original");
 brain.addEventListener("click", function (){
 	brain.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Brain.png)";
-
-	createInfoWindow();
+	showOverlay();
+	brain.classList.add("clicked-body-part");
 	TweenMax.to(".brain-original .speech-bubble-container", 1, {display: "block"});
-	TweenMax.to(".brain-original .brain-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
-	// let activeBrain = document.createElement("div");
-	// activeBrain.classList.add("brain-active");
-	// speechBubbleTop.appendChild(activeBrain);
-
-	// let activeBrainText = document.createElement("p");
-	// activeBrainText.innerHTML = "Hi! I am your <span class='bold-active-text'>brain</span>.<br/>I help you think fast.";
-	// activeBrainText.classList.add("brain-active-text");
-	// speechBubbleTop.appendChild(activeBrainText);
-
-	// speechBubble.style.top = 5+"%";
-	// speechBubble.style.left = 15+"%";
-	// speechBubble.style.transform = "rotateY(0deg)";
-
-	
+	TweenMax.to(".brain-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let leftLung = document.querySelector(".body-layers .left-lung-original");
 leftLung.addEventListener("click", function (){
 	leftLung.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/GhostedL_Lung.png)";
 	rightLung.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/GhostedR_Lung.png)";
-
-	createInfoWindow();
+	showOverlay();
+	leftLung.classList.add("clicked-body-part");
 	TweenMax.to(".left-lung-original .speech-bubble-container", 1, {display: "block"});
-	TweenMax.to(".left-lung-original .left-lung-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
-	// let activeLeftLung = document.createElement("div");
-	// activeLeftLung.classList.add("left-lung-active");
-	// speechBubbleTop.appendChild(activeLeftLung);
-
-	// let activeLeftLungText = document.createElement("p");
-	// activeLeftLungText.innerHTML = "I'm your <span class='bold-active-text'>lung</span>. My twin and I help you breath easy.";
-	// activeLeftLungText.classList.add("left-lung-active-text");
-	// speechBubbleTop.appendChild(activeLeftLungText);
-
-	// speechBubble.style.top = 24+"%";
-	// speechBubble.style.left = 12+"%";
-	// speechBubble.style.transform = "rotateY(0deg)";
-
-
+	TweenMax.to(".left-lung-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightLung = document.querySelector(".body-layers .right-lung-original");
 rightLung.addEventListener("click", function (){
 	rightLung.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/GhostedR_Lung.png)";
 	leftLung.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/GhostedL_Lung.png)";
-
-	createInfoWindow();
+	showOverlay();
+	rightLung.classList.add("clicked-body-part");
 	TweenMax.to(".right-lung-original .speech-bubble-container", 1, {display: "block"});
-	TweenMax.to(".right-lung-original .right-lung-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
-
-	// let activeRightLung = document.createElement("div");
-	// activeRightLung.classList.add("right-lung-active");
-	// speechBubbleTop.appendChild(activeRightLung);
-
-	// let activeRightLungText = document.createElement("p");
-	// activeRightLungText.innerHTML = "I'm your <span class='bold-active-text'>lung</span>. My twin and I help you breath easy.";
-	// activeRightLungText.classList.add("right-lung-active-text");
-	// speechBubbleTop.appendChild(activeRightLungText);
-
-	// speechBubble.style.top = 24+"%";
-	// speechBubble.style.left = 59+"%";
-	// speechBubble.style.transform = "rotateY(180deg)";
-
+	TweenMax.to(".right-lung-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let heart = document.querySelector(".body-layers .heart-original");
 heart.addEventListener("click", function (){
 	heart.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Heart.png)";
-
-	createInfoWindow();
+	showOverlay();
+	heart.classList.add("clicked-body-part");
 	TweenMax.to(".heart-original .speech-bubble-container", 1, {display: "block"});
-	TweenMax.to(".heart-original .heart-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
-	// let activeHeart = document.createElement("div");
-	// activeHeart.classList.add("heart-active");
-	// speechBubbleTop.appendChild(activeHeart);
-
-	// let activeHeartText = document.createElement("p");
-	// activeHeartText.innerHTML = "Hello! I'm your <span class='bold-active-text'>heart</span>! I pump blood.";
-	// activeHeartText.classList.add("heart-active-text");
-	// speechBubbleTop.appendChild(activeHeartText);
-
-	// speechBubble.style.top = 28+"%";
-	// speechBubble.style.left = 53+"%";
-	// speechBubble.style.transform = "rotateY(180deg)";
-	
+	TweenMax.to(".heart-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});	
 });
 
 let liver = document.querySelector(".body-layers .liver-original");
 let liverDiv = document.querySelector(".body-layers .liver-div");
 liverDiv.addEventListener("click", function (){
 	liver.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Liver.png)";
-	createInfoWindow();
-
-	let activeLiver = document.createElement("div");
-	activeLiver.classList.add("liver-active");
-	speechBubbleTop.appendChild(activeLiver);
-
-	let activeLiverText = document.createElement("p");
-	activeLiverText.innerHTML = "Hi, I'm your <span class='bold-active-text'>liver</span>. I clean your blood.";
-	activeLiverText.classList.add("liver-active-text");
-	speechBubbleTop.appendChild(activeLiverText);
-	
-	speechBubble.style.top = 32+"%";
-	speechBubble.style.left = 12+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".liver-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+	showOverlay();
+	liver.classList.add("clicked-body-part");
+	TweenMax.to(".liver-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".liver-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let kidney = document.querySelector(".body-layers .kidney-original");
 let kidneyDiv = document.querySelector(".body-layers .kidney-div");
 kidneyDiv.addEventListener("click", function (){
 	kidney.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Kidney.png)";
-	createInfoWindow();
-
-	let activeKidney = document.createElement("div");
-	activeKidney.classList.add("kidney-active");
-	speechBubbleTop.appendChild(activeKidney);
-
-	let activeKidneyText = document.createElement("p");
-	activeKidneyText.innerHTML = "I'm one of two <span class='bold-active-text'>kidneys</span>. My brother is two shy but he is here, too!";
-	activeKidneyText.classList.add("kidney-active-text");
-	speechBubbleTop.appendChild(activeKidneyText);
-
-	speechBubble.style.top = 36+"%";
-	speechBubble.style.left = 12+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".kidney-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+	showOverlay();
+	kidney.classList.add("clicked-body-part");
+	TweenMax.to(".kidney-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".kidney-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let stomach = document.querySelector(".body-layers .stomach-original");
 stomach.addEventListener("click", function (){
 	stomach.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Stomach.png)";
-	createInfoWindow();
-
-	let activeStomach = document.createElement("div");
-	activeStomach.classList.add("stomach-active");
-	speechBubbleTop.appendChild(activeStomach);
-
-	let activeStomachText = document.createElement("p");
-	activeStomachText.innerHTML = "I'm your <span class='bold-active-text'>stomach</span>. I'm where your food goes to.";
-	activeStomachText.classList.add("stomach-active-text");
-	speechBubbleTop.appendChild(activeStomachText);
-
-	speechBubble.style.top = 34+"%";
-	speechBubble.style.left = 59+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".stomach-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+	showOverlay();
+	stomach.classList.add("clicked-body-part");
+	TweenMax.to(".stomach-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".stomach-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let pancreas = document.querySelector(".body-layers .pancreas-original");
 let pancreasDiv = document.querySelector(".body-layers .pancreas-div");
 pancreasDiv.addEventListener("click", function (){
-	pancreas.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Pancreas.png)";
-	createInfoWindow();
-
-	let activePancreas = document.createElement("div");
-	activePancreas.classList.add("pancreas-active");
-	speechBubbleTop.appendChild(activePancreas);
-
-	let activePancreasText = document.createElement("p");
-	activePancreasText.innerHTML = "I'm your <span class='bold-active-text'>pancreas</span>.<br/> I make helpers that break down your food.";
-	activePancreasText.classList.add("pancreas-active-text");
-	speechBubbleTop.appendChild(activePancreasText);
-
-	speechBubble.style.top = 41+"%";
-	speechBubble.style.left = 17+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".pancreas-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+	pancreasDiv.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Pancreas.png)";
+	showOverlay();
+	pancreas.classList.add("clicked-body-part");
+	TweenMax.to(".pancreas-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".pancreas-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let largeIntestine = document.querySelector(".body-layers .large-intestine-original");
 largeIntestine.addEventListener("click", function (){
 	largeIntestine.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_LargeIntestine.png)";
-	createInfoWindow();
-
-	let activeLargeIntestine = document.createElement("div");
-	activeLargeIntestine.classList.add("large-intestine-active");
-	speechBubbleTop.appendChild(activeLargeIntestine);
-
-	let activeLargeIntestineText = document.createElement("p");
-	activeLargeIntestineText.innerHTML = "Hi, I'm your <span class='bold-active-text'>large intestine</span>. I take the small intestine's leftovers.";
-	activeLargeIntestineText.classList.add("large-intestine-active-text");
-	speechBubbleTop.appendChild(activeLargeIntestineText);
-
-	speechBubble.style.top = 44+"%";
-	speechBubble.style.left = 10+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-	
-	TweenMax.to(".large-intestine-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+	showOverlay();
+	largeIntestine.classList.add("clicked-body-part");
+	TweenMax.to(".large-intestine-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".large-intestine-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let smallIntestine = document.querySelector(".body-layers .small-intestine-original");
 let smallIntestineDiv = document.querySelector(".body-layers .small-intestine-div");
 smallIntestineDiv.addEventListener("click", function (){
 	smallIntestine.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_SmallIntestine.png)";
-	createInfoWindow();
+	smallIntestine.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".small-intestine-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".small-intestine-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 
-	let activeSmallIntestine = document.createElement("div");
-	activeSmallIntestine.classList.add("small-intestine-active");
-	speechBubbleTop.appendChild(activeSmallIntestine);
-
-	let activeSmallIntestineText = document.createElement("p");
-	activeSmallIntestineText.innerHTML = "I'm your <span class='bold-active-text'>small intestine</span>. I absorb nutrients from food.";
-	activeSmallIntestineText.classList.add("small-intestine-active-text");
-	speechBubbleTop.appendChild(activeSmallIntestineText);
-
-	speechBubble.style.top = 46+"%";
-	speechBubble.style.left = 55+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".small-intestine-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
 });
 
 let leftChest = document.querySelector(".body-layers .left-chest-original");
 leftChest.addEventListener("click", function (){
 	leftChest.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Chestmuscle.png)";
 	rightChest.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Chestmuscle.png)";
-	createInfoWindow();
-
-	let activeLeftChest = document.createElement("div");
-	activeLeftChest.classList.add("left-chest-active");
-	speechBubbleTop.appendChild(activeLeftChest);
-
-	let activeLeftChestText = document.createElement("p");
-	activeLeftChestText.innerHTML = "Hello, I'm your <span class='bold-active-text'>chest muscle</span>.<br/>I help you move your shoulders.";
-	activeLeftChestText.classList.add("left-chest-active-text");
-	speechBubbleTop.appendChild(activeLeftChestText);
-
-	speechBubble.style.top = 26+"%";
-	speechBubble.style.left = 10+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".left-chest-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	leftChest.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".left-chest-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-chest-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightChest = document.querySelector(".body-layers .right-chest-original");
 rightChest.addEventListener("click", function (){
 	rightChest.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Chestmuscle.png)";
 	leftChest.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Chestmuscle.png)";
-	createInfoWindow();
-
-	let activeRightChest = document.createElement("div");
-	activeRightChest.classList.add("right-chest-active");
-	speechBubbleTop.appendChild(activeRightChest);
-
-	let activeRightChestText = document.createElement("p");
-	activeRightChestText.innerHTML = "Hello, I'm your <span class='bold-active-text'>chest muscle</span>.<br/>I help you move your shoulders.";
-	activeRightChestText.classList.add("right-chest-active-text");
-	speechBubbleTop.appendChild(activeRightChestText);
-
-	speechBubble.style.top = 26+"%";
-	speechBubble.style.left = 60+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".right-chest-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+	rightChest.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".right-chest-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-chest-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let leftDeltoid = document.querySelector(".body-layers .left-deltoid-original");
 leftDeltoid.addEventListener("click", function (){
 	leftDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Deltoid.png)";
 	rightDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Deltoid.png)";
-	createInfoWindow();
-
-	let activeLeftDeltoid = document.createElement("div");
-	activeLeftDeltoid.classList.add("left-deltoid-active");
-	speechBubbleTop.appendChild(activeLeftDeltoid);
-
-	let activeLeftDeltoidText = document.createElement("p");
-	activeLeftDeltoidText.innerHTML = "I'm your <span class='bold-active-text'>deltoid</span>.<br/>I help you move your arm around.";
-	activeLeftDeltoidText.classList.add("left-deltoid-active-text");
-	speechBubbleTop.appendChild(activeLeftDeltoidText);
-
-	speechBubble.style.top = 26+"%";
-	speechBubble.style.left = 3+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".left-deltoid-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+	leftDeltoid.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".left-deltoid-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-deltoid-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightDeltoid = document.querySelector(".body-layers .right-deltoid-original");
 rightDeltoid.addEventListener("click", function (){
 	rightDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Deltoid.png)";
 	leftDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Deltoid.png)";
-	createInfoWindow();
-
-	let activeRightDeltoid = document.createElement("div");
-	activeRightDeltoid.classList.add("right-deltoid-active");
-	speechBubbleTop.appendChild(activeRightDeltoid);
-
-	let activeRightDeltoidText = document.createElement("p");
-	activeRightDeltoidText.innerHTML = "I'm your <span class='bold-active-text'>deltoid</span>.<br/>I help you move your arm aroud.";
-	activeRightDeltoidText.classList.add("right-deltoid-active-text");
-	speechBubbleTop.appendChild(activeRightDeltoidText);
-
-	speechBubble.style.top = 26+"%";
-	speechBubble.style.left = 69+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".right-deltoid-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
+	rightDeltoid.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".right-deltoid-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-deltoid-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let leftBiceps = document.querySelector(".body-layers .left-biceps-original");
 leftBiceps.addEventListener("click", function (){
 	leftBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Biceps.png)";
 	rightBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Biceps.png)";
-	createInfoWindow();
-
-	let activeLeftBiceps = document.createElement("div");
-	activeLeftBiceps.classList.add("left-biceps-active");
-	speechBubbleTop.appendChild(activeLeftBiceps);
-
-	let activeLeftBicepsText = document.createElement("p");
-	activeLeftBicepsText.innerHTML = "Hi, I'm your <span class='bold-active-text'>biceps</span>.<br/>I help you lift heavy stuff!";
-	activeLeftBicepsText.classList.add("left-biceps-active-text");
-	speechBubbleTop.appendChild(activeLeftBicepsText);
-
-	speechBubble.style.top = 32+"%";
-	speechBubble.style.left = 0+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".left-biceps-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	leftBiceps.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".left-biceps-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-biceps-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightBiceps = document.querySelector(".body-layers .right-biceps-original");
 rightBiceps.addEventListener("click", function (){
 	rightBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Biceps.png)";
-			leftBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Biceps.png)";
-	createInfoWindow();
-
-	let activeRightBiceps = document.createElement("div");
-	activeRightBiceps.classList.add("right-biceps-active");
-	speechBubbleTop.appendChild(activeRightBiceps);
-
-	let activeRightBicepsText = document.createElement("p");
-	activeRightBicepsText.innerHTML = "Hi, I'm your <span class='bold-active-text'>biceps</span>.<br/>I help you lift heavy stuff!";
-	activeRightBicepsText.classList.add("right-biceps-active-text");
-	speechBubbleTop.appendChild(activeRightBicepsText);
-
-	speechBubble.style.top = 33+"%";
-	speechBubble.style.left = 71+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".right-biceps-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	leftBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Biceps.png)";
+	rightBiceps.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".right-biceps-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-biceps-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let abdomin = document.querySelector(".body-layers .abdomin-original");
 abdomin.addEventListener("click", function (){
 	abdomin.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedAbdomin.png)";
-	createInfoWindow();
-
-	let activeAbdomin = document.createElement("div");
-	activeAbdomin.classList.add("abdomin-active");
-	speechBubbleTop.appendChild(activeAbdomin);
-
-	let activeAbdominText = document.createElement("p");
-	activeAbdominText.innerHTML = "Hi, I'm your <span class='bold-active-text'>abdomen</span>.<br/>I protect your organs!";
-	activeAbdominText.classList.add("abdomin-active-text");
-	speechBubbleTop.appendChild(activeAbdominText);
-
-	speechBubble.style.top = 36+"%";
-	speechBubble.style.left = 18+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".abdomin-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	abdomin.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".abdomin-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".abdomin-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let leftQuadriceps = document.querySelector(".body-layers .left-quadriceps-original");
 leftQuadriceps.addEventListener("click", function (){
 	leftQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Quadriceps.png)";
 	rightQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Quadriceps.png)";
-	createInfoWindow();
-
-	let activeLeftQuadriceps = document.createElement("div");
-	activeLeftQuadriceps.classList.add("left-quadriceps-active");
-	speechBubbleTop.appendChild(activeLeftQuadriceps);
-
-	let activeLeftQuadricepsText = document.createElement("p");
-	activeLeftQuadricepsText.innerHTML = "Hi, I'm your <span class='bold-active-text'>quad muscle</span>.<br/>I help you bend your knee and sit!";
-	activeLeftQuadricepsText.classList.add("left-quadriceps-active-text");
-	speechBubbleTop.appendChild(activeLeftQuadricepsText);
-
-	speechBubble.style.top = 53+"%";
-	speechBubble.style.left = 9+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".left-quadriceps-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	leftQuadriceps.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".left-quadriceps-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-quadriceps-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightQuadriceps = document.querySelector(".body-layers .right-quadriceps-original");
 rightQuadriceps.addEventListener("click", function (){
 	rightQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Quadriceps.png)";
 	leftQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Quadriceps.png)";
-	createInfoWindow();
-
-	let activeRightQuadriceps = document.createElement("div");
-	activeRightQuadriceps.classList.add("right-quadriceps-active");
-	speechBubbleTop.appendChild(activeRightQuadriceps);
-
-	let activeRightQuadricepsText = document.createElement("p");
-	activeRightQuadricepsText.innerHTML = "Hi, I'm your <span class='bold-active-text'>quad muscle</span>.<br/>I help you bend your knee and sit!";
-	activeRightQuadricepsText.classList.add("right-quadriceps-active-text");
-	speechBubbleTop.appendChild(activeRightQuadricepsText);
-
-	speechBubble.style.top = 53+"%";
-	speechBubble.style.left = 63+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".right-quadriceps-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	rightQuadriceps.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".right-quadriceps-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-quadriceps-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let leftCalf = document.querySelector(".body-layers .left-calf-original");
 leftCalf.addEventListener("click", function (){
 	leftCalf.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Calfmuscle.png)";
 	rightCalf.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Calfmuscle.png)";
-	createInfoWindow();
-
-	let activeLeftCalf = document.createElement("div");
-	activeLeftCalf.classList.add("left-calf-active");
-	speechBubbleTop.appendChild(activeLeftCalf);
-
-	let activeLeftCalfText = document.createElement("p");
-	activeLeftCalfText.innerHTML = "I'm your <span class='bold-active-text'>calf muscle</span>.<br/>I help you take steps!";
-	activeLeftCalfText.classList.add("left-calf-active-text");
-	speechBubbleTop.appendChild(activeLeftCalfText);
-
-	speechBubble.style.top = 70+"%";
-	speechBubble.style.left = 9+"%";
-	speechBubble.style.transform = "rotateY(0deg)";
-
-	TweenMax.to(".left-calf-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	leftCalf.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".left-calf-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".left-calf-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
 let rightCalf = document.querySelector(".body-layers .right-calf-original");
 rightCalf.addEventListener("click", function (){
 	rightCalf.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Calfmuscle.png)";
 	leftCalf.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Calfmuscle.png)";
-	createInfoWindow();
-
-	let activeRightCalf = document.createElement("div");
-	activeRightCalf.classList.add("right-calf-active");
-	speechBubbleTop.appendChild(activeRightCalf);
-
-	let activeRightCalfText = document.createElement("p");
-	activeRightCalfText.innerHTML = "I'm your <span class='bold-active-text'>calf muscle</span>.<br/>I help you take steps!";
-	activeRightCalfText.classList.add("right-calf-active-text");
-	speechBubbleTop.appendChild(activeRightCalfText);
-
-	speechBubble.style.top = 70+"%";
-	speechBubble.style.left = 63+"%";
-	speechBubble.style.transform = "rotateY(180deg)";
-
-	TweenMax.to(".right-calf-active", .4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: .5});
-
+	rightCalf.classList.add("clicked-body-part");
+	showOverlay();
+	TweenMax.to(".right-calf-original .speech-bubble-container", 1, {display: "block"});
+	TweenMax.to(".right-calf-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
 
-let overlayBK = document.querySelector(".overlay");
-overlayBK.addEventListener("click", function (){
-	closeInfoWindow();
-});
+let overlayBK = document.querySelectorAll(".overlay");
+overlayBK.forEach(function () {
+	this.addEventListener("mousedown", closeInfoWindow);
+})
 
-function createInfoWindow () {
-	let overlay = document.querySelector(".overlay");
-	// let speechBubbleTop = document.querySelector(".speech-bubble-top");
-	// let speechBubbleTip = document.querySelector(".speech-bubble-tip");
-
-	overlay.style.display = "block";
-	// speechBubbleTop.style.display = "block";
-	// speechBubbleTip.style.display = "block";
-	// speechBubble.style.zIndex = 155;
-
+function showOverlay () {
+	let overlays = document.querySelectorAll(".overlay");
+	overlays.forEach(function(overlay) {
+		overlay.style.display = "block";
+	})
 }
 
 function closeInfoWindow () {
-	let overlay = document.querySelector(".overlay");
-	// let speechBubbleTop = document.querySelector(".speech-bubble-top");
-	// let speechBubbleTip = document.querySelector(".speech-bubble-tip");
-	// speechBubble.style.zIndex = 0;
+	let overlays = document.querySelectorAll(".overlay");
 
-	TweenMax.to(".speech-bubble-container", .1, {display: "none"});
+	var clickedBodyPart = document.querySelector(".clicked-body-part")
+	if (clickedBodyPart) {
+		clickedBodyPart.classList.remove("clicked-body-part");
+	}
 
+	overlays.forEach(function(overlay) {
+		overlay.style.display = "none";
+	})
 
-	overlay.style.display = "none";
-	// speechBubbleTop.innerHTML = '';
-	// speechBubbleTop.style.display = "none";
-	// speechBubbleTip.style.display = "none";
+	TweenMax.to(".speech-bubble-container", 0.1, {display: "none"});
 	skull.style.backgroundImage = "url(../../dist/img/Skeleton/Original/Skull.png)";
 	spine.style.backgroundImage = "url(../../dist/img/Skeleton/Original/Spine.png)";
 	leftCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Collarbone.png)";

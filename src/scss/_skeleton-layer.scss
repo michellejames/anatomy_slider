@@ -28,6 +28,7 @@
 		top: 5.78125%;
 		left: 18.944444%;
 		z-index: 5;
+        opacity: 0;
 		display: none;
 	}
 	.skeleton-body {
@@ -59,6 +60,16 @@
     top: 0.614583%;
     left: 32.625926%;
     z-index: 1;
+
+    .active-image {
+		background-image: url(../../dist/img/Skeleton/Active/ActiveSkull.png);
+		width: 40%;
+	    height: 0;
+	    padding-bottom: 25%;
+	    top: 36%;
+	    left: 6%;
+	    z-index: 151;
+    }
 }
 
 .spine-original {
@@ -73,6 +84,18 @@
     top: 20.322917%;
     left: 46.385185%;
     z-index: 2;
+
+    .active-image {
+		background-image: url(../../dist/img/Skeleton/Active/ActiveSpine.png);
+		width: 40%;
+	    height: 0;
+	    padding-bottom: 25%;
+	    top: 36%;
+	    left: 6%;
+	    z-index: 151;
+	    transform: rotateY(-180deg);
+    }
+
 }
 
 .left-collarbone-original {
@@ -87,6 +110,16 @@
     top: 26.783333%;
     left: 27.62963%;
     z-index: 2;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveL_Collarbone.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    }
 }
 
 .right-collarbone-original {
@@ -101,6 +134,17 @@
     top: 26.783333%;
     left: 55.466667%;
     z-index: 2;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveR_Collarbone.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    	transform: rotateY(-180deg);
+    }
 }
 
 .left-humerus-original {
@@ -115,6 +159,17 @@
     top: 28.697917%;
     left: 17.840741%;
     z-index: 1;
+
+    .active-image {
+	    background-position: center;
+	    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Humerus.png);
+	    width: 40%;
+	    height: 0;
+	    padding-bottom: 25%;
+	    top: 36%;
+	    left: 6%;
+	    z-index: 151;	
+    }
 }
 
 .right-humerus-original {
@@ -129,6 +184,17 @@
     top: 28.697917%;
     left: 70.037037%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveR_Humerus.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    	transform: rotateY(-180deg);
+    }
 }
 
 .left-forearm-original {
@@ -143,6 +209,17 @@
     top: 42.53125%;
     left: 12.407407%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveL_Forearm.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    	transform: rotateY(-180deg);
+    }
 }
 
 .right-forearm-original {
@@ -157,6 +234,16 @@
     top: 42.53125%;
     left: 79.407407%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveR_Forearm.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    }
 }
 
 .left-wrist-original {
@@ -171,6 +258,17 @@
     top: 52.547917%;
     left: 7.981481%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveL_Wristbone.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    	transform: rotateY(-180deg);
+    }
 }
 
 .right-wrist-original {
@@ -185,6 +283,16 @@
     top: 52.547917%;
     left: 83.381481%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveR_Wristbone.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    }
 }
 
 .left-fingers-original {
@@ -199,6 +307,17 @@
     top: 54.297917%;
     left: 2.155556%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveL_Fingerbones.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    	transform: rotateY(-180deg);
+    }
 }
 
 .right-fingers-original {
@@ -213,6 +332,16 @@
     top: 54.297917%;
     left: 81.155556%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveR_Fingerbones.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    }
 }
 
 .ribcage-original {
@@ -227,6 +356,16 @@
     top: 29.90625%;
     left: 29.974074%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveRibcage.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    }
 }
 
 .hipbone-original {
@@ -241,6 +380,17 @@
     top: 49.052083%;
     left: 31.492593%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveHipbone.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    	transform: rotateY(-180deg);
+    }
 }
 
 .left-femur-original {
@@ -255,6 +405,16 @@
     top: 55.816667%;
     left: 31.12963%;
     z-index: 2;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveL_Femur.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    }
 }
 
 .right-femur-original {
@@ -269,6 +429,17 @@
     top: 55.816667%;
     left: 59.12963%;
     z-index: 2;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveR_Femur.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    	transform: rotateY(-180deg);
+    }
 }
 
 .left-knee-original {
@@ -283,6 +454,16 @@
     top: 74.447917%;
     left: 32.962963%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveL_Kneecap.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    }
 }
 
 .left-knee-div {
@@ -307,6 +488,18 @@
     top: 74.447917%;
     left: 63.962963%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveR_Kneecap.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    	transform: rotateY(-180deg);
+
+    }
 }
 
 .right-knee-div {
@@ -331,6 +524,16 @@
     top: 75.729167%;
     left: 29.725926%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveL_Tibia.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    }
 }
 
 .right-tibia-original {
@@ -345,6 +548,17 @@
     top: 75.729167%;
     left: 62.725926%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveR_Tibia.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    	transform: rotateY(-180deg);
+    }
 }
 
 .left-ankle-original {
@@ -359,6 +573,16 @@
     top: 93.183333%;
     left: 28.262963%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveL_Anklebone.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    }
 }
 
 .right-ankle-original {
@@ -373,6 +597,17 @@
     top: 93.183333%;
     left: 63.262963%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveR_Anklebone.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    	transform: rotateY(-180deg);
+    }
 }
 
 .left-foot-original {
@@ -387,6 +622,17 @@
     top: 95.133333%;
     left: 10.333333%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveL_Footbone.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    	transform: rotateY(-180deg);
+    }
 }
 
 .right-foot-original {
@@ -401,6 +647,16 @@
     top: 95.133333%;
     left: 74.333333%;
     z-index: 1;
+
+    .active-image {
+    	background-image: url(../../dist/img/Skeleton/Active/ActiveR_Footbone.png);
+    	width: 40%;
+    	height: 0;
+    	padding-bottom: 25%;
+    	top: 36%;
+    	left: 6%;
+    	z-index: 151;
+    }
 }
 
 

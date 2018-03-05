@@ -53,10 +53,10 @@
 
 .skull-active {
     position: absolute; 
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 	background-image: url(../../dist/img/Skeleton/Active/ActiveSkull.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
 	width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -67,10 +67,10 @@
 
 .spine-active {
     position: absolute; 
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 	background-image: url(../../dist/img/Skeleton/Active/ActiveSpine.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
 	width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -82,10 +82,10 @@
 
 .left-collarbone-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Collarbone.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Collarbone.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -96,10 +96,10 @@
 
 .right-collarbone-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Collarbone.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Collarbone.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -111,10 +111,10 @@
 
 .left-humerus-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Humerus.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Humerus.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -125,10 +125,10 @@
 
 .right-humerus-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Humerus.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Humerus.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -140,10 +140,10 @@
 
 .left-forearm-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Forearm.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Forearm.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -155,10 +155,10 @@
 
 .right-forearm-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Forearm.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Forearm.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -169,10 +169,10 @@
 
 .left-wrist-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Wristbone.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Wristbone.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -184,10 +184,10 @@
 
 .right-wrist-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Wristbone.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Wristbone.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -198,10 +198,10 @@
 
 .left-fingers-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Fingerbones.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Fingerbones.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -213,10 +213,10 @@
 
 .right-fingers-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Fingerbones.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Fingerbones.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -227,10 +227,10 @@
 
 .ribcage-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveRibcage.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveRibcage.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -241,10 +241,10 @@
 
 .hipbone-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveHipbone.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveHipbone.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -256,10 +256,10 @@
 
 .left-femur-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Femur.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Femur.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -270,10 +270,10 @@
 
 .right-femur-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Femur.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Femur.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -285,10 +285,10 @@
 
 .left-knee-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Kneecap.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Kneecap.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -299,10 +299,10 @@
 
 .right-knee-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Kneecap.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Kneecap.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -314,10 +314,10 @@
 
 .left-tibia-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Tibia.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Tibia.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -328,10 +328,10 @@
 
 .right-tibia-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Tibia.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Tibia.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -343,10 +343,10 @@
 
 .left-ankle-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Anklebone.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Anklebone.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -357,10 +357,10 @@
 
 .right-ankle-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Anklebone.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Anklebone.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -372,10 +372,10 @@
 
 .left-foot-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Footbone.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveL_Footbone.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -387,10 +387,10 @@
 
 .right-foot-active {
     position: absolute; 
-    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Footbone.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: url(../../dist/img/Skeleton/Active/ActiveR_Footbone.png);
     width: 40%;
     height: 0;
     padding-bottom: 25%;

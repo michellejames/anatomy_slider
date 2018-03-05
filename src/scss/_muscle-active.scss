@@ -15,9 +15,9 @@
     font-family: 'Lato', sans-serif;
 }
 
-.left-chest-active-text {
-	top: 21%;
-}
+// .left-chest-active-text {
+// 	top: 21%;
+// }
 
 .right-chest-active-text,
 .right-deltoid-active-text,
@@ -36,26 +36,26 @@
     font-family: 'Lato', sans-serif;
 }
 
-.right-chest-active-text {
-	top: 21%;
-	left: 38%;
-}
+// .right-chest-active-text {
+// 	top: 21%;
+// 	left: 38%;
+// }
 
-.right-quadriceps-active-text {
-	top: 29%;
-}
+// .right-quadriceps-active-text {
+// 	top: 29%;
+// }
 
-.right-deltoid-active-text {
-	top: 32%;
-    left: 38%;
-}
+// .right-deltoid-active-text {
+// 	top: 32%;
+//     left: 38%;
+// }
 
 .left-chest-active {
 	position: absolute;
-	background-image: url(../../dist/img/Muscles/Active/ActiveL_Chestmuscle.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+	background-image: url(../../dist/img/Muscles/Active/ActiveL_Chestmuscle.png);
 	width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -66,10 +66,10 @@
 
 .right-chest-active {
 	position: absolute;
-	background-image: url(../../dist/img/Muscles/Active/ActiveR_Chestmuscle.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+	background-image: url(../../dist/img/Muscles/Active/ActiveR_Chestmuscle.png);
 	width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -82,10 +82,10 @@
 
 .left-deltoid-active {
 	position: absolute;
-	background-image: url(../../dist/img/Muscles/Active/ActiveL_Deltoid.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+	background-image: url(../../dist/img/Muscles/Active/ActiveL_Deltoid.png);
 	width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -96,10 +96,10 @@
 
 .right-deltoid-active {
 	position: absolute;
-	background-image: url(../../dist/img/Muscles/Active/ActiveR_Deltoid.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+	background-image: url(../../dist/img/Muscles/Active/ActiveR_Deltoid.png);
 	width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -112,10 +112,10 @@
 
 .left-biceps-active {
 	position: absolute;
-	background-image: url(../../dist/img/Muscles/Active/ActiveL_Biceps.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+	background-image: url(../../dist/img/Muscles/Active/ActiveL_Biceps.png);
 	width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -126,10 +126,10 @@
 
 .right-biceps-active {
 	position: absolute;
-	background-image: url(../../dist/img/Muscles/Active/ActiveR_Biceps.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+	background-image: url(../../dist/img/Muscles/Active/ActiveR_Biceps.png);
 	width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -141,10 +141,10 @@
 
 .abdomin-active {
 	position: absolute;
-	background-image: url(../../dist/img/Muscles/Active/ActiveAbdomin.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+	background-image: url(../../dist/img/Muscles/Active/ActiveAbdomin.png);
 	width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -155,10 +155,10 @@
 
 .left-quadriceps-active {
 	position: absolute;
-	background-image: url(../../dist/img/Muscles/Active/ActiveL_Quadriceps.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+	background-image: url(../../dist/img/Muscles/Active/ActiveL_Quadriceps.png);
 	width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -169,10 +169,10 @@
 
 .right-quadriceps-active {
 	position: absolute;
-	background-image: url(../../dist/img/Muscles/Active/ActiveR_Quadriceps.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+	background-image: url(../../dist/img/Muscles/Active/ActiveR_Quadriceps.png);
 	width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -184,10 +184,10 @@
 
 .left-calf-active {
 	position: absolute;
-	background-image: url(../../dist/img/Muscles/Active/ActiveL_Calfmuscle.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+	background-image: url(../../dist/img/Muscles/Active/ActiveL_Calfmuscle.png);
 	width: 40%;
     height: 0;
     padding-bottom: 25%;
@@ -198,10 +198,10 @@
 
 .right-calf-active {
 	position: absolute;
-	background-image: url(../../dist/img/Muscles/Active/ActiveR_Calfmuscle.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+	background-image: url(../../dist/img/Muscles/Active/ActiveR_Calfmuscle.png);
 	width: 40%;
     height: 0;
     padding-bottom: 25%;
