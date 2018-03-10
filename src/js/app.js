@@ -1,4 +1,4 @@
-const FASTMODE = true;
+const FASTMODE = false;
 
 
 //snap sliders to left and right
