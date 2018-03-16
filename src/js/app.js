@@ -230,7 +230,7 @@ TweenMax.to(".start-title", 1, {scale: 1.2, yoyo: true, repeat: 1, delay: 2});
 
 startButton.addEventListener("click", function (){
 	console.log("click");
-	startButton.style.backgroundImage = "url(../../dist/img/Go_selected_button.svg)";
+	startButton.style.backgroundImage = "url(dist/img/Go_selected_button.svg)";
 
 
 	var timeline = new TimelineMax();
@@ -254,7 +254,7 @@ startButton.addEventListener("click", function (){
 let skull = document.querySelector(".body-layers .skull-original");
 skull.addEventListener("click", function (){
 	console.log("click");
-	skull.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedSkull.png)";
+	skull.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedSkull.png)";
 	skull.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".skull-original .speech-bubble-container", 1, {display: "block"});
@@ -263,7 +263,7 @@ skull.addEventListener("click", function (){
 
 let spine = document.querySelector(".body-layers .spine-original");
 spine.addEventListener("click", function (){
-	spine.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedSpine.png)";
+	spine.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedSpine.png)";
 	spine.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".spine-original .speech-bubble-container", 1, {display: "block"});
@@ -272,8 +272,8 @@ spine.addEventListener("click", function (){
 
 let leftCollarbone = document.querySelector(".body-layers .left-collarbone-original");
 leftCollarbone.addEventListener("click", function (){
-	leftCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Collarbone.png)";
-	rightCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Collarbone.png)";
+	leftCollarbone.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Collarbone.png)";
+	rightCollarbone.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Collarbone.png)";
 	leftCollarbone.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".left-collarbone-original .speech-bubble-container", 1, {display: "block"});
@@ -282,8 +282,8 @@ leftCollarbone.addEventListener("click", function (){
 
 let rightCollarbone = document.querySelector(".body-layers .right-collarbone-original");
 rightCollarbone.addEventListener("click", function (){
-	rightCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Collarbone.png)";
-	leftCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Collarbone.png)";
+	rightCollarbone.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Collarbone.png)";
+	leftCollarbone.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Collarbone.png)";
 	rightCollarbone.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".right-collarbone-original .speech-bubble-container", 1, {display: "block"});
@@ -292,8 +292,8 @@ rightCollarbone.addEventListener("click", function (){
 
 let leftHumerus = document.querySelector(".body-layers .left-humerus-original");
 leftHumerus.addEventListener("click", function (){
-	leftHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Humerus.png)";
-	rightHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Humerus.png)";
+	leftHumerus.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Humerus.png)";
+	rightHumerus.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Humerus.png)";
 	leftHumerus.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".left-humerus-original .speech-bubble-container", 1, {display: "block"});
@@ -302,8 +302,8 @@ leftHumerus.addEventListener("click", function (){
 
 let rightHumerus = document.querySelector(".body-layers .right-humerus-original");
 rightHumerus.addEventListener("click", function (){
-	rightHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Humerus.png)";
-	leftHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Humerus.png)";
+	rightHumerus.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Humerus.png)";
+	leftHumerus.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Humerus.png)";
 	rightHumerus.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".right-humerus-original .speech-bubble-container", 1, {display: "block"});
@@ -312,8 +312,8 @@ rightHumerus.addEventListener("click", function (){
 
 let leftForearm = document.querySelector(".body-layers .left-forearm-original");
 leftForearm.addEventListener("click", function (){
-	leftForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Forearm.png)";
-	rightForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Forearm.png)";
+	leftForearm.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Forearm.png)";
+	rightForearm.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Forearm.png)";
 	leftForearm.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".left-forearm-original .speech-bubble-container", 1, {display: "block"});
@@ -322,8 +322,8 @@ leftForearm.addEventListener("click", function (){
 
 let rightForearm = document.querySelector(".body-layers .right-forearm-original");
 rightForearm.addEventListener("click", function (){
-	rightForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Forearm.png)";
-	leftForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Forearm.png)";
+	rightForearm.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Forearm.png)";
+	leftForearm.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Forearm.png)";
 	rightForearm.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".right-forearm-original .speech-bubble-container", 1, {display: "block"});
@@ -332,8 +332,8 @@ rightForearm.addEventListener("click", function (){
 
 let leftWrist = document.querySelector(".body-layers .left-wrist-original");
 leftWrist.addEventListener("click", function (){
-	leftWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Wristbone.png)";
-	rightWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Wristbone.png)";
+	leftWrist.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Wristbone.png)";
+	rightWrist.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Wristbone.png)";
 	leftWrist.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".left-wrist-original .speech-bubble-container", 1, {display: "block"});
@@ -342,8 +342,8 @@ leftWrist.addEventListener("click", function (){
 
 let rightWrist = document.querySelector(".body-layers .right-wrist-original");
 rightWrist.addEventListener("click", function (){
-	rightWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Wristbone.png)";
-	leftWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Wristbone.png)";
+	rightWrist.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Wristbone.png)";
+	leftWrist.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Wristbone.png)";
 	rightWrist.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".right-wrist-original .speech-bubble-container", 1, {display: "block"});
@@ -352,8 +352,8 @@ rightWrist.addEventListener("click", function (){
 
 let leftFingers = document.querySelector(".body-layers .left-fingers-original");
 leftFingers.addEventListener("click", function (){
-	leftFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Fingerbones.png)";
-	rightFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Fingerbones.png)";
+	leftFingers.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Fingerbones.png)";
+	rightFingers.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Fingerbones.png)";
 	leftFingers.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".left-fingers-original .speech-bubble-container", 1, {display: "block"});
@@ -362,8 +362,8 @@ leftFingers.addEventListener("click", function (){
 
 let rightFingers = document.querySelector(".body-layers .right-fingers-original");
 rightFingers.addEventListener("click", function (){
-	rightFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Fingerbones.png)";
-	leftFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Fingerbones.png)";
+	rightFingers.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Fingerbones.png)";
+	leftFingers.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Fingerbones.png)";
 	rightFingers.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".right-fingers-original .speech-bubble-container", 1, {display: "block"});
@@ -372,7 +372,7 @@ rightFingers.addEventListener("click", function (){
 
 let ribcage = document.querySelector(".body-layers .ribcage-original");
 ribcage.addEventListener("click", function (){
-	ribcage.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedRibcage.png)";
+	ribcage.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedRibcage.png)";
 	ribcage.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".ribcage-original .speech-bubble-container", 1, {display: "block"});
@@ -381,7 +381,7 @@ ribcage.addEventListener("click", function (){
 
 let hipbone = document.querySelector(".body-layers .hipbone-original");
 	hipbone.addEventListener("click", function (){
-	hipbone.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedHipbone.png)";
+	hipbone.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedHipbone.png)";
 	hipbone.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".hipbone-original .speech-bubble-container", 1, {display: "block"});
@@ -390,8 +390,8 @@ let hipbone = document.querySelector(".body-layers .hipbone-original");
 
 let leftFemur = document.querySelector(".body-layers .left-femur-original");
 leftFemur.addEventListener("click", function (){
-	leftFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Femur.png)";
-	rightFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Femur.png)";
+	leftFemur.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Femur.png)";
+	rightFemur.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Femur.png)";
 	leftFemur.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".left-femur-original .speech-bubble-container", 1, {display: "block"});
@@ -400,8 +400,8 @@ leftFemur.addEventListener("click", function (){
 
 let rightFemur = document.querySelector(".body-layers .right-femur-original");
 rightFemur.addEventListener("click", function (){
-	rightFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Femur.png)";
-	leftFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Femur.png)";
+	rightFemur.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Femur.png)";
+	leftFemur.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Femur.png)";
 	rightFemur.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".right-femur-original .speech-bubble-container", 1, {display: "block"});
@@ -411,8 +411,8 @@ rightFemur.addEventListener("click", function (){
 let leftKnee = document.querySelector(".body-layers .left-knee-original");
 let leftKneeDiv = document.querySelector(".body-layers .left-knee-div");
 leftKneeDiv.addEventListener("click", function (){
-	leftKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Kneecap.png)";
-	rightKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Kneecap.png)";
+	leftKnee.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Kneecap.png)";
+	rightKnee.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Kneecap.png)";
 	leftKnee.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".left-knee-original .speech-bubble-container", 1, {display: "block"});
@@ -422,8 +422,8 @@ leftKneeDiv.addEventListener("click", function (){
 let rightKnee = document.querySelector(".body-layers .right-knee-original");
 let rightKneeDiv = document.querySelector(".body-layers .right-knee-div");
 rightKneeDiv.addEventListener("click", function (){
-	rightKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Kneecap.png)";
-	leftKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Kneecap.png)";
+	rightKnee.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Kneecap.png)";
+	leftKnee.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Kneecap.png)";
 	rightKnee.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".right-knee-original .speech-bubble-container", 1, {display: "block"});
@@ -432,8 +432,8 @@ rightKneeDiv.addEventListener("click", function (){
 
 let leftTibia = document.querySelector(".body-layers .left-tibia-original");
 	leftTibia.addEventListener("click", function (){
-	leftTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Tibia.png)";
-	rightTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Tibia.png)";
+	leftTibia.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Tibia.png)";
+	rightTibia.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Tibia.png)";
 	leftTibia.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".left-tibia-original .speech-bubble-container", 1, {display: "block"});
@@ -442,8 +442,8 @@ let leftTibia = document.querySelector(".body-layers .left-tibia-original");
 
 let rightTibia = document.querySelector(".body-layers .right-tibia-original");
 rightTibia.addEventListener("click", function (){
-	rightTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Tibia.png)";
-	leftTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Tibia.png)";
+	rightTibia.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Tibia.png)";
+	leftTibia.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Tibia.png)";
 	rightTibia.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".right-tibia-original .speech-bubble-container", 1, {display: "block"});
@@ -452,8 +452,8 @@ rightTibia.addEventListener("click", function (){
 
 let leftAnkle = document.querySelector(".body-layers .left-ankle-original");
 leftAnkle.addEventListener("click", function (){
-	leftAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Anklebone.png)";
-	rightAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Anklebone.png)";
+	leftAnkle.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Anklebone.png)";
+	rightAnkle.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Anklebone.png)";
 	leftAnkle.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".left-ankle-original .speech-bubble-container", 1, {display: "block"});
@@ -462,8 +462,8 @@ leftAnkle.addEventListener("click", function (){
 
 let rightAnkle = document.querySelector(".body-layers .right-ankle-original");
 rightAnkle.addEventListener("click", function (){
-	rightAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Anklebone.png)";
-	leftAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Anklebone.png)";
+	rightAnkle.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Anklebone.png)";
+	leftAnkle.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Anklebone.png)";
 	rightAnkle.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".right-ankle-original .speech-bubble-container", 1, {display: "block"});
@@ -472,8 +472,8 @@ rightAnkle.addEventListener("click", function (){
 
 let leftFoot = document.querySelector(".body-layers .left-foot-original");
 leftFoot.addEventListener("click", function (){
-	leftFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Footbone.png)";
-	rightFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Footbone.png)";
+	leftFoot.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Footbone.png)";
+	rightFoot.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Footbone.png)";
 	leftFoot.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".left-foot-original .speech-bubble-container", 1, {display: "block"});
@@ -482,8 +482,8 @@ leftFoot.addEventListener("click", function (){
 
 let rightFoot = document.querySelector(".body-layers .right-foot-original");
 rightFoot.addEventListener("click", function (){
-	rightFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedR_Footbone.png)";
-	leftFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Ghosted/GhostedL_Footbone.png)";
+	rightFoot.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedR_Footbone.png)";
+	leftFoot.style.backgroundImage = "url(dist/img/Skeleton/Ghosted/GhostedL_Footbone.png)";
 	rightFoot.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".right-foot-original .speech-bubble-container", 1, {display: "block"});
@@ -492,7 +492,7 @@ rightFoot.addEventListener("click", function (){
 
 let brain = document.querySelector(".body-layers .brain-original");
 brain.addEventListener("click", function (){
-	brain.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Brain.png)";
+	brain.style.backgroundImage = "url(dist/img/Organs/Ghosted/Ghosted_Brain.png)";
 	showOverlay();
 	brain.classList.add("clicked-body-part");
 	TweenMax.to(".brain-original .speech-bubble-container", 1, {display: "block"});
@@ -501,8 +501,8 @@ brain.addEventListener("click", function (){
 
 let leftLung = document.querySelector(".body-layers .left-lung-original");
 leftLung.addEventListener("click", function (){
-	leftLung.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/GhostedL_Lung.png)";
-	rightLung.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/GhostedR_Lung.png)";
+	leftLung.style.backgroundImage = "url(dist/img/Organs/Ghosted/GhostedL_Lung.png)";
+	rightLung.style.backgroundImage = "url(dist/img/Organs/Ghosted/GhostedR_Lung.png)";
 	showOverlay();
 	leftLung.classList.add("clicked-body-part");
 	TweenMax.to(".left-lung-original .speech-bubble-container", 1, {display: "block"});
@@ -511,8 +511,8 @@ leftLung.addEventListener("click", function (){
 
 let rightLung = document.querySelector(".body-layers .right-lung-original");
 rightLung.addEventListener("click", function (){
-	rightLung.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/GhostedR_Lung.png)";
-	leftLung.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/GhostedL_Lung.png)";
+	rightLung.style.backgroundImage = "url(dist/img/Organs/Ghosted/GhostedR_Lung.png)";
+	leftLung.style.backgroundImage = "url(dist/img/Organs/Ghosted/GhostedL_Lung.png)";
 	showOverlay();
 	rightLung.classList.add("clicked-body-part");
 	TweenMax.to(".right-lung-original .speech-bubble-container", 1, {display: "block"});
@@ -521,7 +521,7 @@ rightLung.addEventListener("click", function (){
 
 let heart = document.querySelector(".body-layers .heart-original");
 heart.addEventListener("click", function (){
-	heart.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Heart.png)";
+	heart.style.backgroundImage = "url(dist/img/Organs/Ghosted/Ghosted_Heart.png)";
 	showOverlay();
 	heart.classList.add("clicked-body-part");
 	TweenMax.to(".heart-original .speech-bubble-container", 1, {display: "block"});
@@ -531,7 +531,7 @@ heart.addEventListener("click", function (){
 let liver = document.querySelector(".body-layers .liver-original");
 let liverDiv = document.querySelector(".body-layers .liver-div");
 liverDiv.addEventListener("click", function (){
-	liver.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Liver.png)";
+	liver.style.backgroundImage = "url(dist/img/Organs/Ghosted/Ghosted_Liver.png)";
 	showOverlay();
 	liver.classList.add("clicked-body-part");
 	TweenMax.to(".liver-original .speech-bubble-container", 1, {display: "block"});
@@ -541,7 +541,7 @@ liverDiv.addEventListener("click", function (){
 let kidney = document.querySelector(".body-layers .kidney-original");
 let kidneyDiv = document.querySelector(".body-layers .kidney-div");
 kidneyDiv.addEventListener("click", function (){
-	kidney.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Kidney.png)";
+	kidney.style.backgroundImage = "url(dist/img/Organs/Ghosted/Ghosted_Kidney.png)";
 	showOverlay();
 	kidney.classList.add("clicked-body-part");
 	TweenMax.to(".kidney-original .speech-bubble-container", 1, {display: "block"});
@@ -550,7 +550,7 @@ kidneyDiv.addEventListener("click", function (){
 
 let stomach = document.querySelector(".body-layers .stomach-original");
 stomach.addEventListener("click", function (){
-	stomach.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Stomach.png)";
+	stomach.style.backgroundImage = "url(dist/img/Organs/Ghosted/Ghosted_Stomach.png)";
 	showOverlay();
 	stomach.classList.add("clicked-body-part");
 	TweenMax.to(".stomach-original .speech-bubble-container", 1, {display: "block"});
@@ -560,7 +560,7 @@ stomach.addEventListener("click", function (){
 let pancreas = document.querySelector(".body-layers .pancreas-original");
 let pancreasDiv = document.querySelector(".body-layers .pancreas-div");
 pancreasDiv.addEventListener("click", function (){
-	pancreasDiv.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_Pancreas.png)";
+	pancreasDiv.style.backgroundImage = "url(dist/img/Organs/Ghosted/Ghosted_Pancreas.png)";
 	showOverlay();
 	pancreas.classList.add("clicked-body-part");
 	TweenMax.to(".pancreas-original .speech-bubble-container", 1, {display: "block"});
@@ -569,7 +569,7 @@ pancreasDiv.addEventListener("click", function (){
 
 let largeIntestine = document.querySelector(".body-layers .large-intestine-original");
 largeIntestine.addEventListener("click", function (){
-	largeIntestine.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_LargeIntestine.png)";
+	largeIntestine.style.backgroundImage = "url(dist/img/Organs/Ghosted/Ghosted_LargeIntestine.png)";
 	showOverlay();
 	largeIntestine.classList.add("clicked-body-part");
 	TweenMax.to(".large-intestine-original .speech-bubble-container", 1, {display: "block"});
@@ -579,7 +579,7 @@ largeIntestine.addEventListener("click", function (){
 let smallIntestine = document.querySelector(".body-layers .small-intestine-original");
 let smallIntestineDiv = document.querySelector(".body-layers .small-intestine-div");
 smallIntestineDiv.addEventListener("click", function (){
-	smallIntestine.style.backgroundImage = "url(../../dist/img/Organs/Ghosted/Ghosted_SmallIntestine.png)";
+	smallIntestine.style.backgroundImage = "url(dist/img/Organs/Ghosted/Ghosted_SmallIntestine.png)";
 	smallIntestine.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".small-intestine-original .speech-bubble-container", 1, {display: "block"});
@@ -589,8 +589,8 @@ smallIntestineDiv.addEventListener("click", function (){
 
 let leftChest = document.querySelector(".body-layers .left-chest-original");
 leftChest.addEventListener("click", function (){
-	leftChest.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Chestmuscle.png)";
-	rightChest.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Chestmuscle.png)";
+	leftChest.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedL_Chestmuscle.png)";
+	rightChest.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedR_Chestmuscle.png)";
 	leftChest.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".left-chest-original .speech-bubble-container", 1, {display: "block"});
@@ -599,8 +599,8 @@ leftChest.addEventListener("click", function (){
 
 let rightChest = document.querySelector(".body-layers .right-chest-original");
 rightChest.addEventListener("click", function (){
-	rightChest.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Chestmuscle.png)";
-	leftChest.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Chestmuscle.png)";
+	rightChest.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedR_Chestmuscle.png)";
+	leftChest.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedL_Chestmuscle.png)";
 	rightChest.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".right-chest-original .speech-bubble-container", 1, {display: "block"});
@@ -609,8 +609,8 @@ rightChest.addEventListener("click", function (){
 
 let leftDeltoid = document.querySelector(".body-layers .left-deltoid-original");
 leftDeltoid.addEventListener("click", function (){
-	leftDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Deltoid.png)";
-	rightDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Deltoid.png)";
+	leftDeltoid.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedL_Deltoid.png)";
+	rightDeltoid.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedR_Deltoid.png)";
 	leftDeltoid.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".left-deltoid-original .speech-bubble-container", 1, {display: "block"});
@@ -619,8 +619,8 @@ leftDeltoid.addEventListener("click", function (){
 
 let rightDeltoid = document.querySelector(".body-layers .right-deltoid-original");
 rightDeltoid.addEventListener("click", function (){
-	rightDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Deltoid.png)";
-	leftDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Deltoid.png)";
+	rightDeltoid.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedR_Deltoid.png)";
+	leftDeltoid.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedL_Deltoid.png)";
 	rightDeltoid.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".right-deltoid-original .speech-bubble-container", 1, {display: "block"});
@@ -629,8 +629,8 @@ rightDeltoid.addEventListener("click", function (){
 
 let leftBiceps = document.querySelector(".body-layers .left-biceps-original");
 leftBiceps.addEventListener("click", function (){
-	leftBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Biceps.png)";
-	rightBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Biceps.png)";
+	leftBiceps.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedL_Biceps.png)";
+	rightBiceps.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedR_Biceps.png)";
 	leftBiceps.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".left-biceps-original .speech-bubble-container", 1, {display: "block"});
@@ -639,8 +639,8 @@ leftBiceps.addEventListener("click", function (){
 
 let rightBiceps = document.querySelector(".body-layers .right-biceps-original");
 rightBiceps.addEventListener("click", function (){
-	rightBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Biceps.png)";
-	leftBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Biceps.png)";
+	rightBiceps.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedR_Biceps.png)";
+	leftBiceps.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedL_Biceps.png)";
 	rightBiceps.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".right-biceps-original .speech-bubble-container", 1, {display: "block"});
@@ -649,7 +649,7 @@ rightBiceps.addEventListener("click", function (){
 
 let abdomin = document.querySelector(".body-layers .abdomin-original");
 abdomin.addEventListener("click", function (){
-	abdomin.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedAbdomin.png)";
+	abdomin.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedAbdomin.png)";
 	abdomin.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".abdomin-original .speech-bubble-container", 1, {display: "block"});
@@ -658,8 +658,8 @@ abdomin.addEventListener("click", function (){
 
 let leftQuadriceps = document.querySelector(".body-layers .left-quadriceps-original");
 leftQuadriceps.addEventListener("click", function (){
-	leftQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Quadriceps.png)";
-	rightQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Quadriceps.png)";
+	leftQuadriceps.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedL_Quadriceps.png)";
+	rightQuadriceps.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedR_Quadriceps.png)";
 	leftQuadriceps.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".left-quadriceps-original .speech-bubble-container", 1, {display: "block"});
@@ -668,8 +668,8 @@ leftQuadriceps.addEventListener("click", function (){
 
 let rightQuadriceps = document.querySelector(".body-layers .right-quadriceps-original");
 rightQuadriceps.addEventListener("click", function (){
-	rightQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Quadriceps.png)";
-	leftQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Quadriceps.png)";
+	rightQuadriceps.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedR_Quadriceps.png)";
+	leftQuadriceps.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedL_Quadriceps.png)";
 	rightQuadriceps.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".right-quadriceps-original .speech-bubble-container", 1, {display: "block"});
@@ -678,8 +678,8 @@ rightQuadriceps.addEventListener("click", function (){
 
 let leftCalf = document.querySelector(".body-layers .left-calf-original");
 leftCalf.addEventListener("click", function (){
-	leftCalf.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Calfmuscle.png)";
-	rightCalf.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Calfmuscle.png)";
+	leftCalf.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedL_Calfmuscle.png)";
+	rightCalf.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedR_Calfmuscle.png)";
 	leftCalf.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".left-calf-original .speech-bubble-container", 1, {display: "block"});
@@ -688,8 +688,8 @@ leftCalf.addEventListener("click", function (){
 
 let rightCalf = document.querySelector(".body-layers .right-calf-original");
 rightCalf.addEventListener("click", function (){
-	rightCalf.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedR_Calfmuscle.png)";
-	leftCalf.style.backgroundImage = "url(../../dist/img/Muscles/Ghosted/GhostedL_Calfmuscle.png)";
+	rightCalf.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedR_Calfmuscle.png)";
+	leftCalf.style.backgroundImage = "url(dist/img/Muscles/Ghosted/GhostedL_Calfmuscle.png)";
 	rightCalf.classList.add("clicked-body-part");
 	showOverlay();
 	TweenMax.to(".right-calf-original .speech-bubble-container", 1, {display: "block"});
@@ -721,49 +721,49 @@ function closeInfoWindow () {
 	})
 
 	TweenMax.to(".speech-bubble-container", 0.1, {display: "none"});
-	skull.style.backgroundImage = "url(../../dist/img/Skeleton/Original/Skull.png)";
-	spine.style.backgroundImage = "url(../../dist/img/Skeleton/Original/Spine.png)";
-	leftCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Collarbone.png)";
-	rightCollarbone.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Collarbone.png)";
-	leftHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Humerus.png)";
-	rightHumerus.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Humerus.png)";
-	leftForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Forearm.png)";
-	rightForearm.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Forearm.png)";
-	leftWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Wristbone.png)";
-	rightWrist.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Wristbone.png)";
-	leftFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Fingerbones.png)";
-	rightFingers.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Fingerbones.png)";
-	ribcage.style.backgroundImage = "url(../../dist/img/Skeleton/Original/Ribcage.png)";
-	hipbone.style.backgroundImage = "url(../../dist/img/Skeleton/Original/Hipbone.png)";
-	leftFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Femur.png)";
-	rightFemur.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Femur.png)";
-	leftKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Kneecap.png)";
-	rightKnee.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Kneecap.png)";
-	leftTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Tibia.png)";
-	rightTibia.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Tibia.png)";
-	leftAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Anklebone.png)";
-	rightAnkle.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Anklebone.png)";
-	leftFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Original/L_Footbone.png)";
-	rightFoot.style.backgroundImage = "url(../../dist/img/Skeleton/Original/R_Footbone.png)";
-	brain.style.backgroundImage = "url(../../dist/img/Organs/Original/Brain.png)";
-	leftLung.style.backgroundImage = "url(../../dist/img/Organs/Original/Lung_L.png)";
-	rightLung.style.backgroundImage = "url(../../dist/img/Organs/Original/Lung_R.png)";
-	heart.style.backgroundImage = "url(../../dist/img/Organs/Original/Heart.png)";
-	liver.style.backgroundImage = "url(../../dist/img/Organs/Original/Liver.png)";
-	kidney.style.backgroundImage = "url(../../dist/img/Organs/Original/Kidney.png)";
-	stomach.style.backgroundImage = "url(../../dist/img/Organs/Original/Stomach.png)";
-	pancreas.style.backgroundImage = "url(../../dist/img/Organs/Original/Pancreas.png)";
-	largeIntestine.style.backgroundImage = "url(../../dist/img/Organs/Original/LargeIntestine.png)";
-	smallIntestine.style.backgroundImage = "url(../../dist/img/Organs/Original/SmallIntestine.png)";
-	leftChest.style.backgroundImage = "url(../../dist/img/Muscles/Original/L_Chestmuscle.png)";
-	rightChest.style.backgroundImage = "url(../../dist/img/Muscles/Original/R_Chestmuscle.png)";
-	leftDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Original/L_Deltoid.png)";
-	rightDeltoid.style.backgroundImage = "url(../../dist/img/Muscles/Original/R_Deltoid.png)";
-	leftBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Original/L_Biceps.png)";
-	rightBiceps.style.backgroundImage = "url(../../dist/img/Muscles/Original/R_Biceps.png)";
-	abdomin.style.backgroundImage = "url(../../dist/img/Muscles/Original/Abdomin.png)";
-	leftQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Original/L_Quadriceps.png)";
-	rightQuadriceps.style.backgroundImage = "url(../../dist/img/Muscles/Original/R_Quadriceps.png)";
-	leftCalf.style.backgroundImage = "url(../../dist/img/Muscles/Original/L_Calfmuscle.png)";
-	rightCalf.style.backgroundImage = "url(../../dist/img/Muscles/Original/R_Calfmuscle.png)";
+	skull.style.backgroundImage = "url(dist/img/Skeleton/Original/Skull.png)";
+	spine.style.backgroundImage = "url(dist/img/Skeleton/Original/Spine.png)";
+	leftCollarbone.style.backgroundImage = "url(dist/img/Skeleton/Original/L_Collarbone.png)";
+	rightCollarbone.style.backgroundImage = "url(dist/img/Skeleton/Original/R_Collarbone.png)";
+	leftHumerus.style.backgroundImage = "url(dist/img/Skeleton/Original/L_Humerus.png)";
+	rightHumerus.style.backgroundImage = "url(dist/img/Skeleton/Original/R_Humerus.png)";
+	leftForearm.style.backgroundImage = "url(dist/img/Skeleton/Original/L_Forearm.png)";
+	rightForearm.style.backgroundImage = "url(dist/img/Skeleton/Original/R_Forearm.png)";
+	leftWrist.style.backgroundImage = "url(dist/img/Skeleton/Original/L_Wristbone.png)";
+	rightWrist.style.backgroundImage = "url(dist/img/Skeleton/Original/R_Wristbone.png)";
+	leftFingers.style.backgroundImage = "url(dist/img/Skeleton/Original/L_Fingerbones.png)";
+	rightFingers.style.backgroundImage = "url(dist/img/Skeleton/Original/R_Fingerbones.png)";
+	ribcage.style.backgroundImage = "url(dist/img/Skeleton/Original/Ribcage.png)";
+	hipbone.style.backgroundImage = "url(dist/img/Skeleton/Original/Hipbone.png)";
+	leftFemur.style.backgroundImage = "url(dist/img/Skeleton/Original/L_Femur.png)";
+	rightFemur.style.backgroundImage = "url(dist/img/Skeleton/Original/R_Femur.png)";
+	leftKnee.style.backgroundImage = "url(dist/img/Skeleton/Original/L_Kneecap.png)";
+	rightKnee.style.backgroundImage = "url(dist/img/Skeleton/Original/R_Kneecap.png)";
+	leftTibia.style.backgroundImage = "url(dist/img/Skeleton/Original/L_Tibia.png)";
+	rightTibia.style.backgroundImage = "url(dist/img/Skeleton/Original/R_Tibia.png)";
+	leftAnkle.style.backgroundImage = "url(dist/img/Skeleton/Original/L_Anklebone.png)";
+	rightAnkle.style.backgroundImage = "url(dist/img/Skeleton/Original/R_Anklebone.png)";
+	leftFoot.style.backgroundImage = "url(dist/img/Skeleton/Original/L_Footbone.png)";
+	rightFoot.style.backgroundImage = "url(dist/img/Skeleton/Original/R_Footbone.png)";
+	brain.style.backgroundImage = "url(dist/img/Organs/Original/Brain.png)";
+	leftLung.style.backgroundImage = "url(dist/img/Organs/Original/Lung_L.png)";
+	rightLung.style.backgroundImage = "url(dist/img/Organs/Original/Lung_R.png)";
+	heart.style.backgroundImage = "url(dist/img/Organs/Original/Heart.png)";
+	liver.style.backgroundImage = "url(dist/img/Organs/Original/Liver.png)";
+	kidney.style.backgroundImage = "url(dist/img/Organs/Original/Kidney.png)";
+	stomach.style.backgroundImage = "url(dist/img/Organs/Original/Stomach.png)";
+	pancreas.style.backgroundImage = "url(dist/img/Organs/Original/Pancreas.png)";
+	largeIntestine.style.backgroundImage = "url(dist/img/Organs/Original/LargeIntestine.png)";
+	smallIntestine.style.backgroundImage = "url(dist/img/Organs/Original/SmallIntestine.png)";
+	leftChest.style.backgroundImage = "url(dist/img/Muscles/Original/L_Chestmuscle.png)";
+	rightChest.style.backgroundImage = "url(dist/img/Muscles/Original/R_Chestmuscle.png)";
+	leftDeltoid.style.backgroundImage = "url(dist/img/Muscles/Original/L_Deltoid.png)";
+	rightDeltoid.style.backgroundImage = "url(dist/img/Muscles/Original/R_Deltoid.png)";
+	leftBiceps.style.backgroundImage = "url(dist/img/Muscles/Original/L_Biceps.png)";
+	rightBiceps.style.backgroundImage = "url(dist/img/Muscles/Original/R_Biceps.png)";
+	abdomin.style.backgroundImage = "url(dist/img/Muscles/Original/Abdomin.png)";
+	leftQuadriceps.style.backgroundImage = "url(dist/img/Muscles/Original/L_Quadriceps.png)";
+	rightQuadriceps.style.backgroundImage = "url(dist/img/Muscles/Original/R_Quadriceps.png)";
+	leftCalf.style.backgroundImage = "url(dist/img/Muscles/Original/L_Calfmuscle.png)";
+	rightCalf.style.backgroundImage = "url(dist/img/Muscles/Original/R_Calfmuscle.png)";
 }

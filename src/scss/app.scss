@@ -31,15 +31,35 @@ TABLE OF CONTENTS:
 }
 
 body {
-	background: #ccc;
+	background: #D1F4E0;
 }
 
 .iframe {
 	width: 1080px;
 	height: 1920px;
 	transform-origin: top center;
-	transform: scale(0.3);
+	transform: scale(0.36);
+	margin-left: 60vh;
 }
+
+.parent {
+	position: absolute;
+	top: 40%;
+	left: 10%;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	.iframe-headline {
+		font-size: 3rem;
+
+	}
+
+	.iframe-description {
+		font-size: 1.5rem;
+	}
+}
+
+
 .change-height {
 	width: 10px;
 	height: 100vh;
