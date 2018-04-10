@@ -1,5 +1,9 @@
 const FASTMODE = true;
 
+const titleSkeleton = document.querySelector(".skeleton-title");
+const titleMuscle = document.querySelector(".muscle-title");
+const titleOrgan = document.querySelector(".organ-title");
+
 //snap sliders to left and right
 let skeletonLayer = document.querySelector(".body-layers .skeleton-layer");
 skeletonLayer.addEventListener("click", function () {
@@ -9,9 +13,9 @@ skeletonLayer.addEventListener("click", function () {
 	TweenMax.to(document.querySelector('.top'), 1, {delay: 0.4, width: 1080});
 	TweenMax.to(scrollerTop, 1, {delay: 0.4, left: 1080-25});
 
-	TweenMax.to(".organ-title", 0.4, {display: "none"});
-	TweenMax.to(".muscle-title", 0.4, {display: "none"});
-	TweenMax.to (".skeleton-title", 2, {display: "block", delay: 2, opacity: 2});
+	// TweenMax.to(".organ-title", 0.4, {display: "none"});
+	// TweenMax.to(".muscle-title", 0.4, {display: "none"});
+	// TweenMax.to (".skeleton-title", 2, {display: "block", delay: 2, opacity: 2});
 });
 
 let organLayer = document.querySelector(".body-layers .organ-layer");
@@ -22,9 +26,9 @@ organLayer.addEventListener("click", function () {
 	TweenMax.to(document.querySelector('.top'), 1, {delay: 0.4, width: 0});
 	TweenMax.to(scrollerTop, 1, {delay: 0.4, left: 0-25});
 
-	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
-	TweenMax.to(".muscle-title", 0.4, {display: "none"});
-	TweenMax.to (".organ-title", 2, {display: "block", delay: 2, opacity: 2});
+	// TweenMax.to(".skeleton-title", 0.4, {display: "none"});
+	// TweenMax.to(".muscle-title", 0.4, {display: "none"});
+	// TweenMax.to (".organ-title", 2, {display: "block", delay: 2, opacity: 2});
 });
 
 let muscleLayer = document.querySelector(".body-layers .muscle-layer");
@@ -35,9 +39,9 @@ muscleLayer.addEventListener("click", function () {
 	TweenMax.to(document.querySelector('.top'), 1, {delay: 0.4, width: 0});
 	TweenMax.to(scrollerTop, 1, {delay: 0.4, left: 0-25});
 
-	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
-	TweenMax.to(".organ-title", 0.4, {display: "none"});
-	TweenMax.to (".muscle-title", 2, {display: "block", delay: 2, opacity: 2});
+	// TweenMax.to(".skeleton-title", 0.4, {display: "none"});
+	// TweenMax.to(".organ-title", 0.4, {display: "none"});
+	// TweenMax.to (".muscle-title", 2, {display: "block", delay: 2, opacity: 2});
 });
 
 
@@ -108,13 +112,13 @@ function scrollIt(x){
       document.querySelector('.top').style.width = transform-5+"px";
       scrollerTop.style.left = transform-30+"px";
     }
-    if (x < 540) {
-    	TweenMax.to(".organ-title", 0.4, {display: "none"});
-    	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
-    	TweenMax.to (".muscle-title", 2, {display: "block", delay: 1, opacity: 2});
-    } else {
-    	TweenMax.to(".muscle-title", 0.4, {display: "none"});
-    }
+    // if (x < 540) {
+    // 	TweenMax.to(".organ-title", 0.4, {display: "none"});
+    // 	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
+    // 	TweenMax.to (".muscle-title", 2, {display: "block", delay: 1, opacity: 2});
+    // } else {
+    // 	TweenMax.to(".muscle-title", 0.4, {display: "none"});
+    // }
   }
   // if we're dragging the top slider
   if (active==="top"){
@@ -125,23 +129,52 @@ function scrollIt(x){
       document.querySelector('.middle').style.width = transform+5+"px";
       scrollerMiddle.style.left = transform-20+"px";
     }
-    if (x > 540) {
-    	TweenMax.to(".organ-title", 0.4, {display: "none"});
-    	TweenMax.to(".muscle-title", 0.4, {display: "none"});
-    	TweenMax.to (".skeleton-title", 2, {display: "block", delay: 1, opacity: 2});
-    } else {
-    	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
-    }
-    if (x < 540) {
-    	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
-    	TweenMax.to(".muscle-title", 0.4, {display: "none"});
-    	TweenMax.to (".organ-title", 2, {display: "block", delay: 1, opacity: 2});
-    }
+    // if (x > 540) {
+    // 	TweenMax.to(".organ-title", 0.4, {display: "none"});
+    // 	TweenMax.to(".muscle-title", 0.4, {display: "none"});
+    // 	TweenMax.to (".skeleton-title", 2, {display: "block", delay: 1, opacity: 2});
+    // } else {
+    // 	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
+    // }
+    // if (x < 540) {
+    // 	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
+    // 	TweenMax.to(".muscle-title", 0.4, {display: "none"});
+    // 	TweenMax.to (".organ-title", 2, {display: "block", delay: 1, opacity: 2});
+    // }
   }
 
-  if ((active==="top" && x == 360) && (active==="middle" && x == 720)) {
-	TweenMax.to(".organ-title", 0.4, {display: "none"});
-  }
+//   if ((active==="top" && x == 360) && (active==="middle" && x == 720)) {
+// 	TweenMax.to(".organ-title", 0.4, {display: "none"});
+//   }
+	
+	const LEFT_LIMIT = 160;
+	const RIGHT_LIMIT = 900;
+	// console.log("scrollerTop.style.left", scrollerTop.style.left);
+	// console.log("scrollerMiddle.style.left", scrollerMiddle.style.left);
+  	let leftDraggerPos = parseInt(scrollerTop.style.left);
+	let rightDraggerPos = parseInt(scrollerMiddle.style.left);
+	if (leftDraggerPos > RIGHT_LIMIT) {
+		// we've pulled both the draggers over to the right, revealing the skeleton layer
+		titleSkeleton.classList.add('active');
+		titleOrgan.classList.remove('active');
+		titleMuscle.classList.remove('active');
+	} else if (rightDraggerPos < LEFT_LIMIT) {
+		// we've pulled both the draggers over to the left, revealing the muscle layer
+		titleSkeleton.classList.remove('active');
+		titleOrgan.classList.remove('active');
+		titleMuscle.classList.add('active');
+	} else if (leftDraggerPos < LEFT_LIMIT && rightDraggerPos > RIGHT_LIMIT) {
+		// we've pulled the draggers apart, so the middle is showing, revealing the organ layer
+		titleSkeleton.classList.remove('active');
+		titleOrgan.classList.add('active');
+		titleMuscle.classList.remove('active');
+	} else {
+		// the draggers are in disarray, no one layer is fully revealed
+		titleSkeleton.classList.remove('active');
+		titleOrgan.classList.remove('active');
+		titleMuscle.classList.remove('active');
+	}
+
 }
 
 // Let's set our opening state based off the width, 
