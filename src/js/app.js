@@ -1,5 +1,4 @@
-const FASTMODE = false;
-
+const FASTMODE = true;
 
 //snap sliders to left and right
 let skeletonLayer = document.querySelector(".body-layers .skeleton-layer");
@@ -12,8 +11,7 @@ skeletonLayer.addEventListener("click", function () {
 
 	TweenMax.to(".organ-title", 0.4, {display: "none"});
 	TweenMax.to(".muscle-title", 0.4, {display: "none"});
-
-	TweenMax.to (".skeleton-title", 2, {display: "block", delay: 1, opacity: 2});
+	TweenMax.to (".skeleton-title", 2, {display: "block", delay: 2, opacity: 2});
 });
 
 let organLayer = document.querySelector(".body-layers .organ-layer");
@@ -24,11 +22,9 @@ organLayer.addEventListener("click", function () {
 	TweenMax.to(document.querySelector('.top'), 1, {delay: 0.4, width: 0});
 	TweenMax.to(scrollerTop, 1, {delay: 0.4, left: 0-25});
 
-
 	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
 	TweenMax.to(".muscle-title", 0.4, {display: "none"});
-
-	TweenMax.to (".organ-title", 2, {display: "block", delay: 1, opacity: 2});
+	TweenMax.to (".organ-title", 2, {display: "block", delay: 2, opacity: 2});
 });
 
 let muscleLayer = document.querySelector(".body-layers .muscle-layer");
@@ -41,11 +37,8 @@ muscleLayer.addEventListener("click", function () {
 
 	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
 	TweenMax.to(".organ-title", 0.4, {display: "none"});
-
-	TweenMax.to (".muscle-title", 2, {display: "block", delay: 1, opacity: 2});
+	TweenMax.to (".muscle-title", 2, {display: "block", delay: 2, opacity: 2});
 });
-
-
 
 
 // I hope this over-commenting helps. Let's do this!
@@ -115,6 +108,13 @@ function scrollIt(x){
       document.querySelector('.top').style.width = transform-5+"px";
       scrollerTop.style.left = transform-30+"px";
     }
+    if (x < 540) {
+    	TweenMax.to(".organ-title", 0.4, {display: "none"});
+    	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
+    	TweenMax.to (".muscle-title", 2, {display: "block", delay: 1, opacity: 2});
+    } else {
+    	TweenMax.to(".muscle-title", 0.4, {display: "none"});
+    }
   }
   // if we're dragging the top slider
   if (active==="top"){
@@ -125,6 +125,22 @@ function scrollIt(x){
       document.querySelector('.middle').style.width = transform+5+"px";
       scrollerMiddle.style.left = transform-20+"px";
     }
+    if (x > 540) {
+    	TweenMax.to(".organ-title", 0.4, {display: "none"});
+    	TweenMax.to(".muscle-title", 0.4, {display: "none"});
+    	TweenMax.to (".skeleton-title", 2, {display: "block", delay: 1, opacity: 2});
+    } else {
+    	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
+    }
+    if (x < 540) {
+    	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
+    	TweenMax.to(".muscle-title", 0.4, {display: "none"});
+    	TweenMax.to (".organ-title", 2, {display: "block", delay: 1, opacity: 2});
+    }
+  }
+
+  if ((active==="top" && x == 360) && (active==="middle" && x == 720)) {
+	TweenMax.to(".organ-title", 0.4, {display: "none"});
   }
 }
 
@@ -560,7 +576,7 @@ stomach.addEventListener("click", function (){
 let pancreas = document.querySelector(".body-layers .pancreas-original");
 let pancreasDiv = document.querySelector(".body-layers .pancreas-div");
 pancreasDiv.addEventListener("click", function (){
-	pancreasDiv.style.backgroundImage = "url(dist/img/Organs/Ghosted/Ghosted_Pancreas.png)";
+	pancreas.style.backgroundImage = "url(dist/img/Organs/Ghosted/Ghosted_Pancreas.png)";
 	showOverlay();
 	pancreas.classList.add("clicked-body-part");
 	TweenMax.to(".pancreas-original .speech-bubble-container", 1, {display: "block"});

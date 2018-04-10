@@ -53,12 +53,12 @@
   top: 50%;
   transform: translateX(-50px) translateY(-50%);
   border-radius:50%;
-  background-color: #29A7D1;
+  // background-color: #29A7D1;
   opacity:0.9;
   transition: opacity 0.12s ease-in-out;
   pointer-events:auto;
   cursor: pointer;
-  box-shadow: 3.5px 0px 7px rgba(100, 100, 100, 0.2);
+  //box-shadow: 3.5px 0px 7px rgba(100, 100, 100, 0.2);
   z-index: 200;
 }
 .scroller-middle{
@@ -91,7 +91,8 @@
   width:100%;
   height:100%;
   border-radius:50%;
-  padding: 7px;
+  //padding: 7px;
+  transform: rotate(90deg);
 }
 
 .thumb-horizontal {
@@ -148,17 +149,17 @@
 
 /* If you want to cahnge the colors, make sure you change the fill in the svgs to match */
 .scroller-middle>.scroller__thumb{
-  border: 5px solid #29A7D1;
+  //border: 5px solid #29A7D1;
 }
 .scroller-middle:before,
 .scroller-middle:after{
-  background: #29A7D1;
+  background: #267893;
 }
 
 .scroller-top>.scroller__thumb{
-  border: 5px solid #29A7D1;
+  //border: 5px solid #29A7D1;
 }
 .scroller-top:before,
 .scroller-top:after{
-  background: #29A7D1;
+  background: #267893;
 }
