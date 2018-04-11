@@ -1,4 +1,4 @@
-const FASTMODE = true;
+const FASTMODE = false;
 
 const titleSkeleton = document.querySelector(".skeleton-title");
 const titleMuscle = document.querySelector(".muscle-title");
