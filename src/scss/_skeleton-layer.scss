@@ -29,7 +29,10 @@
 		left: 18.944444%;
 		z-index: 5;
         opacity: 0;
-		display: none;
+		transition: opacity 0.3s;
+		&.active {
+			opacity: 1;
+		}
 	}
 	.skeleton-body {
 		position: absolute; 
