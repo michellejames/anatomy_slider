@@ -4,7 +4,7 @@ const titleSkeleton = document.querySelector(".skeleton-title");
 const titleMuscle = document.querySelector(".muscle-title");
 const titleOrgan = document.querySelector(".organ-title");
 
-//snap sliders to left and right
+//Snap sliders to left and right
 let skeletonLayer = document.querySelector(".body-layers .skeleton-layer");
 skeletonLayer.addEventListener("click", function () {
 	TweenMax.to(document.querySelector('.middle'), 1, {delay: 0.4, width: 1080});
@@ -12,10 +12,6 @@ skeletonLayer.addEventListener("click", function () {
 
 	TweenMax.to(document.querySelector('.top'), 1, {delay: 0.4, width: 1080});
 	TweenMax.to(scrollerTop, 1, {delay: 0.4, left: 1080-25});
-
-	// TweenMax.to(".organ-title", 0.4, {display: "none"});
-	// TweenMax.to(".muscle-title", 0.4, {display: "none"});
-	// TweenMax.to (".skeleton-title", 2, {display: "block", delay: 2, opacity: 2});
 });
 
 let organLayer = document.querySelector(".body-layers .organ-layer");
@@ -25,10 +21,6 @@ organLayer.addEventListener("click", function () {
 
 	TweenMax.to(document.querySelector('.top'), 1, {delay: 0.4, width: 0});
 	TweenMax.to(scrollerTop, 1, {delay: 0.4, left: 0-25});
-
-	// TweenMax.to(".skeleton-title", 0.4, {display: "none"});
-	// TweenMax.to(".muscle-title", 0.4, {display: "none"});
-	// TweenMax.to (".organ-title", 2, {display: "block", delay: 2, opacity: 2});
 });
 
 let muscleLayer = document.querySelector(".body-layers .muscle-layer");
@@ -38,14 +30,8 @@ muscleLayer.addEventListener("click", function () {
 
 	TweenMax.to(document.querySelector('.top'), 1, {delay: 0.4, width: 0});
 	TweenMax.to(scrollerTop, 1, {delay: 0.4, left: 0-25});
-
-	// TweenMax.to(".skeleton-title", 0.4, {display: "none"});
-	// TweenMax.to(".organ-title", 0.4, {display: "none"});
-	// TweenMax.to (".muscle-title", 2, {display: "block", delay: 2, opacity: 2});
 });
 
-
-// I hope this over-commenting helps. Let's do this!
 // Let's use the 'active' variable to let us know when we're using it
 let active = false;
 // and define our dom elements to make it easier to read
@@ -112,13 +98,6 @@ function scrollIt(x){
       document.querySelector('.top').style.width = transform-5+"px";
       scrollerTop.style.left = transform-30+"px";
     }
-    // if (x < 540) {
-    // 	TweenMax.to(".organ-title", 0.4, {display: "none"});
-    // 	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
-    // 	TweenMax.to (".muscle-title", 2, {display: "block", delay: 1, opacity: 2});
-    // } else {
-    // 	TweenMax.to(".muscle-title", 0.4, {display: "none"});
-    // }
   }
   // if we're dragging the top slider
   if (active==="top"){
@@ -129,24 +108,8 @@ function scrollIt(x){
       document.querySelector('.middle').style.width = transform+5+"px";
       scrollerMiddle.style.left = transform-20+"px";
     }
-    // if (x > 540) {
-    // 	TweenMax.to(".organ-title", 0.4, {display: "none"});
-    // 	TweenMax.to(".muscle-title", 0.4, {display: "none"});
-    // 	TweenMax.to (".skeleton-title", 2, {display: "block", delay: 1, opacity: 2});
-    // } else {
-    // 	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
-    // }
-    // if (x < 540) {
-    // 	TweenMax.to(".skeleton-title", 0.4, {display: "none"});
-    // 	TweenMax.to(".muscle-title", 0.4, {display: "none"});
-    // 	TweenMax.to (".organ-title", 2, {display: "block", delay: 1, opacity: 2});
-    // }
   }
 
-//   if ((active==="top" && x == 360) && (active==="middle" && x == 720)) {
-// 	TweenMax.to(".organ-title", 0.4, {display: "none"});
-//   }
-	
 	const LEFT_LIMIT = 160;
 	const RIGHT_LIMIT = 900;
 	// console.log("scrollerTop.style.left", scrollerTop.style.left);
@@ -174,7 +137,6 @@ function scrollIt(x){
 		titleOrgan.classList.remove('active');
 		titleMuscle.classList.remove('active');
 	}
-
 }
 
 // Let's set our opening state based off the width, 
@@ -237,8 +199,7 @@ document.querySelector('.wrapper').addEventListener('touchmove',function(e){
 
 
 
-
-
+//Body Parts
 
 let speechBubble = document.querySelector(".speech-bubble");
 let speechBubbleTop = document.querySelector(".speech-bubble-top");
@@ -251,36 +212,27 @@ let skeletonBody = document.querySelector(".body-layers .skeleton-body");
 let organBody = document.querySelector(".body-layers .organ-body");
 let muscleBody = document.querySelector(".body-layers .muscle-body");
 
-Draggable.create(".change-height-slider", {		//.start-body-sizer
+Draggable.create(".change-height-slider", {
 	type:"y", 
 	bounds:".start-screen", 
 	onDrag: function() {
 		console.log((1920 - this.endY)/1920);
 		let bodyHeight =((1920 - this.endY)/1920) * 1.1;
 		console.log(bodyHeight);
-		// for (var i = bodyHeight.length - 1; i >= 0; i--) {
-		// 	startBody.style.paddingBottom = bodyHeight[i]+ "%";
-		// }
 		startBody.style.transform = `scale(${bodyHeight})`;
 		skeletonBody.style.transform = `scale(${bodyHeight})`;
 		organBody.style.transform = `scale(${bodyHeight})`;
 		muscleBody.style.transform = `scale(${bodyHeight})`;
-
-
-			
 	}
 });
-
 
 TweenMax.to(startButton, 1, {scale: 1.2, repeat: -1, yoyo: true }); 
 TweenMax.fromTo(".start-title", 1, { ease: Bounce.easeOut, y:-300, delay: 1}, {opacity: 1, ease: Bounce.easeOut, y: 20, delay: 1});
 TweenMax.to(".start-title", 1, {scale: 1.2, yoyo: true, repeat: 1, delay: 2});
 
-
 startButton.addEventListener("click", function (){
 	console.log("click");
 	startButton.style.backgroundImage = "url(dist/img/Go_selected_button.svg)";
-
 
 	var timeline = new TimelineMax();
 	timeline.to(".start-button", 0.3, {opacity: 0})
@@ -744,6 +696,17 @@ rightCalf.addEventListener("click", function (){
 	TweenMax.to(".right-calf-original .speech-bubble-container", 1, {display: "block"});
 	TweenMax.to(".right-calf-original .active-image", 0.4, {ease: Power1.easeIn, y: -30, rotation: -5, yoyo: true, repeat: 3, delay: 0.5});
 });
+
+
+
+
+
+
+
+
+
+
+
 
 let overlayBK = document.querySelectorAll(".overlay");
 overlayBK.forEach(function () {
