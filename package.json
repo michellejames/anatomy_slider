@@ -1,7 +1,7 @@
 {
   "name": "circus-starter",
   "version": "1.2.3",
-  "description": "A good starting point for new Circus students",
+  "description": "A touch screen application for children between two and seven years. The application is to be deployed in pediatrician’s waiting rooms to help teach young children the anatomical structure of the body including bones, organs and muscles.",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -20,15 +20,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chrissilich/circus-starter.git"
-  },
-  "author": "Chris Silich",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/chrissilich/circus-starter/issues"
-  },
-  "homepage": "https://github.com/chrissilich/circus-starter#readme",
+  "author": "@webDevShelly <webDevShelly@gmail.com>",
   "babel": {}
 }
